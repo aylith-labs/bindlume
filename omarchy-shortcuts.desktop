@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Omarchy Shortcuts
+Comment=Browse, search, run and favorite keyboard shortcuts
+Exec=/usr/bin/python /home/stevenp/Work/omarchy-shortcuts/app.py
+Icon=preferences-desktop-keyboard-shortcuts
+Terminal=false
+Categories=Utility;
+StartupWMClass=local.omarchy.Shortcuts

@@ -183,6 +183,25 @@ def reveal_file(uri):
         raise FileNotFoundError('The containing folder does not exist.')
 
 
+def preview_actions(uri):
+    path = local_preview_path(uri)
+    actions = [('Open Externally', 'open')]
+    if path is not None:
+        if not path.is_dir():
+            actions.append(('Show in Folder', 'reveal'))
+        actions.extend([('Copy Path', 'copy-path'), ('Copy File URI', 'copy-link')])
+    else:
+        actions.append(('Copy URL', 'copy-link'))
+    return actions
+
+
+def copy_plain_text(value):
+    # wl-copy retains ownership in its own process after the Info dialog closes.
+    subprocess.run(['wl-copy', '--type', 'text/plain;charset=utf-8'], input=value,
+                   text=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                   timeout=3, check=True)
+
+
 def dialog_size(width, height):
     """Logical pixels, with room for panel and compositor borders."""
     return max(1, min(1060, width - 48)), max(1, min(700, height - 48))
@@ -248,14 +267,20 @@ class InfoWindow(Gtk.Window):
         nav=Gtk.FlowBox(selection_mode=Gtk.SelectionMode.NONE,column_spacing=6,row_spacing=4,max_children_per_line=4,valign=Gtk.Align.START)
         self.back=Gtk.Button(label='←');self.back.set_tooltip_text('Previous preview');self.back.connect('clicked',lambda *_:self.navigate(-1));nav.insert(self.back,-1)
         self.forward=Gtk.Button(label='→');self.forward.set_tooltip_text('Next preview');self.forward.connect('clicked',lambda *_:self.navigate(1));nav.insert(self.forward,-1)
-        self.open=Gtk.Button(label='Open Externally');self.open.connect('clicked',self.open_external);nav.insert(self.open,-1)
-        self.copy=Gtk.Button(label='Copy Link');self.copy.connect('clicked',self.copy_link);nav.insert(self.copy,-1)
-        self.reveal=Gtk.Button(label='Show in Folder')
-        self.reveal.connect('clicked',self.show_in_folder)
-        nav.insert(self.reveal,-1)
-        self.reveal_slot=self.reveal.get_parent()
-        self.reveal_slot.set_visible(False)
+        self.action_group=Gio.SimpleActionGroup()
+        for name, callback in [('open', self.open_external), ('reveal', self.show_in_folder),
+                               ('copy-path', self.copy_path), ('copy-link', self.copy_link)]:
+            action=Gio.SimpleAction.new(name,None)
+            action.connect('activate',lambda _,_parameter,fn=callback:fn())
+            self.action_group.add_action(action)
+        self.insert_action_group('preview',self.action_group)
+        self.actions_menu=Gio.Menu()
+        self.actions_button=Gtk.MenuButton(label='Actions',menu_model=self.actions_menu)
+        self.actions_button.set_tooltip_text('Open, reveal or copy this resource')
+        nav.insert(self.actions_button,-1)
         right.append(nav)
+        self.action_status=Gtk.Label(xalign=0,wrap=True,visible=False)
+        self.action_status.add_css_class('dim-label');right.append(self.action_status)
         self.preview_title=Gtk.Label(label='Resource preview',xalign=0,wrap=True);self.preview_title.add_css_class('title-2');right.append(self.preview_title)
         self.meta=Gtk.Label(xalign=0,wrap=True,selectable=True,wrap_mode=Pango.WrapMode.WORD_CHAR)
         self.meta.add_css_class('dim-label');right.append(self.meta)
@@ -324,9 +349,10 @@ class InfoWindow(Gtk.Window):
         if remember:
             self.history=self.history[:self.index+1]+[uri];self.index+=1
         self.back.set_sensitive(self.index>0);self.forward.set_sensitive(self.index<len(self.history)-1)
-        path = local_preview_path(uri)
-        self.reveal_slot.set_visible(path is not None and not path.is_dir())
-        self.reveal.set_tooltip_text(str(path.parent) if path is not None else '')
+        self.actions_menu.remove_all()
+        for label, name in preview_actions(uri):
+            self.actions_menu.append(label, 'preview.' + name)
+        self.action_status.set_visible(False)
         self.generation+=1;ticket=self.generation
         self.preview_title.set_text('Loading preview…');self.meta.set_text(uri)
         spinner=Gtk.Spinner(spinning=True,halign=Gtk.Align.CENTER,valign=Gtk.Align.CENTER)
@@ -369,8 +395,24 @@ class InfoWindow(Gtk.Window):
         if 0<=index<len(self.history):
             self.index=index;self.preview(self.history[index],False)
 
+    def copy_value(self, value, label):
+        try:
+            copy_plain_text(value)
+            self.action_status.set_text(label + ' copied as plain text')
+        except Exception as e:
+            self.action_status.set_text('Could not copy: ' + str(e))
+        self.action_status.set_visible(True)
+
+    def copy_path(self,*_):
+        if self.index>=0:
+            path=local_preview_path(self.history[self.index])
+            if path is not None:
+                self.copy_value(str(path), 'Path')
+
     def copy_link(self,*_):
-        if self.index>=0:self.get_clipboard().set(self.history[self.index])
+        if self.index>=0:
+            uri=self.history[self.index]
+            self.copy_value(uri, 'File URI' if local_preview_path(uri) is not None else 'URL')
 
     def open_external(self,*_):
         if self.index>=0:

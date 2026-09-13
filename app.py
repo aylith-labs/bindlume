@@ -65,8 +65,8 @@ def project_info(shortcut_count):
          'This app retains its existing Omarchy adapter and implements its own GTK keyboard view. '
          'Research notes and primary documentation links are in RESEARCH.md.'),
         ('Linked Info and previews',
-         'Press Escape to close Info. Local-file previews offer Show in Folder to select the file in its containing folder. Info is a modal with linked sections and a preview pane. Click a file, folder or web link to inspect it here. '
-         'Back and forward navigate preview history; Copy Link and Open Externally are available for each resource. '
+         'Press Escape to close Info. The Actions menu offers Copy Path as plain text for local files and Copy URL for web pages. Local-file previews offer Show in Folder to select the file in its containing folder. Info is a modal with linked sections and a preview pane. Click a file, folder or web link to inspect it here. '
+         'Back and forward navigate preview history; the Actions menu contains Open Externally, Show in Folder, Copy Path and Copy File URI or Copy URL as appropriate. '
          'Files show source or formatted Markdown, folders show clickable entries, images render inline, and web pages '
          'show readable content with working links. Preview state stays in memory. Binary files show metadata and an external-open option.'),
         ('Built on this machine',

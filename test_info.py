@@ -3,10 +3,25 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 import app
-from info_view import linked_markup, load_preview, ReadableHTML, dialog_size, local_preview_path, reveal_file, InfoWindow
+from info_view import linked_markup, load_preview, ReadableHTML, dialog_size, local_preview_path, reveal_file, InfoWindow, preview_actions, copy_plain_text
 from shortcut_data import tooltip_widget
 
 class InfoTests(unittest.TestCase):
+    def test_preview_menu_has_contextual_open_reveal_copy_commands(self):
+        actions=dict(preview_actions((app.PROJECT/'app.py').as_uri()))
+        self.assertIn('Show in Folder',actions)
+        self.assertIn('Copy Path',actions)
+        self.assertIn('Copy File URI',actions)
+        self.assertNotIn('Show in Folder',dict(preview_actions(app.PROJECT.as_uri())))
+        web=dict(preview_actions('https://example.com'))
+        self.assertEqual(web,{'Open Externally':'open','Copy URL':'copy-link'})
+
+    def test_copy_uses_explicit_text_mime_and_literal_input(self):
+        with patch('info_view.subprocess.run') as run:
+            copy_plain_text('/tmp/my file $(literal).json')
+            self.assertEqual(run.call_args.args[0],['wl-copy','--type','text/plain;charset=utf-8'])
+            self.assertEqual(run.call_args.kwargs['input'],'/tmp/my file $(literal).json')
+
     def test_escape_closes_only_info(self):
         from unittest.mock import Mock
         dialog=Mock()

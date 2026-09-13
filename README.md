@@ -75,3 +75,5 @@ dofile("/home/stevenp/Work/omarchy-shortcuts/input_bridge.lua")
 Check for an existing binding before adding it, then run `hyprctl reload` and `hyprctl configerrors`. The current machine already has these entries. User favorites, learned marks, and expanded-group state remain outside the repository in `~/.config/omarchy-shortcuts/`.
 
 Press **Escape** to close Info. A **Show in Folder** button appears for local-file previews and selects the file in Nautilus; its tooltip shows the containing directory. For a file that has not been created yet, it opens the existing parent folder instead.
+
+Preview commands are grouped in the **Actions** menu. Local resources offer **Copy Path** (a pasteable filesystem path) and **Copy File URI** (a `file://` reference); web pages offer **Copy URL**. **Open Externally** and **Show in Folder** appear where applicable. Copy uses `wl-copy` with an explicit UTF-8 plain-text MIME type and survives closing Info. Omarchy clipboard history can recognize file URIs as file references; use Copy Path for ordinary text fields.

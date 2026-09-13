@@ -10,6 +10,17 @@ PALETTE = Path.home() / '.local/state/omarchy/current/theme/colors.toml'
 DEFAULT = dict(background='#242424', foreground='#eeeeee', accent='#78aeed',
                lighter_background='#343434', selection='#454545', muted='#9a9a9a')
 
+TOAST_CSS = """
+.copy-toast {
+    background: @theme_bg_color;
+    color: @theme_fg_color;
+    border: 1px solid alpha(@theme_fg_color, 0.25);
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 4px 16px alpha(black, 0.22);
+}
+"""
+
 class SystemTheme:
     def __init__(self, changed=lambda: None):
         self.provider = Gtk.CssProvider()
@@ -36,7 +47,7 @@ class SystemTheme:
         colors = {k: v for k, v in values.items() if isinstance(v, str) and re.fullmatch(r'#[0-9a-fA-F]{6}', v)}
         settings = Gtk.Settings.get_default()
         if not colors:
-            self.provider.load_from_data(b'')
+            self.provider.load_from_data(TOAST_CSS.encode())
             settings.reset_property('gtk-application-prefer-dark-theme')
             context = Gtk.Label().get_style_context()
             for target, role in [('background','theme_bg_color'), ('foreground','theme_fg_color'), ('accent','accent_bg_color')]:
@@ -87,6 +98,6 @@ class SystemTheme:
         .dim-label {{ opacity: 0.75; }}
         .keyboard-map {{ background: {c['background']}; }}
         '''
-        self.provider.load_from_data(css.encode())
+        self.provider.load_from_data((TOAST_CSS + css + f' .copy-toast {{ background: {c["lighter_background"]}; }}').encode())
         self.changed()
         return True

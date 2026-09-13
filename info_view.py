@@ -237,7 +237,29 @@ class InfoWindow(Gtk.Window):
         keys.connect('key-pressed', self.key_pressed)
         self.add_controller(keys)
         root=Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=14, margin_top=18, margin_bottom=18, margin_start=18, margin_end=18)
-        self.set_child(root)
+        overlay=Gtk.Overlay()
+        overlay.set_child(root)
+        self.set_child(overlay)
+        self.toast_timer=0
+        self.toast=Gtk.Revealer(halign=Gtk.Align.CENTER,valign=Gtk.Align.END,
+                               margin_start=24,margin_end=24,margin_bottom=24,
+                               transition_type=Gtk.RevealerTransitionType.SLIDE_UP)
+        card=Gtk.Box(spacing=12)
+        card.add_css_class('copy-toast')
+        message=Gtk.Box(orientation=Gtk.Orientation.VERTICAL,spacing=5)
+        self.toast_title=Gtk.Label(xalign=0)
+        self.toast_title.add_css_class('heading')
+        self.toast_preview=Gtk.Label(xalign=0,wrap=True,wrap_mode=Pango.WrapMode.WORD_CHAR,
+                                    max_width_chars=52,ellipsize=Pango.EllipsizeMode.END,lines=3)
+        self.toast_preview.add_css_class('monospace')
+        message.append(self.toast_title);message.append(self.toast_preview)
+        card.append(message)
+        dismiss=Gtk.Button(icon_name='window-close-symbolic',valign=Gtk.Align.CENTER)
+        dismiss.set_tooltip_text('Dismiss notification')
+        dismiss.connect('clicked',lambda *_:self.hide_toast())
+        card.append(dismiss)
+        self.toast.set_child(card)
+        overlay.add_overlay(self.toast)
         header=Gtk.Box(spacing=12)
         title=Gtk.Label(label='Inside Omarchy Shortcuts', xalign=0, hexpand=True, ellipsize=Pango.EllipsizeMode.END, width_chars=1)
         title.add_css_class('title-1'); header.append(title)
@@ -279,8 +301,6 @@ class InfoWindow(Gtk.Window):
         self.actions_button.set_tooltip_text('Open, reveal or copy this resource')
         nav.insert(self.actions_button,-1)
         right.append(nav)
-        self.action_status=Gtk.Label(xalign=0,wrap=True,visible=False)
-        self.action_status.add_css_class('dim-label');right.append(self.action_status)
         self.preview_title=Gtk.Label(label='Resource preview',xalign=0,wrap=True);self.preview_title.add_css_class('title-2');right.append(self.preview_title)
         self.meta=Gtk.Label(xalign=0,wrap=True,selectable=True,wrap_mode=Pango.WrapMode.WORD_CHAR)
         self.meta.add_css_class('dim-label');right.append(self.meta)
@@ -315,6 +335,7 @@ class InfoWindow(Gtk.Window):
         return False
 
     def closed(self,*_):
+        self.hide_toast()
         self.generation+=1
         return False
 
@@ -352,7 +373,6 @@ class InfoWindow(Gtk.Window):
         self.actions_menu.remove_all()
         for label, name in preview_actions(uri):
             self.actions_menu.append(label, 'preview.' + name)
-        self.action_status.set_visible(False)
         self.generation+=1;ticket=self.generation
         self.preview_title.set_text('Loading preview…');self.meta.set_text(uri)
         spinner=Gtk.Spinner(spinning=True,halign=Gtk.Align.CENTER,valign=Gtk.Align.CENTER)
@@ -395,13 +415,31 @@ class InfoWindow(Gtk.Window):
         if 0<=index<len(self.history):
             self.index=index;self.preview(self.history[index],False)
 
+    def hide_toast(self):
+        if self.toast_timer:
+            GLib.source_remove(self.toast_timer)
+            self.toast_timer=0
+        self.toast.set_reveal_child(False)
+        return False
+
+    def show_toast(self, title, value):
+        self.hide_toast()
+        self.toast_title.set_text(title)
+        self.toast_preview.set_text(value)
+        self.toast_preview.set_tooltip_text(value)
+        self.toast.set_reveal_child(True)
+        def expire():
+            self.toast_timer=0
+            self.toast.set_reveal_child(False)
+            return False
+        self.toast_timer=GLib.timeout_add(6000,expire)
+
     def copy_value(self, value, label):
         try:
             copy_plain_text(value)
-            self.action_status.set_text(label + ' copied as plain text')
+            self.show_toast(label + ' copied', value)
         except Exception as e:
-            self.action_status.set_text('Could not copy: ' + str(e))
-        self.action_status.set_visible(True)
+            self.show_toast('Copy failed', str(e))
 
     def copy_path(self,*_):
         if self.index>=0:

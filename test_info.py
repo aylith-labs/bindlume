@@ -22,6 +22,19 @@ class InfoTests(unittest.TestCase):
             self.assertEqual(run.call_args.args[0],['wl-copy','--type','text/plain;charset=utf-8'])
             self.assertEqual(run.call_args.kwargs['input'],'/tmp/my file $(literal).json')
 
+    def test_copy_toast_previews_exact_clipboard_value_and_reports_failure(self):
+        from unittest.mock import Mock
+        dialog=Mock()
+        value='/tmp/my notes & examples.json'
+        with patch('info_view.copy_plain_text') as copy:
+            InfoWindow.copy_value(dialog,value,'Path')
+            copy.assert_called_once_with(value)
+            dialog.show_toast.assert_called_once_with('Path copied',value)
+        dialog.reset_mock()
+        with patch('info_view.copy_plain_text',side_effect=RuntimeError('Clipboard unavailable')):
+            InfoWindow.copy_value(dialog,value,'Path')
+            dialog.show_toast.assert_called_once_with('Copy failed','Clipboard unavailable')
+
     def test_escape_closes_only_info(self):
         from unittest.mock import Mock
         dialog=Mock()

@@ -163,6 +163,26 @@ def load_preview(uri):
     return dict(kind=kind, title=title, meta=final + '\nReadable web preview · scripts and interactive content are omitted', text=text or 'No readable page content found.', base=final)
 
 
+def local_preview_path(uri):
+    parsed = urlparse(uri)
+    if parsed.scheme == 'file' and parsed.netloc in ('', 'localhost'):
+        return Path(unquote(parsed.path))
+    return None
+
+
+def reveal_file(uri):
+    path = local_preview_path(uri)
+    if path is None:
+        raise ValueError('Show in Folder is available for local files only.')
+    if path.exists():
+        subprocess.Popen(['nautilus', '--select', str(path)],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    elif path.parent.is_dir():
+        Gio.AppInfo.launch_default_for_uri(path.parent.as_uri(), None)
+    else:
+        raise FileNotFoundError('The containing folder does not exist.')
+
+
 def dialog_size(width, height):
     """Logical pixels, with room for panel and compositor borders."""
     return max(1, min(1060, width - 48)), max(1, min(700, height - 48))
@@ -193,6 +213,10 @@ class InfoWindow(Gtk.Window):
         self.connect('map', lambda *_: GLib.timeout_add(150, self.center_on_monitor))
         self.owner=owner; self.project=project; self.history=[]; self.index=-1; self.generation=0
         self.connect('close-request', self.closed)
+        keys = Gtk.EventControllerKey()
+        keys.set_propagation_phase(Gtk.PropagationPhase.CAPTURE)
+        keys.connect('key-pressed', self.key_pressed)
+        self.add_controller(keys)
         root=Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=14, margin_top=18, margin_bottom=18, margin_start=18, margin_end=18)
         self.set_child(root)
         header=Gtk.Box(spacing=12)
@@ -226,6 +250,11 @@ class InfoWindow(Gtk.Window):
         self.forward=Gtk.Button(label='→');self.forward.set_tooltip_text('Next preview');self.forward.connect('clicked',lambda *_:self.navigate(1));nav.insert(self.forward,-1)
         self.open=Gtk.Button(label='Open Externally');self.open.connect('clicked',self.open_external);nav.insert(self.open,-1)
         self.copy=Gtk.Button(label='Copy Link');self.copy.connect('clicked',self.copy_link);nav.insert(self.copy,-1)
+        self.reveal=Gtk.Button(label='Show in Folder')
+        self.reveal.connect('clicked',self.show_in_folder)
+        nav.insert(self.reveal,-1)
+        self.reveal_slot=self.reveal.get_parent()
+        self.reveal_slot.set_visible(False)
         right.append(nav)
         self.preview_title=Gtk.Label(label='Resource preview',xalign=0,wrap=True);self.preview_title.add_css_class('title-2');right.append(self.preview_title)
         self.meta=Gtk.Label(xalign=0,wrap=True,selectable=True,wrap_mode=Pango.WrapMode.WORD_CHAR)
@@ -233,6 +262,19 @@ class InfoWindow(Gtk.Window):
         self.preview_scroll=Gtk.ScrolledWindow(vexpand=True,hscrollbar_policy=Gtk.PolicyType.AUTOMATIC)
         right.append(self.preview_scroll)
         self.preview(project.as_uri())
+
+    def key_pressed(self, _controller, keyval, _keycode, _state):
+        if keyval == Gdk.KEY_Escape:
+            self.close()
+            return True
+        return False
+
+    def show_in_folder(self, *_):
+        if self.index >= 0:
+            try:
+                reveal_file(self.history[self.index])
+            except Exception as e:
+                self.meta.set_text('Could not reveal file: ' + str(e))
 
     def center_on_monitor(self):
         if not self.get_mapped():
@@ -282,6 +324,9 @@ class InfoWindow(Gtk.Window):
         if remember:
             self.history=self.history[:self.index+1]+[uri];self.index+=1
         self.back.set_sensitive(self.index>0);self.forward.set_sensitive(self.index<len(self.history)-1)
+        path = local_preview_path(uri)
+        self.reveal_slot.set_visible(path is not None and not path.is_dir())
+        self.reveal.set_tooltip_text(str(path.parent) if path is not None else '')
         self.generation+=1;ticket=self.generation
         self.preview_title.set_text('Loading preview…');self.meta.set_text(uri)
         spinner=Gtk.Spinner(spinning=True,halign=Gtk.Align.CENTER,valign=Gtk.Align.CENTER)

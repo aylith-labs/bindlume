@@ -73,3 +73,5 @@ dofile("/home/stevenp/Work/omarchy-shortcuts/input_bridge.lua")
 ```
 
 Check for an existing binding before adding it, then run `hyprctl reload` and `hyprctl configerrors`. The current machine already has these entries. User favorites, learned marks, and expanded-group state remain outside the repository in `~/.config/omarchy-shortcuts/`.
+
+Press **Escape** to close Info. A **Show in Folder** button appears for local-file previews and selects the file in Nautilus; its tooltip shows the containing directory. For a file that has not been created yet, it opens the existing parent folder instead.

@@ -3,10 +3,29 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 import app
-from info_view import linked_markup, load_preview, ReadableHTML, dialog_size
+from info_view import linked_markup, load_preview, ReadableHTML, dialog_size, local_preview_path, reveal_file, InfoWindow
 from shortcut_data import tooltip_widget
 
 class InfoTests(unittest.TestCase):
+    def test_escape_closes_only_info(self):
+        from unittest.mock import Mock
+        dialog=Mock()
+        self.assertTrue(InfoWindow.key_pressed(dialog,None,app.Gdk.KEY_Escape,0,0))
+        dialog.close.assert_called_once()
+        self.assertFalse(InfoWindow.key_pressed(dialog,None,app.Gdk.KEY_a,0,0))
+        dialog.close.assert_called_once()
+
+    def test_show_in_folder_selects_local_file_with_spaces(self):
+        with tempfile.TemporaryDirectory() as directory:
+            file=Path(directory)/'my notes.md'
+            file.write_text('notes')
+            self.assertEqual(local_preview_path(file.as_uri()),file)
+            with patch('info_view.subprocess.Popen') as launch:
+                reveal_file(file.as_uri())
+                self.assertEqual(launch.call_args.args[0],['nautilus','--select',str(file)])
+            self.assertIsNone(local_preview_path('https://example.com/readme.md'))
+            self.assertIsNone(local_preview_path('file://remote-host/etc/passwd'))
+
     def test_info_size_fits_scaled_display_and_smaller_monitors(self):
         self.assertEqual(dialog_size(1200, 649), (1060, 601))
         for width, height in [(800, 600), (600, 400), (1920, 1080)]:

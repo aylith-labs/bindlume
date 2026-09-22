@@ -310,6 +310,8 @@ class UiWorkflows(unittest.TestCase):
         self.ui.flat_list = True
         self.ui.items = [dict(id=str(i),key=f'F{i}',name=f'Match {i}',kind='action',group='Action',dispatcher='',arg='') for i in range(80)]
         self.ui.render(); pump(.2)
+        # Broadway has no browser client in CI; allocate the content explicitly.
+        self.ui.main_pane.allocate(900, 560, -1, None); pump(.2)
         self.ui.list_selection.set_selected(50)
         self.ui.list_scroll.get_vadjustment().set_value(400); pump(.15)
         self.assertGreater(self.ui.list_scroll.get_vadjustment().get_value(), 0)

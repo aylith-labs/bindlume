@@ -335,7 +335,7 @@ class InfoWindow(Gtk.Window):
             selector = json.dumps('address:' + dialog['address'])
             subprocess.run(['hyprctl', 'eval', 'hl.dispatch(hl.dsp.window.center({ window = ' + selector + ', reserved = true }))'],
                            capture_output=True, text=True, timeout=2, check=True)
-        except (subprocess.SubprocessError, ValueError, StopIteration):
+        except (OSError, subprocess.SubprocessError, ValueError, StopIteration):
             pass
         return False
 

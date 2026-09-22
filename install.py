@@ -11,7 +11,7 @@ import subprocess
 import sys
 
 SOURCE = Path(__file__).resolve().parent
-FILES = ('VERSION', 'docs/USER_GUIDE.md', 'LICENSE', 'CONTRIBUTING.md', 'branding/mark.svg', 'branding/README.md', 'FAST_CHAT.md', 'chat_api.py', 'source_cache.py', 'brand.py', 'input_controls.py', 'usage_view.py', 'overlay_surface.py', 'native_style.py', 'rich_content.py', 'companion.py', 'about.py', 'settings_ui.py', 'guide_settings.py', 'dialogs.py', 'agent_quota.py', 'agent_control.py', 'chat.py', 'chat_view.py', 'looks.json', 'localization.py', 'translations.json', 'preferences.py', 'global_shortcut.py', 'shortcut_sets.py', 'source_library.py', 'SHORTCUT_SETS.md', 'features.py', 'app.py', 'shortcut_data.py', 'keyboard_view.py', 'info_view.py',
+FILES = ('UI_SCENARIOS.md', 'VERSION', 'docs/USER_GUIDE.md', 'LICENSE', 'CONTRIBUTING.md', 'branding/mark.svg', 'branding/README.md', 'FAST_CHAT.md', 'chat_api.py', 'source_cache.py', 'brand.py', 'input_controls.py', 'usage_view.py', 'overlay_surface.py', 'native_style.py', 'rich_content.py', 'companion.py', 'about.py', 'settings_ui.py', 'guide_settings.py', 'dialogs.py', 'agent_quota.py', 'agent_control.py', 'chat.py', 'chat_view.py', 'looks.json', 'localization.py', 'translations.json', 'preferences.py', 'global_shortcut.py', 'shortcut_sets.py', 'source_library.py', 'SHORTCUT_SETS.md', 'features.py', 'app.py', 'shortcut_data.py', 'keyboard_view.py', 'info_view.py',
          'binding_sources.py', 'shortcut_manager.py', 'theme.py', 'guide.py', 'shortcut_types.py', 'input_bridge.lua', 'windows.lua', 'README.md', 'RELEASE_READINESS.md', 'RESEARCH.md', 'install.py')
 BEGIN = '-- BEGIN bindlume (managed by installer)'
 END = '-- END bindlume'

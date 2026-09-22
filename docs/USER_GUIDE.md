@@ -230,7 +230,7 @@ List appearance has two independent switches in F10: **Flat list** removes categ
 
 The main list uses Gtk.ListView virtualization for both grouped and flat modes. Category rows and expanded child rows share one scroll model, and unchanged rows survive incremental updates.
 
-UI regression scenarios and manual integration checks are documented in [UI_SCENARIOS.md](UI_SCENARIOS.md). Run `make test` for the Python and QML suites. Mapped GTK workflow tests use isolated preferences and mock external desktop actions.
+UI regression scenarios and manual integration checks are documented in [UI_SCENARIOS.md](../UI_SCENARIOS.md). Run `make test` for the Python and QML suites. Mapped GTK workflow tests use isolated preferences and mock external desktop actions.
 
 Keyboard-specific Numpad and Fit width switches are in Settings (F10); Flat list and Columns appear there only in List view. Key overlays default off for new preferences. The animation preference applies to all native app windows on Hyprland.
 
@@ -314,7 +314,7 @@ until Reset selected is pressed.
 
 The source menu shows only enabled, installed applications with usable shortcuts. **Choose shortcut sets…** at the bottom opens the catalog. The catalog includes 30 default reference shortcuts each for Google Chrome and Chromium, detected through executable names or desktop launchers. Unavailable and empty sets stay out of the source menu; the catalog explains their status.
 
-Use **Import set…**, **Create a set…**, or the folder button to manage data-only JSON plugins. No executable plugin code is loaded. Selection is saved separately from source bookmarks, and disabling a set keeps all marks. See [the plugin format and validation commands](../SHORTCUT_SETS.md). Agent authoring instructions are in [shortcut-set-creator](skills/shortcut-set-creator/SKILL.md).
+Use **Import set…**, **Create a set…**, or the folder button to manage data-only JSON plugins. No executable plugin code is loaded. Selection is saved separately from source bookmarks, and disabling a set keeps all marks. See [the plugin format and validation commands](../SHORTCUT_SETS.md). Agent authoring instructions are in [shortcut-set-creator](../skills/shortcut-set-creator/SKILL.md).
 
 
 ### App settings and appearance
@@ -447,7 +447,7 @@ Window animations default to off. In-app animations are independently configurab
 
 ### Fast companion connections and interaction checks
 
-See [FAST_CHAT.md](FAST_CHAT.md) for direct Gemini API, OpenRouter, Ollama and compatible endpoint setup, research, limits, and evaluation guidance. API connections are explicit opt-ins in AI companion settings; keys are referenced by environment-variable name.
+See [FAST_CHAT.md](../FAST_CHAT.md) for direct Gemini API, OpenRouter, Ollama and compatible endpoint setup, research, limits, and evaluation guidance. API connections are explicit opt-ins in AI companion settings; keys are referenced by environment-variable name.
 
 Shortcut capture temporarily requests compositor shortcut inhibition. Its button changes to “Press shortcut…” and focuses the capture control. Escape cancels without closing Settings; completing a chord, leaving the window, or closing the picker releases capture. Use the modifier/key dropdowns if the compositor declines the request. Tests on the private Broadway display cover the controller and inhibition lifecycle; they cannot verify a compositor’s decision.
 

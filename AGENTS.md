@@ -5,3 +5,10 @@
 - App control mutations must go through the running app API. A requested operation enables its prerequisite UI features automatically, validates the whole request before changing state, and reports the actual result. Do not automatically enable optional persistent memory or token tracking without a user request.
 - Verify GTK behavior on the private Broadway display (`make test`); never send synthetic desktop input to the user’s active session. Include regression coverage for reported bugs and visually inspect changed surfaces.
 - Follow the Aylith handbook for website design and deployment. Preserve the site’s current audience and deploy only the validated, pushed source state.
+
+<!-- aylith-handbook:start -->
+> **Aylith handbook (authoritative).** Consult https://github.com/aylith-labs/aylith-handbook
+> (locally `../aylith-handbook/`) before public-surface, catalog, CI, design-system,
+> or cross-repo work. It defines studio attribution, source-owned catalog data,
+> and the rule that public repositories use GitHub-hosted runners.
+<!-- aylith-handbook:end -->

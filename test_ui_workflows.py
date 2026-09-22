@@ -272,6 +272,17 @@ class UiWorkflows(unittest.TestCase):
         self.assertTrue(self.ui.feature_enabled('layouts'))
         self.assertFalse(self.ui.keyboard.all_layers)
 
+    def test_raised_keys_control_and_reset_default(self):
+        from agent_control import execute
+        def call(operation, **arguments): return execute(self.ui,dict(operation=operation,arguments=arguments))
+        self.assertTrue(self.ui.keyboard.raised_keys)
+        with self.assertRaises(ValueError): call('view',raised_keys='false')
+        self.assertTrue(self.ui.keyboard.raised_keys)
+        self.assertFalse(call('view',raised_keys=False)['raised_keys'])
+        call('reset',apply=True,categories=['keyboard'])
+        self.assertTrue(self.ui.keyboard.raised_keys)
+        self.assertTrue(call('view',raised_keys=True)['raised_keys'])
+
     def test_search_and_feature_changes_preserve_window_geometry(self):
         self.ui.features = app.DEFAULT_FEATURES.copy(); self.ui.apply_features()
         self.ui.items = [dict(id=str(i),key=f'F{i}',name=f'Action {i}',kind='action',group='Action',dispatcher='',arg='') for i in range(60)]

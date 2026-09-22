@@ -113,7 +113,7 @@ class KeyboardView(Gtk.Box):
         preferences = preferences or {}
         self.show_numpad = preferences.get('show_numpad') is True
         self.fit_width = preferences.get('fit_width') is True
-        self.raised_keys = preferences.get('raised_keys') is True
+        self.raised_keys = preferences.get('raised_keys', True) is True
         self.key_overlay = preferences.get('key_overlay', False) is True
         self.save_preferences = save_preferences
         self.icon_cache = {}

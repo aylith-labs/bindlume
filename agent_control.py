@@ -27,7 +27,7 @@ HELP = {
     'features': 'name (feature key or all), enabled (boolean). Omit both to list feature descriptions and states.',
     'settings': 'key and value to set one validated preference; omit to list current values. Global hotkey changes desktop bindings.',
     'sources': 'name and enabled to include/exclude a shortcut set; omit to list sets.',
-    'view': 'Optional source, search, modifiers (array of SUPER/CTRL/ALT/SHIFT), all_layers, live, target (current or exact window address), type (all/action/systemUi/apps/desktopApp/webapp/cmd/unknown), show_filters, favorites_only, visibility (all/hidden/visible), layout (list/keyboard), flat_list, columns, look, feature_view (grid/previews/descriptions booleans). Required features are enabled automatically; type filtering also shows the filters. Changes return enabled_features and matching results.',
+    'view': 'Optional source, search, modifiers (array of SUPER/CTRL/ALT/SHIFT), all_layers, live, target (current or exact window address), type (all/action/systemUi/apps/desktopApp/webapp/cmd/unknown), show_filters, favorites_only, visibility (all/hidden/visible), layout (list/keyboard), flat_list, columns, raised_keys (boolean), look, feature_view (grid/previews/descriptions booleans). Required features are enabled automatically; type filtering also shows the filters. Changes return enabled_features and matching results.',
     'guide': 'values (object) to update guide settings; omit to read. Uses the guide settings validator.',
     'reset': 'Read a preview with no arguments. apply=true resets categories (array of returned category IDs), or all available categories when omitted. Chats and desktop bindings are retained.',
     'sessions': 'List saved chat metadata; optionally id to read a transcript, or id and title to rename.',
@@ -172,7 +172,7 @@ def execute(app, request):
         return dict(devices=available, settings=app.input_controls.config, actions=dict(input_controls.ACTIONS))
     if op == 'view':
         # Validate the entire update before changing any visible state.
-        unknown = set(args)-{'source','search','favorites_only','visibility','layout','flat_list','columns','look','feature_view','type','show_filters','modifiers','all_layers','live','target'}
+        unknown = set(args)-{'source','search','favorites_only','visibility','layout','flat_list','columns','look','feature_view','type','show_filters','modifiers','all_layers','live','target','raised_keys'}
         if unknown: raise ValueError('Unknown view option: '+', '.join(sorted(unknown)))
         if 'source' in args and args['source'] not in SOURCES: raise ValueError('Unknown source')
         if args.get('look') == 'omarchy': args = dict(args, look='square')
@@ -180,7 +180,7 @@ def execute(app, request):
             if key in args and args[key] not in allowed: raise ValueError('Invalid '+key)
         from shortcut_types import FILTERS
         if 'type' in args and args['type'] not in dict(FILTERS): raise ValueError('Invalid type; use a shortcut type from schema')
-        for key in ('favorites_only','flat_list','columns','show_filters','all_layers','live'):
+        for key in ('favorites_only','flat_list','columns','show_filters','all_layers','live','raised_keys'):
             if key in args: boolean(args[key])
         if 'search' in args and not isinstance(args['search'], str): raise ValueError('search must be text')
         if 'feature_view' in args:
@@ -194,7 +194,7 @@ def execute(app, request):
         if any(k in args for k in ('type','show_filters','flat_list','columns','modifiers','all_layers')): required.add('layouts')
         if args.get('favorites_only'): required.add('bookmarks')
         if args.get('visibility') in ('hidden','visible'): required.add('hidden')
-        if args.get('layout') == 'keyboard': required.add('keyboard')
+        if args.get('layout') == 'keyboard' or 'raised_keys' in args: required.add('keyboard')
         if 'look' in args: required.add('appearance')
         enabled_features = sorted(k for k in required if not app.feature_enabled(k))
         for key in enabled_features: app.features[key] = True
@@ -207,6 +207,7 @@ def execute(app, request):
         if 'modifiers' in args:
             app.settings_switches['Show filters'].set_active(True)
             for key,button in app.keyboard.buttons.items(): button.set_active(key in args['modifiers'])
+        if 'raised_keys' in args: app.keyboard.option_buttons['raised_keys'].set_active(args['raised_keys'])
         if 'all_layers' in args: app.keyboard.all_button.set_active(args['all_layers'])
         if 'live' in args: app.live_switch.set_active(args['live'])
         if 'target' in args: app.target.set_selected(targets.index(args['target']))
@@ -220,7 +221,7 @@ def execute(app, request):
         if 'feature_view' in args: app.feature_view.update(args['feature_view'])
         app.save_ui_state()
         app.render()
-        return dict(source=app.source_name, filters=app.saved_filters, feature_view=app.feature_view, enabled_features=enabled_features, matches=len(app.filtered_items()))
+        return dict(source=app.source_name, filters=app.saved_filters, feature_view=app.feature_view, raised_keys=app.keyboard.raised_keys, enabled_features=enabled_features, matches=len(app.filtered_items()))
     if op == 'guide':
         from guide import GuideController
         controller = GuideController()

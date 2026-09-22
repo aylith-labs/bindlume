@@ -7,6 +7,15 @@ import cairo
 from keyboard_view import KeyboardView
 
 class RaisedKeyboardTests(unittest.TestCase):
+    def test_default_and_explicit_flat_preference(self):
+        for preferences, expected in ((None, True), ({}, True), ({'raised_keys': False}, False)):
+            with self.subTest(preferences=preferences):
+                view=KeyboardView(lambda *_:None,lambda:{},preferences,preview=True)
+                try:
+                    self.assertEqual(view.raised_keys,expected)
+                    self.assertEqual(view.option_buttons['raised_keys'].get_active(),expected)
+                finally:view.stop()
+
     def test_preference_persistence_and_transformed_key_targets(self):
         saved=[]
         view=KeyboardView(lambda *_:None,lambda:{}, {'raised_keys':True,'show_numpad':True},saved.append,preview=True)

@@ -1456,7 +1456,7 @@ class Shortcuts(Gtk.Application):
         for group in self.expanded_groups: filters.append('Category expansion: ' + group + ' → default')
         add('filters', 'Search and filters', filters)
         keyboard = []
-        for field, title, default in [('raised_keys','Raised keys',False), ('show_numpad','Numpad',False), ('fit_width','Fit width',False), ('key_overlay','Key overlay',False), ('extras_expanded','Extra keys expanded',False), ('extras_layout','Extra-key layout','grid')]:
+        for field, title, default in [('raised_keys','Raised keys',True), ('show_numpad','Numpad',False), ('fit_width','Fit width',False), ('key_overlay','Key overlay',False), ('extras_expanded','Extra keys expanded',False), ('extras_layout','Extra-key layout','grid')]:
             value = getattr(self.keyboard, field)
             if value != default: keyboard.append(f'{title}: {value} → {default}')
         add('keyboard', 'Keyboard display', keyboard)
@@ -1684,7 +1684,7 @@ class Shortcuts(Gtk.Application):
             for name, value in (('Show filters',False), ('Flat list',True), ('Columns',True)):
                 self.settings_switches[name].set_active(value)
         if 'keyboard' in selected:
-            for button in self.keyboard.option_buttons.values(): button.set_active(False)
+            for field, button in self.keyboard.option_buttons.items(): button.set_active(field == 'raised_keys')
             self.keyboard.extras_expanded = False
             self.keyboard.extras_layout = 'grid'
             self.keyboard.columns = True

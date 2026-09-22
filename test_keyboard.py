@@ -12,6 +12,39 @@ from keyboard_view import XkbLayout, KeyboardView
 from shortcut_data import matches_query, details
 
 class KeyboardTests(unittest.TestCase):
+    def test_animation_rule_covers_all_app_windows_only(self):
+        script = '''
+        for _, mode in ipairs({"system", "on", "off", "invalid"}) do
+          local rules = {}
+          o = {window = function(match, props) table.insert(rules, {match, props}) end}
+          io.open = function() return {close=function() end,
+            read=function() return '{"preferences":{"window_animations":"' .. mode .. '"}}' end} end
+          dofile(arg[1])
+          if mode == "on" or mode == "off" then
+            assert(#rules == 2)
+            assert(rules[1][1].class == '^com[.]aylith[.]Bindlume$')
+            assert(rules[1][1].title == nil)
+            assert(rules[1][2].no_anim == (mode == "off"))
+          else
+            assert(#rules == 1)
+            assert(rules[1][2].no_anim == nil)
+          end
+          assert(rules[#rules][1].title == '^Bindlume$')
+          assert(rules[#rules][2].size == nil)
+        end
+        '''
+        subprocess.run(['lua', '-', str(app.PROJECT/'windows.lua')], input=script, text=True, check=True)
+
+    def test_overlay_default_off_and_explicit_preference_preserved(self):
+        with patch.object(KeyboardView, 'refresh_layout', return_value=True), \
+             patch.object(KeyboardView, 'listen_modifiers'), \
+             patch.object(KeyboardView, 'renew_lease', return_value=True):
+            for preferences, expected in (({}, False), ({'key_overlay': True}, True), ({'key_overlay': False}, False)):
+                view = KeyboardView(lambda *_: None, lambda: {}, preferences)
+                self.assertEqual(view.key_overlay, expected)
+                self.assertEqual(view.legend.get_visible(), expected)
+                view.stop()
+
     def item(self,key,name='Window action'):
         return dict(key=key,name=name,group='Windows',dispatcher='lua',arg='hl.dsp.window.close()')
 
@@ -47,8 +80,12 @@ class KeyboardTests(unittest.TestCase):
         v.items=[self.item('CTRL + W'),self.item('SUPER CTRL + W'),self.item('W')]
         self.assertEqual(len(KeyboardView.bindings(v,'W')),1)
         v.all_layers=True
+        self.assertEqual(len(KeyboardView.bindings(v,'W')),2)
+        v.manual.clear()
         self.assertEqual(len(KeyboardView.bindings(v,'W')),3)
         v.held=frozenset({'SUPER','CTRL'})
+        self.assertEqual(len(KeyboardView.bindings(v,'W')),1)
+        v.all_layers=False
         self.assertEqual(KeyboardView.bindings(v,'W')[0]['key'],'SUPER CTRL + W')
 
     def test_input_bridge_lease_release_and_no_history(self):
@@ -63,19 +100,19 @@ events = {}
 dofile(arg[1])
 callback(25, 0, 1)
 assert(#events == 0, 'No non-modifier capture without a lease')
-_omarchy_shortcuts_lease = 110
+_bindlume_lease = 110
 callback(25, 0, 1)
 callback(25, 0, 0)
-assert(events[1] == 'omarchy-shortcuts-key,25,1')
-assert(events[2] == 'omarchy-shortcuts-key,25,0')
+assert(events[1] == 'bindlume-key,25,1')
+assert(events[2] == 'bindlume-key,25,0')
 callback(133, 0, 1)
-assert(_omarchy_shortcuts_mods == 64)
+assert(_bindlume_mods == 64)
 callback(50, 0, 1)
-assert(_omarchy_shortcuts_mods == 65)
+assert(_bindlume_mods == 65)
 callback(133, 0, 0)
-assert(_omarchy_shortcuts_mods == 1)
+assert(_bindlume_mods == 1)
 callback(50, 0, 0)
-assert(_omarchy_shortcuts_mods == 0)
+assert(_bindlume_mods == 0)
 local count = #events
 callback(25, 0, 2)
 assert(#events == count)

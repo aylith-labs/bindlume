@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "id": "chromium",
+  "name": "Chromium",
+  "description": "Default Windows/Linux browser shortcuts; extensions and custom bindings may differ.",
+  "platforms": [
+    "linux",
+    "win32"
+  ],
+  "documentation": "https://support.google.com/chrome/answer/157179?hl=en",
+  "detect": {
+    "executables": [
+      "chromium",
+      "chromium-browser"
+    ],
+    "desktop_ids": [
+      "chromium.desktop",
+      "chromium-browser.desktop",
+      "org.chromium.Chromium.desktop"
+    ]
+  },
+  "shortcuts": [
+    {
+      "id": "new-tab",
+      "keys": "CTRL + T",
+      "title": "New tab",
+      "category": "Tabs"
+    },
+    {
+      "id": "reopen-tab",
+      "keys": "CTRL SHIFT + T",
+      "title": "Restore closed tab",
+      "category": "Tabs"
+    },
+    {
+      "id": "next-tab",
+      "keys": "CTRL + TAB",
+      "title": "Next tab",
+      "category": "Tabs"
+    },
+    {
+      "id": "previous-tab",
+      "keys": "CTRL SHIFT + TAB",
+      "title": "Previous tab",
+      "category": "Tabs"
+    },
+    {
+      "id": "last-tab",
+      "keys": "CTRL + 9",
+      "title": "Last tab",
+      "category": "Tabs"
+    },
+    {
+      "id": "close-tab",
+      "keys": "CTRL + W",
+      "title": "Close tab",
+      "category": "Tabs"
+    },
+    {
+      "id": "new-window",
+      "keys": "CTRL + N",
+      "title": "New window",
+      "category": "Windows"
+    },
+    {
+      "id": "private-window",
+      "keys": "CTRL SHIFT + N",
+      "title": "Incognito window",
+      "category": "Windows"
+    },
+    {
+      "id": "close-window",
+      "keys": "CTRL SHIFT + W",
+      "title": "Close window",
+      "category": "Windows"
+    },
+    {
+      "id": "fullscreen",
+      "keys": "F11",
+      "title": "Fullscreen",
+      "category": "Windows"
+    },
+    {
+      "id": "back",
+      "keys": "ALT + LEFT",
+      "title": "Back",
+      "category": "Navigation"
+    },
+    {
+      "id": "forward",
+      "keys": "ALT + RIGHT",
+      "title": "Forward",
+      "category": "Navigation"
+    },
+    {
+      "id": "address",
+      "keys": "CTRL + L",
+      "title": "Address bar",
+      "category": "Navigation"
+    },
+    {
+      "id": "reload",
+      "keys": "CTRL + R",
+      "title": "Reload",
+      "category": "Navigation"
+    },
+    {
+      "id": "reload-fresh",
+      "keys": "CTRL SHIFT + R",
+      "title": "Reload without cache",
+      "category": "Navigation"
+    },
+    {
+      "id": "stop",
+      "keys": "ESCAPE",
+      "title": "Stop loading",
+      "category": "Navigation"
+    },
+    {
+      "id": "find",
+      "keys": "CTRL + F",
+      "title": "Find in page",
+      "category": "Page"
+    },
+    {
+      "id": "find-next",
+      "keys": "CTRL + G",
+      "title": "Next match",
+      "category": "Page"
+    },
+    {
+      "id": "find-previous",
+      "keys": "CTRL SHIFT + G",
+      "title": "Previous match",
+      "category": "Page"
+    },
+    {
+      "id": "save",
+      "keys": "CTRL + S",
+      "title": "Save page",
+      "category": "Page"
+    },
+    {
+      "id": "print",
+      "keys": "CTRL + P",
+      "title": "Print",
+      "category": "Page"
+    },
+    {
+      "id": "zoom-reset",
+      "keys": "CTRL + 0",
+      "title": "Reset zoom",
+      "category": "Page"
+    },
+    {
+      "id": "bookmark",
+      "keys": "CTRL + D",
+      "title": "Bookmark page",
+      "category": "Bookmarks"
+    },
+    {
+      "id": "bookmarks-bar",
+      "keys": "CTRL SHIFT + B",
+      "title": "Toggle bookmarks bar",
+      "category": "Bookmarks"
+    },
+    {
+      "id": "bookmarks",
+      "keys": "CTRL SHIFT + O",
+      "title": "Manage bookmarks",
+      "category": "Bookmarks"
+    },
+    {
+      "id": "history",
+      "keys": "CTRL + H",
+      "title": "History",
+      "category": "Browser"
+    },
+    {
+      "id": "downloads",
+      "keys": "CTRL + J",
+      "title": "Downloads",
+      "category": "Browser"
+    },
+    {
+      "id": "task-manager",
+      "keys": "SHIFT + ESCAPE",
+      "title": "Task manager",
+      "category": "Browser"
+    },
+    {
+      "id": "devtools",
+      "keys": "F12",
+      "title": "Developer tools",
+      "category": "Developer"
+    },
+    {
+      "id": "source",
+      "keys": "CTRL + U",
+      "title": "Page source",
+      "category": "Developer"
+    }
+  ],
+  "category": "browsers"
+}

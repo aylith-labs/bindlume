@@ -9,3 +9,12 @@ __pycache__/
 /favorites.json
 /learned.json
 /ui-state.json
+
+/website/deployment.json
+/website/design-archive/
+/branding/BRIEF.md
+/branding/control-names.md
+/branding/naming-screen.md
+/branding/inspo-references.json
+/keyguide/build/
+/website/dist/

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Bindlume
+Comment=Bindlume — illuminating your bindings
+Exec=bindlume
+Icon=com.aylith.Bindlume
+Terminal=false
+Categories=Utility;
+StartupWMClass=com.aylith.Bindlume

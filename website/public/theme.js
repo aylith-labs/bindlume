@@ -1,0 +1,1 @@
+(()=>{try{const theme=localStorage.getItem('bindlume-theme')||'system';document.documentElement.dataset.theme=theme;document.documentElement.dataset.motion=localStorage.getItem('bindlume-motion')||'system'}catch{document.documentElement.dataset.theme='system'}})();

@@ -99,17 +99,27 @@ class InfoTests(unittest.TestCase):
     def test_keyboard_tooltip_omits_dispatch_metadata(self):
         item=dict(key='SUPER + W',name='Close window',group='Windows',dispatcher='lua',arg='hl.dsp.window.close()')
         widget=tooltip_widget([item], technical=False)
-        grid=widget.get_first_child().get_next_sibling()
-        self.assertEqual(grid.get_child_at(1,0).get_label(), 'Close window')
-        self.assertIsNone(grid.get_child_at(0,2))
+        header=widget.get_first_child()
+        self.assertIsNone(header.get_first_child().get_next_sibling())
+        description=header.get_next_sibling()
+        self.assertEqual(description.get_label(), 'Close window')
+        self.assertIsNone(description.get_next_sibling().get_child_at(0,0))
 
     def test_tooltip_fields_are_aligned_and_literal(self):
         item=dict(key='SUPER + W',name='Close <window>',group='Windows',dispatcher='lua',arg='hl.dsp.window.close()')
         widget=tooltip_widget([item])
-        grid=widget.get_first_child().get_next_sibling()
-        self.assertEqual(grid.get_child_at(0,0).get_label(),'Description')
-        self.assertEqual(grid.get_child_at(1,0).get_label(),'Close <window>')
-        self.assertEqual(grid.get_child_at(0,3).get_width_chars(),12)
-        self.assertTrue(grid.get_child_at(1,3).has_css_class('monospace'))
+        description=widget.get_first_child().get_next_sibling()
+        self.assertEqual(description.get_label(),'Close <window>')
+        grid=description.get_next_sibling()
+        self.assertEqual(grid.get_child_at(0,0).get_label(),'Dispatcher')
+        self.assertEqual(grid.get_child_at(0,1).get_width_chars(),12)
+        self.assertTrue(grid.get_child_at(1,1).has_css_class('monospace'))
+
+    def test_non_action_tooltip_has_category_badge(self):
+        item=dict(key='SUPER + B', name='Browser', group='Desktop App', kind='desktopApp')
+        header=tooltip_widget([item], technical=False).get_first_child()
+        badge=header.get_last_child()
+        self.assertEqual(badge.get_label(), 'Desktop App')
+        self.assertTrue(badge.has_css_class('tooltip-category'))
 
 if __name__=='__main__':unittest.main()

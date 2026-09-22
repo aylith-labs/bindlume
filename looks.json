@@ -1,0 +1,24 @@
+{
+  "system": {
+    "name": "System",
+    "font": "sans-serif",
+    "radius": 10
+  },
+  "rounded": {
+    "name": "Rounded",
+    "font": "sans-serif",
+    "radius": 10
+  },
+  "square": {
+    "name": "Square",
+    "font": "monospace",
+    "radius": 0
+  },
+  "neo-brutalism": {
+    "name": "Neo-brutalism",
+    "font": "sans-serif",
+    "radius": 0,
+    "border": 2,
+    "shadow": 3
+  }
+}

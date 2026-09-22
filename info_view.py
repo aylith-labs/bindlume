@@ -13,6 +13,8 @@ import gi
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gio, GLib, Gdk, Pango
 
+from shortcut_data import action_tooltip
+
 LIMIT = 512 * 1024
 TOKEN = re.compile(r'https?://[^\s<>]+|(?<![\w:])(?:~/|/)[^\s<>]+|\b[\w.-]+\.(?:py|lua|md|json|toml|desktop)\b')
 
@@ -227,7 +229,7 @@ def available_area(owner):
 class InfoWindow(Gtk.Window):
     def __init__(self, owner, sections, project, settings):
         width, height = dialog_size(*available_area(owner))
-        super().__init__(title='About Omarchy Shortcuts', transient_for=owner.window, application=owner,
+        super().__init__(title='Inside Bindlume', transient_for=owner.window, application=owner,
                          modal=True, default_width=width, default_height=height)
         self.connect('map', lambda *_: GLib.timeout_add(150, self.center_on_monitor))
         self.owner=owner; self.project=project; self.history=[]; self.index=-1; self.generation=0
@@ -261,7 +263,7 @@ class InfoWindow(Gtk.Window):
         self.toast.set_child(card)
         overlay.add_overlay(self.toast)
         header=Gtk.Box(spacing=12)
-        title=Gtk.Label(label='Inside Omarchy Shortcuts', xalign=0, hexpand=True, ellipsize=Pango.EllipsizeMode.END, width_chars=1)
+        title=Gtk.Label(label='Inside Bindlume', xalign=0, hexpand=True, ellipsize=Pango.EllipsizeMode.END, width_chars=1)
         title.add_css_class('title-1'); header.append(title)
         close=Gtk.Button(label='Close');close.connect('clicked',lambda *_:self.close());header.append(close)
         root.append(header)
@@ -287,8 +289,8 @@ class InfoWindow(Gtk.Window):
         right=Gtk.Box(orientation=Gtk.Orientation.VERTICAL,spacing=10,margin_start=12)
         pane.set_end_child(right)
         nav=Gtk.FlowBox(selection_mode=Gtk.SelectionMode.NONE,column_spacing=6,row_spacing=4,max_children_per_line=4,valign=Gtk.Align.START)
-        self.back=Gtk.Button(label='←');self.back.set_tooltip_text('Previous preview');self.back.connect('clicked',lambda *_:self.navigate(-1));nav.insert(self.back,-1)
-        self.forward=Gtk.Button(label='→');self.forward.set_tooltip_text('Next preview');self.forward.connect('clicked',lambda *_:self.navigate(1));nav.insert(self.forward,-1)
+        self.back=Gtk.Button(icon_name='go-previous-symbolic');self.back.add_css_class('preview-navigation');action_tooltip(self.back, 'Previous preview (Alt+Left)');self.back.connect('clicked',lambda *_:self.navigate(-1));nav.insert(self.back,-1)
+        self.forward=Gtk.Button(icon_name='go-next-symbolic');self.forward.add_css_class('preview-navigation');action_tooltip(self.forward, 'Next preview (Alt+Right)');self.forward.connect('clicked',lambda *_:self.navigate(1));nav.insert(self.forward,-1)
         self.action_group=Gio.SimpleActionGroup()
         for name, callback in [('open', self.open_external), ('reveal', self.show_in_folder),
                                ('copy-path', self.copy_path), ('copy-link', self.copy_link)]:
@@ -309,6 +311,9 @@ class InfoWindow(Gtk.Window):
         self.preview(project.as_uri())
 
     def key_pressed(self, _controller, keyval, _keycode, _state):
+        if _state & Gtk.accelerator_get_default_mod_mask() == Gdk.ModifierType.ALT_MASK and keyval in (Gdk.KEY_Left, Gdk.KEY_Right):
+            self.navigate(-1 if keyval == Gdk.KEY_Left else 1)
+            return True
         if keyval == Gdk.KEY_Escape:
             self.close()
             return True
@@ -350,19 +355,8 @@ class InfoWindow(Gtk.Window):
         return widget
 
     def prose(self,box,text,base=None):
-        for block in re.split(r'\n\s*\n',text):
-            if not block.strip():continue
-            if block.lstrip().startswith('```'):
-                clean=re.sub(r'^```\w*\n?|\n?```$', '', block.strip())
-                label=Gtk.Label(label=clean,xalign=0,selectable=True,wrap=True,wrap_mode=Pango.WrapMode.WORD_CHAR)
-                label.add_css_class('monospace');box.append(label);continue
-            for line in block.splitlines() if block.startswith(('#','- ','* ','• ')) else [block]:
-                if line.startswith('#'):
-                    label=Gtk.Label(label=line.lstrip('# ').strip(),xalign=0,wrap=True)
-                    label.add_css_class('title-3')
-                else:
-                    label=self.label(re.sub(r'^[-*] ', '• ', line),base)
-                box.append(label)
+        from rich_content import MarkdownView
+        box.append(MarkdownView(text, link=self.link, formatter=lambda value: linked_markup(value,self.project,base)))
 
     def preview(self,uri,remember=True):
         if urlparse(uri).scheme not in ('file','http','https'):
@@ -456,3 +450,86 @@ class InfoWindow(Gtk.Window):
         if self.index>=0:
             try:Gio.AppInfo.launch_default_for_uri(self.history[self.index],None)
             except Exception as e:self.meta.set_text('Could not open externally: '+str(e))
+
+
+def agent_guide_prompt(path, content=None):
+    """A paste-ready request; copying never launches an agent or changes files."""
+    task = ('Help me create or update a shortcut-set plugin. Follow the guide below, '
+            'ask which application or shortcuts I need if that is not specified, '
+            'and validate the resulting JSON before importing it. Do not change desktop keybindings.')
+    if content is None:
+        return task + '\n\nRead the guide at this local path first:\n' + str(path)
+    return task + '\n\nGuide source: ' + str(path) + '\n\n' + content
+
+
+class MarkdownWindow(Gtk.Window):
+    """A focused local guide with rendered Markdown and explicit copy actions."""
+    label = InfoWindow.label
+    prose = InfoWindow.prose
+
+    def __init__(self, owner, parent, path, title):
+        super().__init__(application=owner, transient_for=parent, modal=True,
+                         title=title, default_width=800, default_height=650)
+        self.add_css_class('shortcuts-app')
+        self.project = path.parent
+        self.path = path
+        self.content = path.read_text(encoding='utf-8')
+        root = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12,
+                       margin_top=20, margin_bottom=20, margin_start=20, margin_end=20)
+        heading = Gtk.Box(spacing=12)
+        label = Gtk.Label(label=title, xalign=0, hexpand=True)
+        label.add_css_class('title-2')
+        heading.append(label)
+        close = Gtk.Button(icon_name='window-close-symbolic')
+        action_tooltip(close, 'Close (Esc)')
+        close.connect('clicked', lambda *_: self.close())
+        heading.append(close)
+        root.append(heading)
+        location = Gtk.Label(label=str(path), xalign=0, selectable=True, wrap=True,
+                             wrap_mode=Pango.WrapMode.WORD_CHAR)
+        location.add_css_class('monospace')
+        root.append(location)
+        toolbar = Gtk.Box(spacing=8)
+        self.copy_values = {
+            'content': self.content, 'path': str(path),
+            'agent-path': agent_guide_prompt(path),
+            'agent-content': agent_guide_prompt(path, self.content),
+        }
+        for text, key in [('Copy path', 'path'), ('Copy content', 'content')]:
+            button = Gtk.Button(label=text)
+            button.connect('clicked', lambda _, kind=key: self.copy(kind))
+            toolbar.append(button)
+        from localization import text as translate
+        actions = Gio.SimpleActionGroup()
+        menu = Gio.Menu()
+        for text, key in [('Copy instructions with file path', 'agent-path'),
+                          ('Copy instructions with guide content', 'agent-content')]:
+            action = Gio.SimpleAction.new(key, None)
+            action.connect('activate', lambda _, parameter, kind=key: self.copy(kind))
+            actions.add_action(action)
+            menu.append(translate(text), 'guide-copy.' + key)
+        self.insert_action_group('guide-copy', actions)
+        toolbar.append(Gtk.MenuButton(label='Copy for agents', menu_model=menu))
+        root.append(toolbar)
+        content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12)
+        self.prose(content, self.content, path.as_uri())
+        scroll = Gtk.ScrolledWindow(vexpand=True, hscrollbar_policy=Gtk.PolicyType.NEVER)
+        scroll.set_child(content)
+        root.append(scroll)
+        self.message = Gtk.Label(xalign=0)
+        self.message.add_css_class('dim-label')
+        root.append(self.message)
+        self.set_child(root)
+        keys = Gtk.EventControllerKey()
+        keys.connect('key-pressed', lambda _, key, *args: (self.close() or True) if key == Gdk.KEY_Escape else False)
+        self.add_controller(keys)
+
+    def copy(self, kind):
+        self.get_clipboard().set(self.copy_values[kind])
+        self.message.set_text({'content': 'Guide content copied.', 'path': 'Guide path copied.',
+                              'agent-path': 'Agent instructions with file path copied.',
+                              'agent-content': 'Agent instructions with guide content copied.'}[kind])
+
+    def link(self, _, uri):
+        Gio.AppInfo.launch_default_for_uri(uri, None)
+        return True

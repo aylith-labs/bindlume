@@ -1,0 +1,3779 @@
+{
+  "Settings": {
+    "de": "Einstellungen",
+    "fr": "Paramètres",
+    "es": "Ajustes",
+    "uk": "Налаштування",
+    "hu": "Beállítások"
+  },
+  "App settings": {
+    "de": "App-Einstellungen",
+    "fr": "Paramètres de l’application",
+    "es": "Ajustes de la aplicación",
+    "uk": "Налаштування застосунку",
+    "hu": "Alkalmazásbeállítások"
+  },
+  "General": {
+    "de": "Allgemein",
+    "fr": "Général",
+    "es": "General",
+    "uk": "Загальні",
+    "hu": "Általános"
+  },
+  "Appearance": {
+    "de": "Darstellung",
+    "fr": "Apparence",
+    "es": "Apariencia",
+    "uk": "Вигляд",
+    "hu": "Megjelenés"
+  },
+  "Language": {
+    "de": "Sprache",
+    "fr": "Langue",
+    "es": "Idioma",
+    "uk": "Мова",
+    "hu": "Nyelv"
+  },
+  "Theme": {
+    "de": "Design",
+    "fr": "Thème",
+    "es": "Tema",
+    "uk": "Тема",
+    "hu": "Téma"
+  },
+  "Follow system": {
+    "de": "System folgen",
+    "fr": "Suivre le système",
+    "es": "Seguir el sistema",
+    "uk": "Як у системі",
+    "hu": "Rendszer követése"
+  },
+  "Dark": {
+    "de": "Dunkel",
+    "fr": "Sombre",
+    "es": "Oscuro",
+    "uk": "Темна",
+    "hu": "Sötét"
+  },
+  "Light": {
+    "de": "Hell",
+    "fr": "Clair",
+    "es": "Claro",
+    "uk": "Світла",
+    "hu": "Világos"
+  },
+  "Look": {
+    "de": "Stil",
+    "fr": "Style",
+    "es": "Estilo",
+    "uk": "Стиль",
+    "hu": "Stílus"
+  },
+  "Rounded": {
+    "de": "Abgerundet",
+    "fr": "Arrondi",
+    "es": "Redondeado",
+    "uk": "Заокруглений",
+    "hu": "Lekerekített"
+  },
+  "Square": {
+    "de": "Eckig",
+    "fr": "Angulaire",
+    "es": "Cuadrado",
+    "uk": "Прямокутний",
+    "hu": "Szögletes"
+  },
+  "Window animations": {
+    "de": "Fensteranimationen",
+    "fr": "Animations des fenêtres",
+    "es": "Animaciones de ventanas",
+    "uk": "Анімація вікон",
+    "hu": "Ablakanimációk"
+  },
+  "Global shortcut": {
+    "de": "Globales Tastenkürzel",
+    "fr": "Raccourci global",
+    "es": "Atajo global",
+    "uk": "Глобальне сполучення клавіш",
+    "hu": "Globális gyorsbillentyű"
+  },
+  "Apply": {
+    "de": "Anwenden",
+    "fr": "Appliquer",
+    "es": "Aplicar",
+    "uk": "Застосувати",
+    "hu": "Alkalmaz",
+    "ko": "적용",
+    "ja": "適用",
+    "zh_CN": "应用"
+  },
+  "Close": {
+    "de": "Schließen",
+    "fr": "Fermer",
+    "es": "Cerrar",
+    "uk": "Закрити",
+    "hu": "Bezárás"
+  },
+  "Cancel": {
+    "de": "Abbrechen",
+    "fr": "Annuler",
+    "es": "Cancelar",
+    "uk": "Скасувати",
+    "hu": "Mégse",
+    "ko": "취소",
+    "ja": "キャンセル",
+    "zh_CN": "取消"
+  },
+  "Save": {
+    "de": "Speichern",
+    "fr": "Enregistrer",
+    "es": "Guardar",
+    "uk": "Зберегти",
+    "hu": "Mentés"
+  },
+  "Reset all": {
+    "de": "Alles zurücksetzen",
+    "fr": "Tout réinitialiser",
+    "es": "Restablecer todo",
+    "uk": "Скинути все",
+    "hu": "Összes visszaállítása"
+  },
+  "Reset selected": {
+    "de": "Auswahl zurücksetzen",
+    "fr": "Réinitialiser la sélection",
+    "es": "Restablecer selección",
+    "uk": "Скинути вибране",
+    "hu": "Kijelöltek visszaállítása"
+  },
+  "Reset to Defaults…": {
+    "de": "Standardwerte wiederherstellen…",
+    "fr": "Rétablir les valeurs par défaut…",
+    "es": "Restablecer valores predeterminados…",
+    "uk": "Відновити типові налаштування…",
+    "hu": "Alapértékek visszaállítása…"
+  },
+  "Features": {
+    "de": "Funktionen",
+    "fr": "Fonctionnalités",
+    "es": "Funciones",
+    "uk": "Функції",
+    "hu": "Funkciók"
+  },
+  "Make it yours": {
+    "de": "Nach deinen Wünschen",
+    "fr": "Personnalisez l’application",
+    "es": "Hazlo a tu gusto",
+    "uk": "Налаштуйте для себе",
+    "hu": "Szabd személyre"
+  },
+  "Previews": {
+    "de": "Vorschauen",
+    "fr": "Aperçus",
+    "es": "Vistas previas",
+    "uk": "Попередній перегляд",
+    "hu": "Előnézetek"
+  },
+  "Descriptions": {
+    "de": "Beschreibungen",
+    "fr": "Descriptions",
+    "es": "Descripciones",
+    "uk": "Описи",
+    "hu": "Leírások"
+  },
+  "Grid view": {
+    "de": "Rasteransicht",
+    "fr": "Vue en grille",
+    "es": "Vista de cuadrícula",
+    "uk": "Сітка",
+    "hu": "Rácsnézet"
+  },
+  "Bookmarks": {
+    "de": "Lesezeichen",
+    "fr": "Favoris",
+    "es": "Favoritos",
+    "uk": "Закладки",
+    "hu": "Könyvjelzők"
+  },
+  "Hide shortcuts": {
+    "de": "Tastenkürzel ausblenden",
+    "fr": "Masquer des raccourcis",
+    "es": "Ocultar atajos",
+    "uk": "Приховування сполучень",
+    "hu": "Gyorsbillentyűk elrejtése"
+  },
+  "Hidden shortcuts": {
+    "de": "Ausgeblendete Tastenkürzel",
+    "fr": "Raccourcis masqués",
+    "es": "Atajos ocultos",
+    "uk": "Приховані сполучення",
+    "hu": "Rejtett gyorsbillentyűk"
+  },
+  "Keyboard explorer": {
+    "de": "Tastaturansicht",
+    "fr": "Explorateur de clavier",
+    "es": "Explorador del teclado",
+    "uk": "Огляд клавіатури",
+    "hu": "Billentyűzetnézet"
+  },
+  "Shortcut editor": {
+    "de": "Tastenkürzel bearbeiten",
+    "fr": "Éditeur de raccourcis",
+    "es": "Editor de atajos",
+    "uk": "Редактор сполучень",
+    "hu": "Gyorsbillentyű-szerkesztő"
+  },
+  "Keyboard guide": {
+    "de": "Tastaturhilfe",
+    "fr": "Guide des raccourcis",
+    "es": "Guía de atajos",
+    "uk": "Довідник клавіатури",
+    "hu": "Billentyűzetsegéd"
+  },
+  "Keyboard Guide": {
+    "de": "Tastaturhilfe",
+    "fr": "Guide des raccourcis",
+    "es": "Guía de atajos",
+    "uk": "Довідник клавіатури",
+    "hu": "Billentyűzetsegéd"
+  },
+  "Keyboard guide settings": {
+    "de": "Einstellungen der Tastaturhilfe",
+    "fr": "Paramètres du guide",
+    "es": "Ajustes de la guía",
+    "uk": "Налаштування довідника",
+    "hu": "Billentyűzetsegéd beállításai"
+  },
+  "Choose a target window": {
+    "de": "Zielfenster wählen",
+    "fr": "Choisir la fenêtre cible",
+    "es": "Elegir ventana de destino",
+    "uk": "Вибір цільового вікна",
+    "hu": "Célablak kiválasztása"
+  },
+  "Filters and layouts": {
+    "de": "Filter und Ansichten",
+    "fr": "Filtres et dispositions",
+    "es": "Filtros y diseños",
+    "uk": "Фільтри та компонування",
+    "hu": "Szűrők és elrendezések"
+  },
+  "Live filter": {
+    "de": "Live-Filter",
+    "fr": "Filtre en direct",
+    "es": "Filtro en vivo",
+    "uk": "Живий фільтр",
+    "hu": "Élő szűrő"
+  },
+  "Recent searches": {
+    "de": "Letzte Suchen",
+    "fr": "Recherches récentes",
+    "es": "Búsquedas recientes",
+    "uk": "Останні пошуки",
+    "hu": "Legutóbbi keresések"
+  },
+  "Search features…": {
+    "de": "Funktionen suchen…",
+    "fr": "Rechercher des fonctionnalités…",
+    "es": "Buscar funciones…",
+    "uk": "Пошук функцій…",
+    "hu": "Funkciók keresése…"
+  },
+  "Search shortcuts… (@ to search keys)": {
+    "de": "Tastenkürzel suchen… (@ für Tasten)",
+    "fr": "Rechercher des raccourcis… (@ pour les touches)",
+    "es": "Buscar atajos… (@ para buscar teclas)",
+    "uk": "Пошук сполучень… (@ для пошуку клавіш)",
+    "hu": "Gyorsbillentyűk keresése… (@ a billentyűkhöz)"
+  },
+  "Shortcut list": {
+    "de": "Tastenkürzelliste",
+    "fr": "Liste des raccourcis",
+    "es": "Lista de atajos",
+    "uk": "Список сполучень",
+    "hu": "Gyorsbillentyűk listája"
+  },
+  "Compact view": {
+    "de": "Kompakte Ansicht",
+    "fr": "Vue compacte",
+    "es": "Vista compacta",
+    "uk": "Компактний вигляд",
+    "hu": "Kompakt nézet"
+  },
+  "Desktop and web app icons": {
+    "de": "Symbole für Desktop- und Web-Apps",
+    "fr": "Icônes des applications et sites web",
+    "es": "Iconos de aplicaciones y sitios web",
+    "uk": "Значки застосунків і вебсайтів",
+    "hu": "Asztali és webalkalmazások ikonjai"
+  },
+  "Action icons": {
+    "de": "Aktionssymbole",
+    "fr": "Icônes des actions",
+    "es": "Iconos de acciones",
+    "uk": "Значки дій",
+    "hu": "Műveletikonok"
+  },
+  "Label font": {
+    "de": "Schrift der Beschriftungen",
+    "fr": "Police des libellés",
+    "es": "Fuente de las etiquetas",
+    "uk": "Шрифт назв",
+    "hu": "Feliratok betűtípusa"
+  },
+  "Label size": {
+    "de": "Schriftgröße",
+    "fr": "Taille des libellés",
+    "es": "Tamaño de las etiquetas",
+    "uk": "Розмір назв",
+    "hu": "Feliratok mérete"
+  },
+  "Use Omarchy-style typography": {
+    "de": "Omarchy-Schriftstil verwenden",
+    "fr": "Utiliser la typographie Omarchy",
+    "es": "Usar tipografía de Omarchy",
+    "uk": "Використати шрифти Omarchy",
+    "hu": "Omarchy betűstílus használata"
+  },
+  "View options": {
+    "de": "Ansichtsoptionen",
+    "fr": "Options d’affichage",
+    "es": "Opciones de vista",
+    "uk": "Параметри вигляду",
+    "hu": "Nézetbeállítások"
+  },
+  "Visibility": {
+    "de": "Sichtbarkeit",
+    "fr": "Visibilité",
+    "es": "Visibilidad",
+    "uk": "Видимість",
+    "hu": "Láthatóság"
+  },
+  "Show all": {
+    "de": "Alle anzeigen",
+    "fr": "Tout afficher",
+    "es": "Mostrar todo",
+    "uk": "Показати все",
+    "hu": "Összes megjelenítése"
+  },
+  "Hidden": {
+    "de": "Ausgeblendet",
+    "fr": "Masqués",
+    "es": "Ocultos",
+    "uk": "Приховані",
+    "hu": "Rejtett"
+  },
+  "Not hidden": {
+    "de": "Nicht ausgeblendet",
+    "fr": "Non masqués",
+    "es": "No ocultos",
+    "uk": "Не приховані",
+    "hu": "Nem rejtett"
+  },
+  "Show filters": {
+    "de": "Filter anzeigen",
+    "fr": "Afficher les filtres",
+    "es": "Mostrar filtros",
+    "uk": "Показати фільтри",
+    "hu": "Szűrők megjelenítése"
+  },
+  "Flat list": {
+    "de": "Flache Liste",
+    "fr": "Liste simple",
+    "es": "Lista simple",
+    "uk": "Суцільний список",
+    "hu": "Egyszerű lista"
+  },
+  "Columns": {
+    "de": "Spalten",
+    "fr": "Colonnes",
+    "es": "Columnas",
+    "uk": "Стовпці",
+    "hu": "Oszlopok"
+  },
+  "Grid": {
+    "de": "Raster",
+    "fr": "Grille",
+    "es": "Cuadrícula",
+    "uk": "Сітка",
+    "hu": "Rács"
+  },
+  "List": {
+    "de": "Liste",
+    "fr": "Liste",
+    "es": "Lista",
+    "uk": "Список",
+    "hu": "Lista"
+  },
+  "Layout": {
+    "de": "Anordnung",
+    "fr": "Disposition",
+    "es": "Diseño",
+    "uk": "Компонування",
+    "hu": "Elrendezés"
+  },
+  "All layers": {
+    "de": "Alle Ebenen",
+    "fr": "Toutes les couches",
+    "es": "Todas las capas",
+    "uk": "Усі шари",
+    "hu": "Összes réteg"
+  },
+  "All types": {
+    "de": "Alle Typen",
+    "fr": "Tous les types",
+    "es": "Todos los tipos",
+    "uk": "Усі типи",
+    "hu": "Összes típus"
+  },
+  "Key overlay": {
+    "de": "Tastenanzeige",
+    "fr": "Indications sur les touches",
+    "es": "Indicaciones en las teclas",
+    "uk": "Позначки на клавішах",
+    "hu": "Billentyűjelölések"
+  },
+  "Numpad": {
+    "de": "Ziffernblock",
+    "fr": "Pavé numérique",
+    "es": "Teclado numérico",
+    "uk": "Цифровий блок",
+    "hu": "Számbillentyűzet"
+  },
+  "Fit width": {
+    "de": "Breite anpassen",
+    "fr": "Adapter à la largeur",
+    "es": "Ajustar al ancho",
+    "uk": "За шириною",
+    "hu": "Szélességhez igazítás"
+  },
+  "Current": {
+    "de": "Aktuell",
+    "fr": "Actuelle",
+    "es": "Actual",
+    "uk": "Поточне",
+    "hu": "Jelenlegi"
+  },
+  "Window for shortcut actions": {
+    "de": "Zielfenster für Aktionen",
+    "fr": "Fenêtre cible des actions",
+    "es": "Ventana de destino de las acciones",
+    "uk": "Вікно для дій сполучень",
+    "hu": "Műveletek célablaka"
+  },
+  "Keyboard shortcuts": {
+    "de": "Tastenkürzel",
+    "fr": "Raccourcis clavier",
+    "es": "Atajos de teclado",
+    "uk": "Клавіатурні сполучення",
+    "hu": "Gyorsbillentyűk"
+  },
+  "App shortcuts": {
+    "de": "App-Tastenkürzel",
+    "fr": "Raccourcis de l’application",
+    "es": "Atajos de la aplicación",
+    "uk": "Сполучення застосунку",
+    "hu": "Alkalmazás gyorsbillentyűi"
+  },
+  "Manage shortcuts": {
+    "de": "Tastenkürzel verwalten",
+    "fr": "Gérer les raccourcis",
+    "es": "Gestionar atajos",
+    "uk": "Керувати сполученнями",
+    "hu": "Gyorsbillentyűk kezelése"
+  },
+  "Refresh shortcuts": {
+    "de": "Tastenkürzel aktualisieren",
+    "fr": "Actualiser les raccourcis",
+    "es": "Actualizar atajos",
+    "uk": "Оновити сполучення",
+    "hu": "Gyorsbillentyűk frissítése"
+  },
+  "About": {
+    "de": "Info",
+    "fr": "À propos",
+    "es": "Acerca de",
+    "uk": "Про застосунок",
+    "hu": "Névjegy"
+  },
+  "Quit": {
+    "de": "Beenden",
+    "fr": "Quitter",
+    "es": "Salir",
+    "uk": "Вийти",
+    "hu": "Kilépés"
+  },
+  "Choose shortcut sets…": {
+    "de": "Tastenkürzelsätze wählen…",
+    "fr": "Choisir les jeux de raccourcis…",
+    "es": "Elegir conjuntos de atajos…",
+    "uk": "Вибрати набори сполучень…",
+    "hu": "Gyorsbillentyű-készletek kiválasztása…"
+  },
+  "Review what will change": {
+    "de": "Änderungen überprüfen",
+    "fr": "Vérifier les changements",
+    "es": "Revisar los cambios",
+    "uk": "Перегляньте зміни",
+    "hu": "Változások áttekintése"
+  },
+  "Clear all": {
+    "de": "Alles löschen",
+    "fr": "Tout effacer",
+    "es": "Borrar todo",
+    "uk": "Очистити все",
+    "hu": "Összes törlése"
+  },
+  "Source bookmarks": {
+    "de": "Quellen-Lesezeichen",
+    "fr": "Sources favorites",
+    "es": "Fuentes favoritas",
+    "uk": "Закладки джерел",
+    "hu": "Forráskönyvjelzők"
+  },
+  "Search and filters": {
+    "de": "Suche und Filter",
+    "fr": "Recherche et filtres",
+    "es": "Búsqueda y filtros",
+    "uk": "Пошук і фільтри",
+    "hu": "Keresés és szűrők"
+  },
+  "Keyboard display": {
+    "de": "Tastaturdarstellung",
+    "fr": "Affichage du clavier",
+    "es": "Vista del teclado",
+    "uk": "Вигляд клавіатури",
+    "hu": "Billentyűzet megjelenítése"
+  },
+  "View and app": {
+    "de": "Ansicht und App",
+    "fr": "Affichage et application",
+    "es": "Vista y aplicación",
+    "uk": "Вигляд і застосунок",
+    "hu": "Nézet és alkalmazás"
+  },
+  "Configuration files on this device": {
+    "de": "Konfigurationsdateien auf diesem Gerät",
+    "fr": "Fichiers de configuration sur cet appareil",
+    "es": "Archivos de configuración en este dispositivo",
+    "uk": "Файли налаштувань на цьому пристрої",
+    "hu": "Beállításfájlok ezen az eszközön"
+  },
+  "Nothing to reset. Your app is already at its defaults.": {
+    "de": "Nichts zurückzusetzen. Die App verwendet bereits die Standardwerte.",
+    "fr": "Rien à réinitialiser. L’application utilise déjà les valeurs par défaut.",
+    "es": "Nada que restablecer. La aplicación ya usa los valores predeterminados.",
+    "uk": "Немає що скидати. Застосунок уже має типові налаштування.",
+    "hu": "Nincs mit visszaállítani. Az alkalmazás már az alapértékeket használja."
+  },
+  "No shortcuts match these filters.": {
+    "de": "Keine Tastenkürzel entsprechen diesen Filtern.",
+    "fr": "Aucun raccourci ne correspond à ces filtres.",
+    "es": "Ningún atajo coincide con estos filtros.",
+    "uk": "Немає сполучень, що відповідають фільтрам.",
+    "hu": "Nincs a szűrőknek megfelelő gyorsbillentyű."
+  },
+  "No features match your search.": {
+    "de": "Keine passenden Funktionen gefunden.",
+    "fr": "Aucune fonctionnalité ne correspond à la recherche.",
+    "es": "Ninguna función coincide con la búsqueda.",
+    "uk": "Не знайдено відповідних функцій.",
+    "hu": "Nincs a keresésnek megfelelő funkció."
+  },
+  "Navigation": {
+    "de": "Navigation",
+    "fr": "Navigation",
+    "es": "Navegación",
+    "uk": "Навігація",
+    "hu": "Navigáció"
+  },
+  "Filters": {
+    "de": "Filter",
+    "fr": "Filtres",
+    "es": "Filtros",
+    "uk": "Фільтри",
+    "hu": "Szűrők"
+  },
+  "Keyboard": {
+    "de": "Tastatur",
+    "fr": "Clavier",
+    "es": "Teclado",
+    "uk": "Клавіатура",
+    "hu": "Billentyűzet"
+  },
+  "App": {
+    "de": "App",
+    "fr": "Application",
+    "es": "Aplicación",
+    "uk": "Застосунок",
+    "hu": "Alkalmazás"
+  },
+  "Controls & windows": {
+    "de": "Steuerung und Fenster",
+    "fr": "Commandes et fenêtres",
+    "es": "Controles y ventanas",
+    "uk": "Елементи керування та вікна",
+    "hu": "Vezérlők és ablakok"
+  },
+  "Developer tools": {
+    "de": "Entwicklerwerkzeuge",
+    "fr": "Outils de développement",
+    "es": "Herramientas de desarrollo",
+    "uk": "Інструменти розробника",
+    "hu": "Fejlesztői eszközök"
+  },
+  "Enabled": {
+    "de": "Aktiviert",
+    "fr": "Activé",
+    "es": "Activado",
+    "uk": "Увімкнено",
+    "hu": "Engedélyezve",
+    "ko": "사용",
+    "ja": "有効",
+    "zh_CN": "已启用"
+  },
+  "Position": {
+    "de": "Position",
+    "fr": "Position",
+    "es": "Posición",
+    "uk": "Положення",
+    "hu": "Pozíció"
+  },
+  "Center": {
+    "de": "Mitte",
+    "fr": "Centre",
+    "es": "Centro",
+    "uk": "Центр",
+    "hu": "Közép"
+  },
+  "Top": {
+    "de": "Oben",
+    "fr": "Haut",
+    "es": "Arriba",
+    "uk": "Вгорі",
+    "hu": "Fent"
+  },
+  "Bottom": {
+    "de": "Unten",
+    "fr": "Bas",
+    "es": "Abajo",
+    "uk": "Внизу",
+    "hu": "Lent"
+  },
+  "Left": {
+    "de": "Links",
+    "fr": "Gauche",
+    "es": "Izquierda",
+    "uk": "Ліворуч",
+    "hu": "Bal"
+  },
+  "Right": {
+    "de": "Rechts",
+    "fr": "Droite",
+    "es": "Derecha",
+    "uk": "Праворуч",
+    "hu": "Jobb"
+  },
+  "Scale": {
+    "de": "Skalierung",
+    "fr": "Échelle",
+    "es": "Escala",
+    "uk": "Масштаб",
+    "hu": "Méretezés"
+  },
+  "Opacity": {
+    "de": "Deckkraft",
+    "fr": "Opacité",
+    "es": "Opacidad",
+    "uk": "Непрозорість",
+    "hu": "Átlátszatlanság"
+  },
+  "Follow theme": {
+    "de": "Design folgen",
+    "fr": "Suivre le thème",
+    "es": "Seguir el tema",
+    "uk": "Як у темі",
+    "hu": "Téma követése"
+  },
+  "Live HUD preview": {
+    "de": "Live-Vorschau",
+    "fr": "Aperçu en direct",
+    "es": "Vista previa en vivo",
+    "uk": "Живий попередній перегляд",
+    "hu": "Élő előnézet"
+  },
+  "Category markers": {
+    "de": "Kategoriemarkierungen",
+    "fr": "Indicateurs de catégorie",
+    "es": "Indicadores de categoría",
+    "uk": "Позначки категорій",
+    "hu": "Kategóriajelölések"
+  },
+  "Badges": {
+    "de": "Abzeichen",
+    "fr": "Étiquettes",
+    "es": "Etiquetas",
+    "uk": "Текстові позначки",
+    "hu": "Címkék"
+  },
+  "Icons": {
+    "de": "Symbole",
+    "fr": "Icônes",
+    "es": "Iconos",
+    "uk": "Значки",
+    "hu": "Ikonok"
+  },
+  "None": {
+    "de": "Keine",
+    "fr": "Aucun",
+    "es": "Ninguno",
+    "uk": "Немає",
+    "hu": "Nincs"
+  },
+  "Show hidden shortcuts": {
+    "de": "Ausgeblendete Tastenkürzel anzeigen",
+    "fr": "Afficher les raccourcis masqués",
+    "es": "Mostrar atajos ocultos",
+    "uk": "Показати приховані сполучення",
+    "hu": "Rejtett gyorsbillentyűk megjelenítése"
+  },
+  "Bookmark and hidden indicators": {
+    "de": "Lesezeichen- und Ausblendmarkierungen",
+    "fr": "Indicateurs de favoris et de masquage",
+    "es": "Indicadores de favoritos y ocultos",
+    "uk": "Позначки закладок і прихованих сполучень",
+    "hu": "Könyvjelző- és rejtettségjelölések"
+  },
+  "Reduce spacing and padding.": {
+    "de": "Abstände verringern.",
+    "fr": "Réduire les espacements.",
+    "es": "Reducir los espacios y márgenes.",
+    "uk": "Зменшити відступи.",
+    "hu": "Térközök és margók csökkentése."
+  },
+  "Show application icons beside shortcut labels.": {
+    "de": "App-Symbole neben den Beschriftungen anzeigen.",
+    "fr": "Afficher les icônes des applications à côté des libellés.",
+    "es": "Mostrar iconos de aplicaciones junto a las etiquetas.",
+    "uk": "Показувати значки застосунків біля назв.",
+    "hu": "Alkalmazásikonok megjelenítése a feliratok mellett."
+  },
+  "Show icons for commands and system actions.": {
+    "de": "Symbole für Befehle und Systemaktionen anzeigen.",
+    "fr": "Afficher les icônes des commandes et actions système.",
+    "es": "Mostrar iconos de comandos y acciones del sistema.",
+    "uk": "Показувати значки команд і системних дій.",
+    "hu": "Parancsok és rendszerműveletek ikonjainak megjelenítése."
+  },
+  "Include shortcuts hidden in the main app.": {
+    "de": "In der Haupt-App ausgeblendete Tastenkürzel einbeziehen.",
+    "fr": "Inclure les raccourcis masqués dans l’application.",
+    "es": "Incluir los atajos ocultos en la aplicación.",
+    "uk": "Додати сполучення, приховані в головному застосунку.",
+    "hu": "A fő alkalmazásban rejtett gyorsbillentyűk megjelenítése."
+  },
+  "Start simple. Enable the tools you need. Previews use sample shortcuts.": {
+    "de": "Einfach starten. Aktiviere die benötigten Funktionen. Vorschauen verwenden Beispieldaten.",
+    "fr": "Commencez simplement. Activez les outils nécessaires. Les aperçus utilisent des exemples.",
+    "es": "Empieza con lo esencial. Activa las herramientas que necesites. Las vistas previas usan ejemplos.",
+    "uk": "Почніть із простого. Увімкніть потрібні інструменти. Перегляди містять приклади.",
+    "hu": "Kezdd egyszerűen. Kapcsold be a szükséges eszközöket. Az előnézetek mintaadatokat használnak."
+  },
+  "Keep favorite shortcuts and sources close at hand. Turning this off keeps your saved bookmarks.": {
+    "de": "Bevorzugte Tastenkürzel und Quellen griffbereit halten. Gespeicherte Lesezeichen bleiben beim Ausschalten erhalten.",
+    "fr": "Gardez vos raccourcis et sources favoris à portée de main. Les favoris enregistrés sont conservés après désactivation.",
+    "es": "Mantén a mano tus atajos y fuentes favoritos. Al desactivar esta función se conservan los favoritos.",
+    "uk": "Тримайте улюблені сполучення та джерела під рукою. Вимкнення зберігає закладки.",
+    "hu": "Tartsd kéznél kedvenc gyorsbillentyűidet és forrásaidat. Kikapcsoláskor a könyvjelzők megmaradnak."
+  },
+  "Hide shortcuts you do not want to see. Turning this off shows everything and keeps your hidden marks.": {
+    "de": "Unerwünschte Tastenkürzel ausblenden. Ausschalten zeigt alles wieder an und behält die Markierungen.",
+    "fr": "Masquez les raccourcis inutiles. Désactiver cette option affiche tout et conserve les marques de masquage.",
+    "es": "Oculta los atajos que no quieras ver. Al desactivar se muestra todo y se conservan las marcas.",
+    "uk": "Приховайте непотрібні сполучення. Вимкнення показує все та зберігає позначки.",
+    "hu": "Rejtsd el a nem kívánt gyorsbillentyűket. Kikapcsoláskor minden megjelenik, a jelölések megmaradnak."
+  },
+  "Explore shortcuts on a keyboard, with modifier layers and key overlays.": {
+    "de": "Tastenkürzel auf einer Tastatur mit Modifikatorebenen und Tastenanzeigen erkunden.",
+    "fr": "Explorez les raccourcis sur un clavier avec couches de modificateurs et indications sur les touches.",
+    "es": "Explora los atajos en un teclado con capas de modificadores e indicaciones en las teclas.",
+    "uk": "Переглядайте сполучення на клавіатурі з шарами модифікаторів і позначками.",
+    "hu": "Fedezd fel a gyorsbillentyűket a billentyűzeten, módosítórétegekkel és jelölésekkel."
+  },
+  "Create and change supported desktop shortcuts. Disabling the editor leaves your bindings intact.": {
+    "de": "Unterstützte Desktop-Tastenkürzel erstellen und ändern. Ausschalten verändert keine Belegungen.",
+    "fr": "Créez et modifiez les raccourcis pris en charge. Désactiver l’éditeur conserve vos raccourcis.",
+    "es": "Crea y modifica los atajos compatibles. Desactivar el editor conserva las asignaciones.",
+    "uk": "Створюйте та змінюйте підтримувані сполучення. Вимкнення редактора зберігає призначення.",
+    "hu": "Hozz létre és módosíts támogatott gyorsbillentyűket. A szerkesztő kikapcsolása nem változtatja meg a kiosztást."
+  },
+  "Show a shortcut guide when you hold Super. Configure its appearance from App settings.": {
+    "de": "Tastaturhilfe beim Halten von Super anzeigen. Darstellung in den App-Einstellungen anpassen.",
+    "fr": "Affichez le guide en maintenant Super. Réglez son apparence dans les paramètres.",
+    "es": "Muestra la guía al mantener Super pulsada. Configura su aspecto en los ajustes.",
+    "uk": "Показуйте довідник, утримуючи Super. Налаштуйте вигляд у параметрах застосунку.",
+    "hu": "A Super nyomva tartásakor megjelenik a segéd. A megjelenése az alkalmazás beállításaiban módosítható."
+  },
+  "Choose which window receives actions launched from the shortcut list.": {
+    "de": "Festlegen, welches Fenster die Aktionen der Tastenkürzelliste erhält.",
+    "fr": "Choisissez la fenêtre qui reçoit les actions lancées depuis la liste.",
+    "es": "Elige la ventana que recibe las acciones de la lista de atajos.",
+    "uk": "Виберіть вікно, яке отримує дії зі списку сполучень.",
+    "hu": "Válaszd ki, melyik ablak kapja a listából indított műveleteket."
+  },
+  "Filter by modifier and shortcut type, group shortcuts, or change the list layout.": {
+    "de": "Nach Modifikator und Typ filtern, Tastenkürzel gruppieren oder die Listenansicht ändern.",
+    "fr": "Filtrez par modificateur ou type, regroupez les raccourcis et changez la disposition.",
+    "es": "Filtra por modificador y tipo, agrupa atajos o cambia el diseño de la lista.",
+    "uk": "Фільтруйте за модифікатором і типом, групуйте сполучення або змінюйте компонування.",
+    "hu": "Szűrj módosító és típus szerint, csoportosítsd a gyorsbillentyűket vagy változtasd meg az elrendezést."
+  },
+  "Hold keys to filter the list. Scroll and click actions while modifiers are held; Escape exits.": {
+    "de": "Tasten halten, um die Liste zu filtern. Scrollen und Klicken funktionieren dabei weiter; Escape beendet den Modus.",
+    "fr": "Maintenez des touches pour filtrer la liste. Le défilement et les clics restent actifs ; Échap quitte le mode.",
+    "es": "Mantén teclas pulsadas para filtrar. Puedes desplazarte y pulsar acciones; Escape sale del modo.",
+    "uk": "Утримуйте клавіші для фільтрації. Прокручуйте й натискайте дії; Escape завершує режим.",
+    "hu": "Tartsd nyomva a billentyűket a szűréshez. Közben görgethetsz és kattinthatsz; Escape: kilépés."
+  },
+  "Keep up to 20 recent searches on this device and suggest them as you type.": {
+    "de": "Bis zu 20 letzte Suchen auf diesem Gerät speichern und beim Tippen vorschlagen.",
+    "fr": "Conservez jusqu’à 20 recherches sur cet appareil et retrouvez-les pendant la saisie.",
+    "es": "Guarda hasta 20 búsquedas recientes en este dispositivo y sugiérelas al escribir.",
+    "uk": "Зберігайте до 20 останніх пошуків на пристрої та отримуйте підказки під час введення.",
+    "hu": "Legfeljebb 20 keresés tárolása ezen az eszközön, javaslatokkal gépelés közben."
+  },
+  "Choose a consistent look for the app and keyboard guide. Rounded uses soft corners; Square uses straight edges and monospace text.": {
+    "de": "Einheitlichen Stil für App und Tastaturhilfe wählen. Abgerundet nutzt weiche Ecken, Eckig gerade Kanten und Festbreitenschrift.",
+    "fr": "Choisissez un style commun à l’application et au guide. Arrondi utilise des coins doux ; Angulaire, des bords droits et une police à chasse fixe.",
+    "es": "Elige un estilo común para la aplicación y la guía. Redondeado usa esquinas suaves; Cuadrado, bordes rectos y texto monoespaciado.",
+    "uk": "Виберіть спільний стиль застосунку й довідника. Заокруглений має м’які кути; Прямокутний — прямі краї та моноширинний текст.",
+    "hu": "Válassz egységes stílust az alkalmazáshoz és a segédhez. A Lekerekített lágy sarkokat, a Szögletes egyenes széleket és fix szélességű betűket használ."
+  },
+  "Settings…": {
+    "de": "Einstellungen…",
+    "fr": "Paramètres…",
+    "es": "Ajustes…",
+    "uk": "Налаштування…",
+    "hu": "Beállítások…"
+  },
+  "Record": {
+    "de": "Aufzeichnen",
+    "fr": "Enregistrer",
+    "es": "Grabar",
+    "uk": "Записати",
+    "hu": "Rögzítés"
+  },
+  "Press shortcut…": {
+    "de": "Tastenkombination drücken…",
+    "fr": "Appuyez sur le raccourci…",
+    "es": "Pulsa el atajo…",
+    "uk": "Натисніть сполучення…",
+    "hu": "Nyomja meg a billentyűkombinációt…",
+    "ko": "단축키를 누르세요…",
+    "ja": "ショートカットを押してください…",
+    "zh_CN": "请按快捷键…"
+  },
+  "Global shortcut updated.": {
+    "de": "Globales Tastenkürzel aktualisiert.",
+    "fr": "Raccourci global mis à jour.",
+    "es": "Atajo global actualizado.",
+    "uk": "Глобальне сполучення оновлено.",
+    "hu": "Globális gyorsbillentyű frissítve."
+  },
+  "Configuration files": {
+    "de": "Konfigurationsdateien",
+    "fr": "Fichiers de configuration",
+    "es": "Archivos de configuración",
+    "uk": "Файли налаштувань",
+    "hu": "Beállításfájlok"
+  },
+  "Preferences & searches": {
+    "de": "Einstellungen und Suchen",
+    "fr": "Préférences et recherches",
+    "es": "Preferencias y búsquedas",
+    "uk": "Налаштування та пошуки",
+    "hu": "Beállítások és keresések"
+  },
+  "Custom shortcut sets": {
+    "de": "Eigene Tastenkürzelsätze",
+    "fr": "Jeux de raccourcis personnels",
+    "es": "Conjuntos de atajos personalizados",
+    "uk": "Власні набори сполучень",
+    "hu": "Egyéni gyorsbillentyű-készletek"
+  },
+  "Available while the main window is focused.": {
+    "de": "Verfügbar, wenn das Hauptfenster fokussiert ist.",
+    "fr": "Disponibles lorsque la fenêtre principale est active.",
+    "es": "Disponibles cuando la ventana principal está activa.",
+    "uk": "Доступні, коли головне вікно активне.",
+    "hu": "A főablak aktív állapotában használhatók."
+  },
+  "Show app shortcuts": {
+    "de": "App-Tastenkürzel anzeigen",
+    "fr": "Afficher les raccourcis de l’application",
+    "es": "Mostrar atajos de la aplicación",
+    "uk": "Показати сполучення застосунку",
+    "hu": "Alkalmazás gyorsbillentyűinek megjelenítése"
+  },
+  "Focus search": {
+    "de": "Suche fokussieren",
+    "fr": "Activer la recherche",
+    "es": "Enfocar búsqueda",
+    "uk": "Перейти до пошуку",
+    "hu": "Keresőmező fókuszálása"
+  },
+  "Choose shortcut source": {
+    "de": "Tastenkürzelquelle wählen",
+    "fr": "Choisir la source des raccourcis",
+    "es": "Elegir fuente de atajos",
+    "uk": "Вибрати джерело сполучень",
+    "hu": "Gyorsbillentyűforrás kiválasztása"
+  },
+  "Choose features": {
+    "de": "Funktionen auswählen",
+    "fr": "Choisir les fonctionnalités",
+    "es": "Elegir funciones",
+    "uk": "Вибрати функції",
+    "hu": "Funkciók kiválasztása"
+  },
+  "Open settings": {
+    "de": "Einstellungen öffnen",
+    "fr": "Ouvrir les paramètres",
+    "es": "Abrir ajustes",
+    "uk": "Відкрити налаштування",
+    "hu": "Beállítások megnyitása"
+  },
+  "Open app settings": {
+    "de": "App-Einstellungen öffnen",
+    "fr": "Ouvrir les paramètres de l’application",
+    "es": "Abrir ajustes de la aplicación",
+    "uk": "Відкрити налаштування застосунку",
+    "hu": "Alkalmazásbeállítások megnyitása"
+  },
+  "Open view options": {
+    "de": "Ansichtsoptionen öffnen",
+    "fr": "Ouvrir les options d’affichage",
+    "es": "Abrir opciones de vista",
+    "uk": "Відкрити параметри вигляду",
+    "hu": "Nézetbeállítások megnyitása"
+  },
+  "Clear all filters": {
+    "de": "Alle Filter zurücksetzen",
+    "fr": "Effacer tous les filtres",
+    "es": "Borrar todos los filtros",
+    "uk": "Очистити всі фільтри",
+    "hu": "Összes szűrő törlése"
+  },
+  "Close current window": {
+    "de": "Aktuelles Fenster schließen",
+    "fr": "Fermer la fenêtre actuelle",
+    "es": "Cerrar ventana actual",
+    "uk": "Закрити поточне вікно",
+    "hu": "Aktuális ablak bezárása"
+  },
+  "Move between controls": {
+    "de": "Zwischen Steuerelementen wechseln",
+    "fr": "Passer entre les commandes",
+    "es": "Moverse entre controles",
+    "uk": "Перехід між елементами",
+    "hu": "Váltás a vezérlők között"
+  },
+  "Activate focused control": {
+    "de": "Fokussiertes Element aktivieren",
+    "fr": "Activer la commande sélectionnée",
+    "es": "Activar control seleccionado",
+    "uk": "Активувати вибраний елемент",
+    "hu": "Kijelölt vezérlő aktiválása"
+  },
+  "Navigate options": {
+    "de": "Optionen durchgehen",
+    "fr": "Parcourir les options",
+    "es": "Recorrer opciones",
+    "uk": "Перехід між параметрами",
+    "hu": "Váltás a lehetőségek között"
+  },
+  "Show saved stars and hidden-item marks from the shortcut browser. This does not filter the guide.": {
+    "de": "Gespeicherte Lesezeichen und Ausblendmarkierungen anzeigen. Die Hilfe wird dadurch nicht gefiltert.",
+    "fr": "Affichez les favoris et marques de masquage enregistrés. Cela ne filtre pas le guide.",
+    "es": "Muestra las estrellas y marcas de ocultos guardadas. Esto no filtra la guía.",
+    "uk": "Показуйте збережені зірочки й позначки прихованих сполучень. Це не фільтрує довідник.",
+    "hu": "Mentett csillagok és rejtettségjelölések megjelenítése. Ez nem szűri a segédet."
+  },
+  "Action or application": {
+    "de": "Aktion oder Anwendung",
+    "fr": "Action ou application",
+    "es": "Acción o aplicación",
+    "uk": "Дія або застосунок",
+    "hu": "Művelet vagy alkalmazás"
+  },
+  "Actions": {
+    "de": "Aktionen",
+    "fr": "Actions",
+    "es": "Acciones",
+    "uk": "Дії",
+    "hu": "Műveletek"
+  },
+  "App Shortcuts": {
+    "de": "App-Tastenkürzel",
+    "fr": "Raccourcis de l’application",
+    "es": "Atajos de la aplicación",
+    "uk": "Сполучення застосунку",
+    "hu": "Alkalmazás gyorsbillentyűi"
+  },
+  "Apply shortcut": {
+    "de": "Tastenkürzel anwenden",
+    "fr": "Appliquer le raccourci",
+    "es": "Aplicar atajo",
+    "uk": "Застосувати сполучення",
+    "hu": "Gyorsbillentyű alkalmazása"
+  },
+  "Back to shortcuts": {
+    "de": "Zurück zu den Tastenkürzeln",
+    "fr": "Retour aux raccourcis",
+    "es": "Volver a los atajos",
+    "uk": "Назад до сполучень",
+    "hu": "Vissza a gyorsbillentyűkhöz"
+  },
+  "Capture shortcut": {
+    "de": "Tastenkürzel erfassen",
+    "fr": "Capturer le raccourci",
+    "es": "Capturar atajo",
+    "uk": "Записати сполучення",
+    "hu": "Gyorsbillentyű rögzítése"
+  },
+  "Choose a modifier group and key, then choose what it should do. Changes apply to your live Hyprland bindings.": {
+    "de": "Modifikatoren und Taste wählen, dann die Aktion auswählen. Änderungen gelten für die aktiven Hyprland-Belegungen.",
+    "fr": "Choisissez les modificateurs et une touche, puis l’action. Les changements s’appliquent aux raccourcis Hyprland actifs.",
+    "es": "Elige modificadores y una tecla, y después la acción. Los cambios se aplican a las asignaciones activas de Hyprland.",
+    "uk": "Виберіть модифікатори, клавішу та дію. Зміни застосовуються до активних призначень Hyprland.",
+    "hu": "Válassz módosítókat és billentyűt, majd műveletet. A változtatások az aktív Hyprland-kiosztásra vonatkoznak."
+  },
+  "Choose a supported Super shortcut, or use the key picker.": {
+    "de": "Unterstütztes Super-Tastenkürzel wählen oder die Tastenauswahl verwenden.",
+    "fr": "Choisissez un raccourci Super pris en charge ou utilisez le sélecteur de touches.",
+    "es": "Elige un atajo Super compatible o usa el selector de teclas.",
+    "uk": "Виберіть підтримуване сполучення Super або скористайтеся вибором клавіш.",
+    "hu": "Válassz támogatott Super-gyorsbillentyűt, vagy használd a billentyűválasztót."
+  },
+  "Choose shortcut sets": {
+    "de": "Tastenkürzelsätze wählen",
+    "fr": "Choisir les jeux de raccourcis",
+    "es": "Elegir conjuntos de atajos",
+    "uk": "Вибрати набори сполучень",
+    "hu": "Gyorsbillentyű-készletek kiválasztása"
+  },
+  "Choose the modifier combination for the shortcut": {
+    "de": "Modifikatorkombination wählen",
+    "fr": "Choisissez les modificateurs du raccourci",
+    "es": "Elige los modificadores del atajo",
+    "uk": "Виберіть комбінацію модифікаторів",
+    "hu": "Válaszd ki a gyorsbillentyű módosítóit"
+  },
+  "Choose what to reset. Unselected data stays as it is. Your desktop shortcut bindings will not be changed.": {
+    "de": "Auswählen, was zurückgesetzt wird. Nicht ausgewählte Daten und Desktop-Tastenkürzel bleiben unverändert.",
+    "fr": "Choisissez les éléments à réinitialiser. Les données non sélectionnées et les raccourcis du bureau restent inchangés.",
+    "es": "Elige qué restablecer. Los datos no seleccionados y los atajos del escritorio no cambiarán.",
+    "uk": "Виберіть, що скинути. Невибрані дані та сполучення робочого столу не зміняться.",
+    "hu": "Válaszd ki, mit állítasz vissza. A nem kijelölt adatok és az asztali gyorsbillentyűk változatlanok maradnak."
+  },
+  "Click, then press a shortcut including Super. Escape cancels capture.": {
+    "de": "Klicken und ein Tastenkürzel mit Super drücken. Escape bricht ab.",
+    "fr": "Cliquez, puis appuyez sur un raccourci avec Super. Échap annule la capture.",
+    "es": "Haz clic y pulsa un atajo con Super. Escape cancela la captura.",
+    "uk": "Натисніть, а потім введіть сполучення із Super. Escape скасовує запис.",
+    "hu": "Kattints, majd nyomj meg egy Super-t tartalmazó gyorsbillentyűt. Escape: megszakítás."
+  },
+  "Command arguments (optional)": {
+    "de": "Befehlsargumente (optional)",
+    "fr": "Arguments de la commande (facultatif)",
+    "es": "Argumentos del comando (opcional)",
+    "uk": "Аргументи команди (необов’язково)",
+    "hu": "Parancsargumentumok (nem kötelező)"
+  },
+  "Confirm replacing or removing the current shortcut": {
+    "de": "Ersetzen oder Entfernen bestätigen",
+    "fr": "Confirmer le remplacement ou la suppression",
+    "es": "Confirmar sustitución o eliminación",
+    "uk": "Підтвердьте заміну або видалення",
+    "hu": "Jelenlegi gyorsbillentyű cseréjének vagy törlésének megerősítése"
+  },
+  "Create a set…": {
+    "de": "Satz erstellen…",
+    "fr": "Créer un jeu…",
+    "es": "Crear un conjunto…",
+    "uk": "Створити набір…",
+    "hu": "Készlet létrehozása…"
+  },
+  "Custom title (optional)": {
+    "de": "Eigener Titel (optional)",
+    "fr": "Titre personnalisé (facultatif)",
+    "es": "Título personalizado (opcional)",
+    "uk": "Власна назва (необов’язково)",
+    "hu": "Egyéni név (nem kötelező)"
+  },
+  "Default: Win+Shift+K. Win+K is a convenient alternative, but replaces the Omarchy shortcut.": {
+    "de": "Standard: Win+Shift+K. Win+K ist eine praktische Alternative, ersetzt aber das Omarchy-Tastenkürzel.",
+    "fr": "Par défaut : Win+Shift+K. Win+K est une alternative pratique, mais remplace le raccourci Omarchy.",
+    "es": "Predeterminado: Win+Shift+K. Win+K es una alternativa cómoda, pero sustituye el atajo de Omarchy.",
+    "uk": "Типово: Win+Shift+K. Win+K — зручна альтернатива, але замінює сполучення Omarchy.",
+    "hu": "Alapérték: Win+Shift+K. A Win+K kényelmes alternatíva, de lecseréli az Omarchy gyorsbillentyűjét."
+  },
+  "Dismiss notification": {
+    "de": "Benachrichtigung schließen",
+    "fr": "Fermer la notification",
+    "es": "Descartar notificación",
+    "uk": "Закрити сповіщення",
+    "hu": "Értesítés bezárása"
+  },
+  "Find a shortcut set…": {
+    "de": "Tastenkürzelsatz suchen…",
+    "fr": "Rechercher un jeu de raccourcis…",
+    "es": "Buscar un conjunto de atajos…",
+    "uk": "Знайти набір сполучень…",
+    "hu": "Gyorsbillentyű-készlet keresése…"
+  },
+  "Hover a category to review it": {
+    "de": "Für eine Vorschau auf eine Kategorie zeigen",
+    "fr": "Survolez une catégorie pour la consulter",
+    "es": "Pasa el cursor por una categoría para revisarla",
+    "uk": "Наведіть на категорію для перегляду",
+    "hu": "Mutass egy kategóriára az áttekintéshez"
+  },
+  "How to create shortcut sets": {
+    "de": "Tastenkürzelsätze erstellen",
+    "fr": "Créer des jeux de raccourcis",
+    "es": "Cómo crear conjuntos de atajos",
+    "uk": "Як створити набори сполучень",
+    "hu": "Gyorsbillentyű-készletek létrehozása"
+  },
+  "Import set…": {
+    "de": "Satz importieren…",
+    "fr": "Importer un jeu…",
+    "es": "Importar conjunto…",
+    "uk": "Імпортувати набір…",
+    "hu": "Készlet importálása…"
+  },
+  "Import shortcut set": {
+    "de": "Tastenkürzelsatz importieren",
+    "fr": "Importer un jeu de raccourcis",
+    "es": "Importar conjunto de atajos",
+    "uk": "Імпортувати набір сполучень",
+    "hu": "Gyorsbillentyű-készlet importálása"
+  },
+  "Include this set in the source menu. Saved marks are kept when disabled.": {
+    "de": "Diesen Satz im Quellenmenü anzeigen. Gespeicherte Markierungen bleiben beim Ausschalten erhalten.",
+    "fr": "Inclure ce jeu dans le menu des sources. Les marques sont conservées après désactivation.",
+    "es": "Incluir este conjunto en el menú de fuentes. Las marcas se conservan al desactivarlo.",
+    "uk": "Додати набір до меню джерел. Вимкнення зберігає позначки.",
+    "hu": "Készlet felvétele a forrásmenübe. Kikapcsoláskor a jelölések megmaradnak."
+  },
+  "Installed apps with available shortcuts appear in the source menu. Turning a set off keeps its bookmarks and hidden shortcuts.": {
+    "de": "Installierte Apps mit Tastenkürzeln erscheinen im Quellenmenü. Ausschalten erhält Lesezeichen und Ausblendmarkierungen.",
+    "fr": "Les applications installées avec des raccourcis figurent dans le menu des sources. Désactiver un jeu conserve ses favoris et raccourcis masqués.",
+    "es": "Las aplicaciones instaladas con atajos aparecen en el menú de fuentes. Desactivar un conjunto conserva favoritos y atajos ocultos.",
+    "uk": "Установлені застосунки зі сполученнями з’являються в меню джерел. Вимкнення набору зберігає закладки й приховані сполучення.",
+    "hu": "A telepített, gyorsbillentyűket kínáló alkalmazások megjelennek a forrásmenüben. Kikapcsoláskor a könyvjelzők és rejtett elemek megmaradnak."
+  },
+  "Loading active keyboard layout…": {
+    "de": "Aktive Tastaturbelegung wird geladen…",
+    "fr": "Chargement de la disposition du clavier…",
+    "es": "Cargando distribución del teclado…",
+    "uk": "Завантаження розкладки клавіатури…",
+    "hu": "Aktív billentyűzetkiosztás betöltése…"
+  },
+  "Loading preview…": {
+    "de": "Vorschau wird geladen…",
+    "fr": "Chargement de l’aperçu…",
+    "es": "Cargando vista previa…",
+    "uk": "Завантаження перегляду…",
+    "hu": "Előnézet betöltése…"
+  },
+  "Loading shortcuts…": {
+    "de": "Tastenkürzel werden geladen…",
+    "fr": "Chargement des raccourcis…",
+    "es": "Cargando atajos…",
+    "uk": "Завантаження скорочень…",
+    "hu": "Gyorsbillentyűk betöltése…",
+    "ko": "단축키 로딩 중…",
+    "ja": "ショートカットを読み込み中…",
+    "zh_CN": "正在加载快捷键…"
+  },
+  "Loading…": {
+    "de": "Wird geladen…",
+    "fr": "Chargement…",
+    "es": "Cargando…",
+    "uk": "Завантаження…",
+    "hu": "Betöltés…",
+    "ko": "불러오는 중…",
+    "ja": "読み込み中…",
+    "zh_CN": "正在加载…"
+  },
+  "No other shortcuts match this layer and filters.": {
+    "de": "Keine weiteren Tastenkürzel passen zu dieser Ebene und den Filtern.",
+    "fr": "Aucun autre raccourci ne correspond à cette couche et aux filtres.",
+    "es": "Ningún otro atajo coincide con esta capa y los filtros.",
+    "uk": "Інші сполучення не відповідають шару й фільтрам.",
+    "hu": "Nincs más gyorsbillentyű ehhez a réteghez és a szűrőkhöz."
+  },
+  "Open Project Folder": {
+    "de": "Projektordner öffnen",
+    "fr": "Ouvrir le dossier du projet",
+    "es": "Abrir carpeta del proyecto",
+    "uk": "Відкрити теку проєкту",
+    "hu": "Projektmappa megnyitása"
+  },
+  "Open shortcut-set folder": {
+    "de": "Tastenkürzelordner öffnen",
+    "fr": "Ouvrir le dossier des jeux",
+    "es": "Abrir carpeta de conjuntos",
+    "uk": "Відкрити теку наборів",
+    "hu": "Gyorsbillentyű-készletek mappájának megnyitása"
+  },
+  "Open, reveal or copy this resource": {
+    "de": "Ressource öffnen, anzeigen oder kopieren",
+    "fr": "Ouvrir, afficher ou copier cette ressource",
+    "es": "Abrir, mostrar o copiar este recurso",
+    "uk": "Відкрити, показати або скопіювати ресурс",
+    "hu": "Erőforrás megnyitása, megjelenítése vagy másolása"
+  },
+  "Pick a key; assigned actions are shown beside each key": {
+    "de": "Taste wählen; zugewiesene Aktionen stehen daneben",
+    "fr": "Choisissez une touche ; les actions affectées sont affichées à côté",
+    "es": "Elige una tecla; las acciones asignadas aparecen a su lado",
+    "uk": "Виберіть клавішу; призначені дії показано поруч",
+    "hu": "Válassz billentyűt; a hozzárendelt műveletek mellette láthatók"
+  },
+  "Preview unavailable": {
+    "de": "Vorschau nicht verfügbar",
+    "fr": "Aperçu indisponible",
+    "es": "Vista previa no disponible",
+    "uk": "Перегляд недоступний",
+    "hu": "Az előnézet nem érhető el"
+  },
+  "Refresh": {
+    "de": "Aktualisieren",
+    "fr": "Actualiser",
+    "es": "Actualizar",
+    "uk": "Оновити",
+    "hu": "Frissítés"
+  },
+  "Remove shortcut": {
+    "de": "Tastenkürzel entfernen",
+    "fr": "Supprimer le raccourci",
+    "es": "Eliminar atajo",
+    "uk": "Видалити сполучення",
+    "hu": "Gyorsbillentyű eltávolítása"
+  },
+  "Remove this binding. Select the confirmation checkbox to allow removal.": {
+    "de": "Belegung entfernen. Zur Bestätigung das Kontrollkästchen aktivieren.",
+    "fr": "Supprimez cette affectation. Cochez la confirmation pour autoriser la suppression.",
+    "es": "Elimina esta asignación. Marca la confirmación para permitir eliminarla.",
+    "uk": "Видаліть призначення. Установіть прапорець підтвердження.",
+    "hu": "Kiosztás eltávolítása. A törlés engedélyezéséhez jelöld be a megerősítést."
+  },
+  "Reset to Defaults": {
+    "de": "Standardwerte wiederherstellen",
+    "fr": "Rétablir les valeurs par défaut",
+    "es": "Restablecer valores predeterminados",
+    "uk": "Відновити типові налаштування",
+    "hu": "Alapértékek visszaállítása"
+  },
+  "Resource preview": {
+    "de": "Ressourcenvorschau",
+    "fr": "Aperçu de la ressource",
+    "es": "Vista previa del recurso",
+    "uk": "Перегляд ресурсу",
+    "hu": "Erőforrás előnézete"
+  },
+  "Review everything that will be cleared before resetting the app.": {
+    "de": "Vor dem Zurücksetzen alle zu löschenden Daten überprüfen.",
+    "fr": "Vérifiez les données à effacer avant de réinitialiser l’application.",
+    "es": "Revisa lo que se borrará antes de restablecer la aplicación.",
+    "uk": "Перегляньте дані, які буде очищено перед скиданням.",
+    "hu": "Tekintsd át a törlendő adatokat az alkalmazás visszaállítása előtt."
+  },
+  "Search shortcuts…": {
+    "de": "Tastenkürzel suchen…",
+    "fr": "Rechercher des raccourcis…",
+    "es": "Buscar atajos…",
+    "uk": "Пошук сполучень…",
+    "hu": "Gyorsbillentyűk keresése…"
+  },
+  "Select or deselect every reset category. Nothing changes until you confirm.": {
+    "de": "Alle Kategorien auswählen oder abwählen. Änderungen erfolgen erst nach Bestätigung.",
+    "fr": "Sélectionnez ou désélectionnez toutes les catégories. Rien ne change avant confirmation.",
+    "es": "Selecciona o deselecciona todas las categorías. Nada cambia hasta confirmar.",
+    "uk": "Виберіть або скасуйте всі категорії. Зміни відбудуться лише після підтвердження.",
+    "hu": "Összes kategória kijelölése vagy törlése. Csak megerősítés után történik változás."
+  },
+  "Select the confirmation checkbox before removing this shortcut.": {
+    "de": "Vor dem Entfernen das Bestätigungsfeld aktivieren.",
+    "fr": "Cochez la confirmation avant de supprimer ce raccourci.",
+    "es": "Marca la confirmación antes de eliminar el atajo.",
+    "uk": "Установіть прапорець підтвердження перед видаленням.",
+    "hu": "Jelöld be a megerősítést a gyorsbillentyű eltávolítása előtt."
+  },
+  "Shortcut sets": {
+    "de": "Tastenkürzelsätze",
+    "fr": "Jeux de raccourcis",
+    "es": "Conjuntos de atajos",
+    "uk": "Набори сполучень",
+    "hu": "Gyorsbillentyű-készletek"
+  },
+  "Show explanatory text inside feature cards. Search still matches descriptions when hidden.": {
+    "de": "Erklärungen in Funktionskarten anzeigen. Die Suche berücksichtigt auch ausgeblendete Beschreibungen.",
+    "fr": "Afficher les explications dans les cartes. La recherche utilise aussi les descriptions masquées.",
+    "es": "Mostrar explicaciones en las tarjetas. La búsqueda incluye las descripciones ocultas.",
+    "uk": "Показувати пояснення на картках. Пошук також враховує приховані описи.",
+    "hu": "Magyarázatok megjelenítése a kártyákon. A keresés a rejtett leírásokban is keres."
+  },
+  "Show feature cards in a grid. Turn off for a single list.": {
+    "de": "Funktionskarten im Raster anzeigen. Ausschalten verwendet eine Liste.",
+    "fr": "Afficher les cartes en grille. Désactivez pour une liste unique.",
+    "es": "Mostrar las tarjetas en cuadrícula. Desactiva para una sola lista.",
+    "uk": "Показувати картки сіткою. Вимкніть для одного списку.",
+    "hu": "Kártyák megjelenítése rácsban. Kikapcsolva egyetlen lista látható."
+  },
+  "Show sample previews inside feature cards.": {
+    "de": "Beispielvorschauen in Funktionskarten anzeigen.",
+    "fr": "Afficher des exemples dans les cartes des fonctionnalités.",
+    "es": "Mostrar ejemplos en las tarjetas de funciones.",
+    "uk": "Показувати приклади на картках функцій.",
+    "hu": "Mintaelőnézetek megjelenítése a funkciókártyákon."
+  },
+  "‹  Settings": {
+    "de": "‹  Einstellungen",
+    "fr": "‹  Paramètres",
+    "es": "‹  Ajustes",
+    "uk": "‹  Налаштування",
+    "hu": "‹  Beállítások"
+  },
+  "{shown} of {total} shortcuts": {
+    "de": "{shown} von {total} Tastenkürzeln",
+    "fr": "{shown} sur {total} raccourcis",
+    "es": "{shown} de {total} atajos",
+    "uk": "{shown} із {total} сполучень",
+    "hu": "{shown} / {total} gyorsbillentyű"
+  },
+  "{count} hidden": {
+    "de": "{count} ausgeblendet",
+    "fr": "{count} masqués",
+    "es": "{count} ocultos",
+    "uk": "{count} приховано",
+    "hu": "{count} rejtett"
+  },
+  "Live Hyprland bindings": {
+    "de": "Aktive Hyprland-Belegungen",
+    "fr": "Raccourcis Hyprland actifs",
+    "es": "Asignaciones activas de Hyprland",
+    "uk": "Активні призначення Hyprland",
+    "hu": "Aktív Hyprland-kiosztás"
+  },
+  "Show delay (milliseconds; 0 = instant)": {
+    "de": "Anzeigeverzögerung (Millisekunden; 0 = sofort)",
+    "fr": "Délai d’affichage (millisecondes ; 0 = immédiat)",
+    "es": "Retraso de aparición (milisegundos; 0 = inmediato)",
+    "uk": "Затримка показу (мілісекунди; 0 = миттєво)",
+    "hu": "Megjelenítési késleltetés (ezredmásodperc; 0 = azonnal)"
+  },
+  "Fade duration (milliseconds; 0 = instant)": {
+    "de": "Überblenddauer (Millisekunden; 0 = sofort)",
+    "fr": "Durée de transition (millisecondes ; 0 = immédiat)",
+    "es": "Duración de transición (milisegundos; 0 = inmediato)",
+    "uk": "Тривалість переходу (мілісекунди; 0 = миттєво)",
+    "hu": "Átmenet időtartama (ezredmásodperc; 0 = azonnal)"
+  },
+  "Action": {
+    "de": "Aktion",
+    "fr": "Action",
+    "es": "Acción",
+    "uk": "Дія",
+    "hu": "Művelet"
+  },
+  "Available": {
+    "de": "Verfügbar",
+    "fr": "Disponible",
+    "es": "Disponible",
+    "uk": "Доступно",
+    "hu": "Elérhető"
+  },
+  "Change": {
+    "de": "Ändern",
+    "fr": "Modifier",
+    "es": "Cambiar",
+    "uk": "Змінити",
+    "hu": "Módosítás"
+  },
+  "Confirm": {
+    "de": "Bestätigen",
+    "fr": "Confirmer",
+    "es": "Confirmar",
+    "uk": "Підтвердити",
+    "hu": "Megerősítés"
+  },
+  "Register": {
+    "de": "Registrieren",
+    "fr": "Enregistrer",
+    "es": "Registrar",
+    "uk": "Зареєструвати",
+    "hu": "Hozzáadás"
+  },
+  "Remove": {
+    "de": "Entfernen",
+    "fr": "Supprimer",
+    "es": "Eliminar",
+    "uk": "Видалити",
+    "hu": "Eltávolítás"
+  },
+  "Saving…": {
+    "de": "Wird gespeichert…",
+    "fr": "Enregistrement…",
+    "es": "Guardando…",
+    "uk": "Збереження…",
+    "hu": "Mentés…"
+  },
+  "Shown": {
+    "de": "Angezeigt",
+    "fr": "Affichés",
+    "es": "Visibles",
+    "uk": "Показані",
+    "hu": "Látható"
+  },
+  "Unavailable": {
+    "de": "Nicht verfügbar",
+    "fr": "Indisponible",
+    "es": "No disponible",
+    "uk": "Недоступно",
+    "hu": "Nem érhető el"
+  },
+  "Unsaved changes": {
+    "de": "Ungespeicherte Änderungen",
+    "fr": "Modifications non enregistrées",
+    "es": "Cambios sin guardar",
+    "uk": "Незбережені зміни",
+    "hu": "Nem mentett módosítások"
+  },
+  "The shortcut could not be changed. Your previous shortcut is still active.": {
+    "de": "Das Tastenkürzel konnte nicht geändert werden. Die vorherige Belegung bleibt aktiv.",
+    "fr": "Le raccourci n’a pas pu être modifié. Le précédent reste actif.",
+    "es": "No se pudo cambiar el atajo. El anterior sigue activo.",
+    "uk": "Не вдалося змінити сполучення. Попереднє залишається активним.",
+    "hu": "A gyorsbillentyű nem módosítható. Az előző továbbra is aktív."
+  },
+  "Choose an action and enter a HUD title.": {
+    "de": "Aktion wählen und einen Titel eingeben.",
+    "fr": "Choisissez une action et saisissez un titre.",
+    "es": "Elige una acción e introduce un título.",
+    "uk": "Виберіть дію та введіть назву.",
+    "hu": "Válassz műveletet és adj meg egy nevet."
+  },
+  "The shortcut could not be removed. Your existing shortcuts are unchanged.": {
+    "de": "Das Tastenkürzel konnte nicht entfernt werden. Bestehende Belegungen bleiben unverändert.",
+    "fr": "Le raccourci n’a pas pu être supprimé. Les raccourcis existants restent inchangés.",
+    "es": "No se pudo eliminar el atajo. Los existentes no han cambiado.",
+    "uk": "Не вдалося видалити сполучення. Наявні призначення не змінено.",
+    "hu": "A gyorsbillentyű nem törölhető. A meglévők változatlanok maradtak."
+  },
+  "This shortcut cannot be removed safely. Refresh and try again.": {
+    "de": "Dieses Tastenkürzel kann nicht sicher entfernt werden. Aktualisieren und erneut versuchen.",
+    "fr": "Ce raccourci ne peut pas être supprimé sans risque. Actualisez et réessayez.",
+    "es": "No se puede eliminar este atajo con seguridad. Actualiza e inténtalo de nuevo.",
+    "uk": "Неможливо безпечно видалити сполучення. Оновіть і спробуйте знову.",
+    "hu": "Ez a gyorsbillentyű nem távolítható el biztonságosan. Frissíts és próbáld újra."
+  },
+  "Shortcuts could not be reset. Existing shortcuts are unchanged.": {
+    "de": "Tastenkürzel konnten nicht zurückgesetzt werden. Bestehende Belegungen bleiben unverändert.",
+    "fr": "Les raccourcis n’ont pas pu être réinitialisés. Ils restent inchangés.",
+    "es": "No se pudieron restablecer los atajos. Los existentes no han cambiado.",
+    "uk": "Не вдалося скинути сполучення. Наявні призначення не змінено.",
+    "hu": "A gyorsbillentyűk nem állíthatók vissza. A meglévők változatlanok maradtak."
+  },
+  "Settings could not be saved. Your previous settings are unchanged.": {
+    "de": "Einstellungen konnten nicht gespeichert werden. Die bisherigen bleiben unverändert.",
+    "fr": "Les paramètres n’ont pas pu être enregistrés. Les précédents restent inchangés.",
+    "es": "No se pudieron guardar los ajustes. Los anteriores no han cambiado.",
+    "uk": "Не вдалося зберегти налаштування. Попередні не змінено.",
+    "hu": "A beállítások nem menthetők. Az előzők változatlanok maradtak."
+  },
+  "Keyguide settings are unavailable. Close and reopen Settings, then try again.": {
+    "de": "Einstellungen der Tastaturhilfe sind nicht verfügbar. Einstellungen schließen, erneut öffnen und nochmals versuchen.",
+    "fr": "Les paramètres du guide sont indisponibles. Fermez puis rouvrez les paramètres et réessayez.",
+    "es": "Los ajustes de la guía no están disponibles. Cierra y vuelve a abrir Ajustes e inténtalo de nuevo.",
+    "uk": "Налаштування довідника недоступні. Закрийте й відкрийте налаштування та спробуйте знову.",
+    "hu": "A segéd beállításai nem érhetők el. Zárd be és nyisd meg újra a Beállításokat."
+  },
+  "This shortcut cannot be changed safely.": {
+    "de": "Dieses Tastenkürzel kann nicht sicher geändert werden.",
+    "fr": "Ce raccourci ne peut pas être modifié sans risque.",
+    "es": "Este atajo no se puede cambiar con seguridad.",
+    "uk": "Неможливо безпечно змінити це сполучення.",
+    "hu": "Ez a gyorsbillentyű nem módosítható biztonságosan."
+  },
+  "The shortcut service is unavailable. Close and reopen Settings, then try again.": {
+    "de": "Der Tastenkürzeldienst ist nicht verfügbar. Einstellungen schließen, erneut öffnen und nochmals versuchen.",
+    "fr": "Le service des raccourcis est indisponible. Fermez puis rouvrez les paramètres et réessayez.",
+    "es": "El servicio de atajos no está disponible. Cierra y vuelve a abrir Ajustes e inténtalo de nuevo.",
+    "uk": "Служба сполучень недоступна. Закрийте й відкрийте налаштування та спробуйте знову.",
+    "hu": "A gyorsbillentyű-szolgáltatás nem érhető el. Nyisd meg újra a Beállításokat és próbáld újra."
+  },
+  "No visible shortcuts in this group.": {
+    "de": "Keine sichtbaren Tastenkürzel in dieser Gruppe.",
+    "fr": "Aucun raccourci visible dans ce groupe.",
+    "es": "No hay atajos visibles en este grupo.",
+    "uk": "У цій групі немає видимих сполучень.",
+    "hu": "Nincs látható gyorsbillentyű ebben a csoportban."
+  },
+  "{modifiers} shortcuts": {
+    "de": "{modifiers}-Tastenkürzel",
+    "fr": "Raccourcis {modifiers}",
+    "es": "Atajos de {modifiers}",
+    "uk": "Сполучення {modifiers}",
+    "hu": "{modifiers} gyorsbillentyűk"
+  },
+  "Showing or hiding only changes the HUD. The shortcut remains active in Hyprland.": {
+    "de": "Ein- oder Ausblenden betrifft nur die Hilfe. Das Tastenkürzel bleibt in Hyprland aktiv.",
+    "fr": "L’affichage ou le masquage ne concerne que le guide. Le raccourci reste actif dans Hyprland.",
+    "es": "Mostrar u ocultar solo afecta a la guía. El atajo sigue activo en Hyprland.",
+    "uk": "Показ або приховування змінює лише довідник. Сполучення залишається активним у Hyprland.",
+    "hu": "A megjelenítés és elrejtés csak a segédet érinti. A gyorsbillentyű aktív marad a Hyprlandben."
+  },
+  "Advanced: runs an executable command directly.": {
+    "de": "Erweitert: führt einen Befehl direkt aus.",
+    "fr": "Avancé : exécute directement une commande.",
+    "es": "Avanzado: ejecuta un comando directamente.",
+    "uk": "Додатково: виконує команду безпосередньо.",
+    "hu": "Haladó: közvetlenül futtat egy parancsot."
+  },
+  "Confirm reset": {
+    "de": "Zurücksetzen bestätigen",
+    "fr": "Confirmer la réinitialisation",
+    "es": "Confirmar restablecimiento",
+    "uk": "Підтвердити скидання",
+    "hu": "Visszaállítás megerősítése"
+  },
+  "Use the active Omarchy popup colors.": {
+    "de": "Aktive Omarchy-Popup-Farben verwenden.",
+    "fr": "Utiliser les couleurs des fenêtres Omarchy.",
+    "es": "Usar los colores activos de las ventanas de Omarchy.",
+    "uk": "Використати поточні кольори вікон Omarchy.",
+    "hu": "Az aktív Omarchy felugró ablak színeinek használata."
+  },
+  "Show the shortcut HUD while Super is held.": {
+    "de": "Tastaturhilfe anzeigen, solange Super gehalten wird.",
+    "fr": "Afficher le guide tant que Super est maintenue.",
+    "es": "Mostrar la guía mientras se mantiene Super pulsada.",
+    "uk": "Показувати довідник, доки утримується Super.",
+    "hu": "Segéd megjelenítése a Super nyomva tartása közben."
+  },
+  "Position, scale, opacity, and visibility changes appear here.": {
+    "de": "Änderungen an Position, Größe, Deckkraft und Sichtbarkeit werden hier angezeigt.",
+    "fr": "Les changements de position, d’échelle, d’opacité et de visibilité apparaissent ici.",
+    "es": "Aquí se ven los cambios de posición, escala, opacidad y visibilidad.",
+    "uk": "Тут відображаються зміни положення, масштабу, непрозорості й видимості.",
+    "hu": "Itt láthatók a pozíció, méretezés, átlátszatlanság és láthatóság változásai."
+  },
+  "Press Reset all again to restore every shortcut changed by Keyguide.": {
+    "de": "Erneut Alles zurücksetzen drücken, um alle durch die Hilfe geänderten Tastenkürzel wiederherzustellen.",
+    "fr": "Appuyez à nouveau sur Tout réinitialiser pour restaurer les raccourcis modifiés par le guide.",
+    "es": "Pulsa otra vez Restablecer todo para restaurar los atajos modificados por la guía.",
+    "uk": "Натисніть Скинути все знову, щоб відновити сполучення, змінені довідником.",
+    "hu": "Az Összes visszaállítása újbóli megnyomásával visszaállíthatod a segéd által módosított gyorsbillentyűket."
+  },
+  "HUD and shortcut settings": {
+    "de": "Einstellungen für Hilfe und Tastenkürzel",
+    "fr": "Paramètres du guide et des raccourcis",
+    "es": "Ajustes de la guía y los atajos",
+    "uk": "Налаштування довідника та сполучень",
+    "hu": "Segéd és gyorsbillentyűk beállításai"
+  },
+  "HUD title": {
+    "de": "Titel in der Hilfe",
+    "fr": "Titre dans le guide",
+    "es": "Título en la guía",
+    "uk": "Назва в довіднику",
+    "hu": "Segédben megjelenő név"
+  },
+  "This is the friendly name shown in the shortcut HUD. You can edit it.": {
+    "de": "Dieser Name wird in der Tastaturhilfe angezeigt. Er kann geändert werden.",
+    "fr": "Ce nom est affiché dans le guide. Vous pouvez le modifier.",
+    "es": "Este nombre se muestra en la guía. Puedes editarlo.",
+    "uk": "Ця назва відображається в довіднику. Її можна змінити.",
+    "hu": "Ez a név jelenik meg a segédben. Szerkeszthető."
+  },
+  "Optional arguments": {
+    "de": "Optionale Argumente",
+    "fr": "Arguments facultatifs",
+    "es": "Argumentos opcionales",
+    "uk": "Необов’язкові аргументи",
+    "hu": "Nem kötelező argumentumok"
+  },
+  "Register or change action": {
+    "de": "Aktion anlegen oder ändern",
+    "fr": "Enregistrer ou modifier l’action",
+    "es": "Registrar o cambiar acción",
+    "uk": "Зареєструвати або змінити дію",
+    "hu": "Művelet hozzáadása vagy módosítása"
+  },
+  "Current key: {chord}": {
+    "de": "Aktuelle Taste: {chord}",
+    "fr": "Touche actuelle : {chord}",
+    "es": "Tecla actual: {chord}",
+    "uk": "Поточна клавіша: {chord}",
+    "hu": "Jelenlegi billentyű: {chord}"
+  },
+  "Search every registered title, key, type, and role, or select one modifier group.": {
+    "de": "Nach Titel, Taste, Typ und Rolle suchen oder eine Modifikatorgruppe auswählen.",
+    "fr": "Recherchez par titre, touche, type ou rôle, ou choisissez un groupe de modificateurs.",
+    "es": "Busca por título, tecla, tipo o función, o selecciona un grupo de modificadores.",
+    "uk": "Шукайте за назвою, клавішею, типом чи роллю або виберіть групу модифікаторів.",
+    "hu": "Keress név, billentyű, típus vagy szerep szerint, vagy válassz módosítócsoportot."
+  },
+  "Search title, key, or type": {
+    "de": "Nach Titel, Taste oder Typ suchen",
+    "fr": "Rechercher un titre, une touche ou un type",
+    "es": "Buscar título, tecla o tipo",
+    "uk": "Пошук за назвою, клавішею або типом",
+    "hu": "Keresés név, billentyű vagy típus szerint"
+  },
+  "{count} shown · {total} total": {
+    "de": "{count} angezeigt · {total} insgesamt",
+    "fr": "{count} affichés · {total} au total",
+    "es": "{count} visibles · {total} en total",
+    "uk": "{count} показано · {total} усього",
+    "hu": "{count} látható · összesen {total}"
+  },
+  "Find registered shortcuts": {
+    "de": "Registrierte Tastenkürzel suchen",
+    "fr": "Rechercher les raccourcis enregistrés",
+    "es": "Buscar atajos registrados",
+    "uk": "Знайти зареєстровані сполучення",
+    "hu": "Hozzáadott gyorsbillentyűk keresése"
+  },
+  "Show this modifier group in the HUD.": {
+    "de": "Diese Modifikatorgruppe in der Hilfe anzeigen.",
+    "fr": "Afficher ce groupe de modificateurs dans le guide.",
+    "es": "Mostrar este grupo de modificadores en la guía.",
+    "uk": "Показувати цю групу модифікаторів у довіднику.",
+    "hu": "Módosítócsoport megjelenítése a segédben."
+  },
+  "Key": {
+    "de": "Taste",
+    "fr": "Touche",
+    "es": "Tecla",
+    "uk": "Клавіша",
+    "hu": "Billentyű"
+  },
+  "Key capture": {
+    "de": "Tastenerfassung",
+    "fr": "Capture de touche",
+    "es": "Captura de tecla",
+    "uk": "Запис клавіші",
+    "hu": "Billentyűrögzítés"
+  },
+  "Managed by Keyguide": {
+    "de": "Von der Tastaturhilfe verwaltet",
+    "fr": "Géré par le guide",
+    "es": "Gestionado por la guía",
+    "uk": "Керується довідником",
+    "hu": "A segéd kezeli"
+  },
+  "Shortcut management": {
+    "de": "Tastenkürzelverwaltung",
+    "fr": "Gestion des raccourcis",
+    "es": "Gestión de atajos",
+    "uk": "Керування сполученнями",
+    "hu": "Gyorsbillentyűk kezelése"
+  },
+  "Choose a modifier group and key, then search for what the shortcut should do.": {
+    "de": "Modifikatorgruppe und Taste wählen, dann die gewünschte Aktion suchen.",
+    "fr": "Choisissez un groupe de modificateurs et une touche, puis recherchez l’action voulue.",
+    "es": "Elige un grupo de modificadores y una tecla, y busca la acción deseada.",
+    "uk": "Виберіть групу модифікаторів і клавішу, а потім знайдіть потрібну дію.",
+    "hu": "Válassz módosítócsoportot és billentyűt, majd keresd meg a kívánt műveletet."
+  },
+  "Modifier group": {
+    "de": "Modifikatorgruppe",
+    "fr": "Groupe de modificateurs",
+    "es": "Grupo de modificadores",
+    "uk": "Група модифікаторів",
+    "hu": "Módosítócsoport"
+  },
+  "Omarchy default": {
+    "de": "Omarchy-Standard",
+    "fr": "Valeur par défaut d’Omarchy",
+    "es": "Predeterminado de Omarchy",
+    "uk": "Типове в Omarchy",
+    "hu": "Omarchy alapérték"
+  },
+  "Press a key…": {
+    "de": "Taste drücken…",
+    "fr": "Appuyez sur une touche…",
+    "es": "Pulsa una tecla…",
+    "uk": "Натисніть клавішу…",
+    "hu": "Nyomj meg egy billentyűt…"
+  },
+  "Registered shortcuts · HUD visibility": {
+    "de": "Registrierte Tastenkürzel · Sichtbarkeit",
+    "fr": "Raccourcis enregistrés · Visibilité dans le guide",
+    "es": "Atajos registrados · Visibilidad en la guía",
+    "uk": "Зареєстровані сполучення · Видимість у довіднику",
+    "hu": "Hozzáadott gyorsbillentyűk · Láthatóság a segédben"
+  },
+  "Press Remove again to confirm.": {
+    "de": "Zum Bestätigen erneut Entfernen drücken.",
+    "fr": "Appuyez à nouveau sur Supprimer pour confirmer.",
+    "es": "Pulsa Eliminar otra vez para confirmar.",
+    "uk": "Натисніть Видалити знову для підтвердження.",
+    "hu": "A megerősítéshez nyomd meg újra az Eltávolítást."
+  },
+  "Remove the {title} shortcut from {chord}?": {
+    "de": "Tastenkürzel {title} von {chord} entfernen?",
+    "fr": "Supprimer le raccourci {title} de {chord} ?",
+    "es": "¿Eliminar el atajo {title} de {chord}?",
+    "uk": "Видалити сполучення {title} з {chord}?",
+    "hu": "Eltávolítod a(z) {title} gyorsbillentyűt innen: {chord}?"
+  },
+  "Replace {oldTitle} with {newTitle}?": {
+    "de": "{oldTitle} durch {newTitle} ersetzen?",
+    "fr": "Remplacer {oldTitle} par {newTitle} ?",
+    "es": "¿Sustituir {oldTitle} por {newTitle}?",
+    "uk": "Замінити {oldTitle} на {newTitle}?",
+    "hu": "Lecseréled ezt: {oldTitle}, erre: {newTitle}?"
+  },
+  "Press Change again to confirm.": {
+    "de": "Zum Bestätigen erneut Ändern drücken.",
+    "fr": "Appuyez à nouveau sur Modifier pour confirmer.",
+    "es": "Pulsa Cambiar otra vez para confirmar.",
+    "uk": "Натисніть Змінити знову для підтвердження.",
+    "hu": "A megerősítéshez nyomd meg újra a Módosítást."
+  },
+  "Shortcut": {
+    "de": "Tastenkürzel",
+    "fr": "Raccourci",
+    "es": "Atajo",
+    "uk": "Сполучення",
+    "hu": "Gyorsbillentyű"
+  },
+  "{chord} will run {action}. The HUD will show “{title}”.": {
+    "de": "{chord} führt {action} aus. Die Hilfe zeigt „{title}“.",
+    "fr": "{chord} exécutera {action}. Le guide affichera « {title} ».",
+    "es": "{chord} ejecutará {action}. La guía mostrará «{title}».",
+    "uk": "{chord} виконає {action}. Довідник покаже «{title}».",
+    "hu": "A(z) {chord} ezt futtatja: {action}. A segédben ez jelenik meg: „{title}”."
+  },
+  "Action / title": {
+    "de": "Aktion / Titel",
+    "fr": "Action / titre",
+    "es": "Acción / título",
+    "uk": "Дія / назва",
+    "hu": "Művelet / név"
+  },
+  "Type / Role": {
+    "de": "Typ / Rolle",
+    "fr": "Type / rôle",
+    "es": "Tipo / función",
+    "uk": "Тип / роль",
+    "hu": "Típus / szerep"
+  },
+  "Create shortcut sets": {
+    "de": "Shortcut-Sammlungen erstellen",
+    "fr": "Créer des ensembles de raccourcis",
+    "es": "Crear conjuntos de atajos",
+    "uk": "Створити набори сполучень",
+    "hu": "Gyorsbillentyű-készletek létrehozása"
+  },
+  "Copy content": {
+    "de": "Inhalt kopieren",
+    "fr": "Copier le contenu",
+    "es": "Copiar contenido",
+    "uk": "Копіювати вміст",
+    "hu": "Tartalom másolása"
+  },
+  "Copy path": {
+    "de": "Pfad kopieren",
+    "fr": "Copier le chemin",
+    "es": "Copiar ruta",
+    "uk": "Копіювати шлях",
+    "hu": "Elérési út másolása"
+  },
+  "Copy for agents": {
+    "de": "Für Agenten kopieren",
+    "fr": "Copier pour un agent",
+    "es": "Copiar para agentes",
+    "uk": "Копіювати для агентів",
+    "hu": "Másolás ügynököknek"
+  },
+  "Copy instructions with file path": {
+    "de": "Anweisungen mit Dateipfad kopieren",
+    "fr": "Copier les instructions avec le chemin du fichier",
+    "es": "Copiar instrucciones con la ruta del archivo",
+    "uk": "Копіювати інструкції зі шляхом до файлу",
+    "hu": "Utasítások másolása a fájl elérési útjával"
+  },
+  "Copy instructions with guide content": {
+    "de": "Anweisungen mit Anleitung kopieren",
+    "fr": "Copier les instructions avec le contenu du guide",
+    "es": "Copiar instrucciones con el contenido de la guía",
+    "uk": "Копіювати інструкції з вмістом посібника",
+    "hu": "Utasítások másolása az útmutató tartalmával"
+  },
+  "Disabled": {
+    "de": "Deaktiviert",
+    "fr": "Désactivé",
+    "es": "Desactivado",
+    "uk": "Вимкнено",
+    "hu": "Kikapcsolva"
+  },
+  "Ask an agent": {
+    "de": "Agenten fragen",
+    "fr": "Demander à un agent",
+    "es": "Preguntar a un agente",
+    "uk": "Запитати агента",
+    "hu": "Kérdezz egy ügynököt"
+  },
+  "Agent chat": {
+    "de": "Agenten-Chat",
+    "fr": "Discussion avec un agent",
+    "es": "Chat con un agente",
+    "uk": "Чат з агентом",
+    "hu": "Csevegés ügynökkel"
+  },
+  "Default agent": {
+    "de": "Standardagent",
+    "fr": "Agent par défaut",
+    "es": "Agente predeterminado",
+    "uk": "Типовий агент",
+    "hu": "Alapértelmezett ügynök"
+  },
+  "Automatic": {
+    "de": "Automatisch",
+    "fr": "Automatique",
+    "es": "Automático",
+    "uk": "Автоматично",
+    "hu": "Automatikus"
+  },
+  "Usage": {
+    "de": "Nutzung",
+    "fr": "Utilisation",
+    "es": "Uso",
+    "uk": "Використання",
+    "hu": "Használat"
+  },
+  "Refresh usage": {
+    "de": "Nutzung aktualisieren",
+    "fr": "Actualiser l’utilisation",
+    "es": "Actualizar uso",
+    "uk": "Оновити використання",
+    "hu": "Használat frissítése"
+  },
+  "Quota unavailable": {
+    "de": "Kontingent nicht verfügbar",
+    "fr": "Quota indisponible",
+    "es": "Cuota no disponible",
+    "uk": "Квота недоступна",
+    "hu": "A kvóta nem érhető el"
+  },
+  "{window}: {remaining}% remaining": {
+    "de": "{window}: {remaining}% verbleibend",
+    "fr": "{window} : {remaining} % restants",
+    "es": "{window}: {remaining}% restante",
+    "uk": "{window}: залишилося {remaining}%",
+    "hu": "{window}: {remaining}% maradt"
+  },
+  "weekly": {
+    "de": "wöchentlich",
+    "fr": "hebdomadaire",
+    "es": "semanal",
+    "uk": "тижнева",
+    "hu": "Heti"
+  },
+  "Automatic compares the lowest remaining percentage across reported windows. Limits differ between providers.": {
+    "de": "Automatisch vergleicht den niedrigsten verbleibenden Prozentsatz der gemeldeten Zeitfenster. Die Limits unterscheiden sich je nach Anbieter.",
+    "fr": "Le mode automatique compare le plus faible pourcentage restant parmi les périodes signalées. Les limites varient selon les fournisseurs.",
+    "es": "El modo automático compara el menor porcentaje restante de los períodos informados. Los límites varían según el proveedor.",
+    "uk": "Автоматичний вибір порівнює найнижчий залишок у відсотках серед відомих періодів. Ліміти залежать від постачальника.",
+    "hu": "Az automatikus mód a jelzett időszakok legkisebb fennmaradó százalékát hasonlítja össze. A korlátok szolgáltatónként eltérnek."
+  },
+  "What would you like to do?": {
+    "de": "Was möchtest du tun?",
+    "fr": "Que souhaitez-vous faire ?",
+    "es": "¿Qué te gustaría hacer?",
+    "uk": "Що бажаєте зробити?",
+    "hu": "Mit szeretnél tenni?"
+  },
+  "Find a shortcut for taking a screenshot": {
+    "de": "Tastenkürzel für einen Screenshot finden",
+    "fr": "Trouver un raccourci pour une capture d’écran",
+    "es": "Buscar un atajo para hacer una captura de pantalla",
+    "uk": "Знайти сполучення для знімка екрана",
+    "hu": "Gyorsbillentyű keresése képernyőkép készítéséhez"
+  },
+  "Help me remember useful shortcuts": {
+    "de": "Hilf mir, nützliche Tastenkürzel zu merken",
+    "fr": "Aidez-moi à retenir les raccourcis utiles",
+    "es": "Ayúdame a recordar atajos útiles",
+    "uk": "Допоможи запам’ятати корисні сполучення",
+    "hu": "Segíts megjegyezni a hasznos gyorsbillentyűket"
+  },
+  "Show me which features are enabled": {
+    "de": "Aktivierte Funktionen anzeigen",
+    "fr": "Afficher les fonctionnalités activées",
+    "es": "Mostrar las funciones activadas",
+    "uk": "Показати ввімкнені функції",
+    "hu": "Mutasd meg a bekapcsolt funkciókat"
+  },
+  "Make the app simpler": {
+    "de": "Die App vereinfachen",
+    "fr": "Simplifier l’application",
+    "es": "Simplificar la aplicación",
+    "uk": "Спростити застосунок",
+    "hu": "Egyszerűsítsd az alkalmazást"
+  },
+  "Uses your installed agent and its signed-in account.": {
+    "de": "Verwendet deinen installierten Agenten und dessen angemeldetes Konto.",
+    "fr": "Utilise votre agent installé et son compte connecté.",
+    "es": "Usa tu agente instalado y la cuenta con la que has iniciado sesión.",
+    "uk": "Використовує встановленого агента та його обліковий запис.",
+    "hu": "A telepített ügynököt és annak bejelentkezett fiókját használja."
+  },
+  "Install and sign in to Codex, Claude, Gemini, or OpenCode, then reopen chat.": {
+    "de": "Installiere Codex, Claude, Gemini oder OpenCode, melde dich an und öffne den Chat erneut.",
+    "fr": "Installez Codex, Claude, Gemini ou OpenCode, connectez-vous, puis rouvrez la discussion.",
+    "es": "Instala Codex, Claude, Gemini u OpenCode, inicia sesión y vuelve a abrir el chat.",
+    "uk": "Установіть Codex, Claude, Gemini або OpenCode, увійдіть і знову відкрийте чат.",
+    "hu": "Telepítsd a Codex, Claude, Gemini vagy OpenCode egyikét, jelentkezz be, majd nyisd meg újra a csevegést."
+  },
+  "Enter to send · Shift+Enter for a new line": {
+    "de": "Enter zum Senden · Umschalt+Enter für eine neue Zeile",
+    "fr": "Entrée pour envoyer · Maj+Entrée pour une nouvelle ligne",
+    "es": "Intro para enviar · Mayús+Intro para una nueva línea",
+    "uk": "Enter — надіслати · Shift+Enter — новий рядок",
+    "hu": "Enter: küldés · Shift+Enter: új sor"
+  },
+  "Ask about shortcuts and settings. Enter sends; Shift+Enter adds a line.": {
+    "de": "Frage nach Tastenkürzeln und Einstellungen. Enter sendet; Umschalt+Enter fügt eine Zeile ein.",
+    "fr": "Posez une question sur les raccourcis et les réglages. Entrée envoie ; Maj+Entrée ajoute une ligne.",
+    "es": "Pregunta sobre atajos y ajustes. Intro envía; Mayús+Intro añade una línea.",
+    "uk": "Запитайте про сполучення й налаштування. Enter надсилає; Shift+Enter додає рядок.",
+    "hu": "Kérdezz a gyorsbillentyűkről és beállításokról. Enter: küldés; Shift+Enter: új sor."
+  },
+  "Send": {
+    "de": "Senden",
+    "fr": "Envoyer",
+    "es": "Enviar",
+    "uk": "Надіслати",
+    "hu": "Küldés"
+  },
+  "Stop": {
+    "de": "Stoppen",
+    "fr": "Arrêter",
+    "es": "Detener",
+    "uk": "Зупинити",
+    "hu": "Leállítás"
+  },
+  "Stopping…": {
+    "de": "Wird gestoppt…",
+    "fr": "Arrêt en cours…",
+    "es": "Deteniendo…",
+    "uk": "Зупинення…",
+    "hu": "Leállítás…"
+  },
+  "Stopped.": {
+    "de": "Gestoppt.",
+    "fr": "Arrêté.",
+    "es": "Detenido.",
+    "uk": "Зупинено.",
+    "hu": "Leállítva."
+  },
+  "Checking available quota…": {
+    "de": "Verfügbares Kontingent wird geprüft…",
+    "fr": "Vérification du quota disponible…",
+    "es": "Comprobando la cuota disponible…",
+    "uk": "Перевірка доступної квоти…",
+    "hu": "Az elérhető kvóta ellenőrzése…"
+  },
+  "Copy": {
+    "de": "Kopieren",
+    "fr": "Copier",
+    "es": "Copiar",
+    "uk": "Копіювати",
+    "hu": "Másolás"
+  },
+  "Copied.": {
+    "de": "Kopiert.",
+    "fr": "Copié.",
+    "es": "Copiado.",
+    "uk": "Скопійовано.",
+    "hu": "Másolva."
+  },
+  "Conversation content": {
+    "de": "Gesprächsinhalt",
+    "fr": "Contenu de la conversation",
+    "es": "Contenido de la conversación",
+    "uk": "Вміст розмови",
+    "hu": "Beszélgetés tartalma"
+  },
+  "Session ID": {
+    "de": "Sitzungs-ID",
+    "fr": "Identifiant de session",
+    "es": "ID de sesión",
+    "uk": "Ідентифікатор сеансу",
+    "hu": "Munkamenet-azonosító"
+  },
+  "Session file path": {
+    "de": "Pfad zur Sitzungsdatei",
+    "fr": "Chemin du fichier de session",
+    "es": "Ruta del archivo de sesión",
+    "uk": "Шлях до файлу сеансу",
+    "hu": "Munkamenetfájl elérési útja"
+  },
+  "Agent session ID": {
+    "de": "Agenten-Sitzungs-ID",
+    "fr": "Identifiant de session de l’agent",
+    "es": "ID de sesión del agente",
+    "uk": "Ідентифікатор сеансу агента",
+    "hu": "Ügynök munkamenet-azonosítója"
+  },
+  "Continue in a terminal": {
+    "de": "Im Terminal fortsetzen",
+    "fr": "Continuer dans un terminal",
+    "es": "Continuar en un terminal",
+    "uk": "Продовжити в терміналі",
+    "hu": "Folytatás terminálban"
+  },
+  "New conversation": {
+    "de": "Neues Gespräch",
+    "fr": "Nouvelle conversation",
+    "es": "Nueva conversación",
+    "uk": "Нова розмова",
+    "hu": "Új beszélgetés"
+  },
+  "Conversation history": {
+    "de": "Gesprächsverlauf",
+    "fr": "Historique des conversations",
+    "es": "Historial de conversaciones",
+    "uk": "Історія розмов",
+    "hu": "Korábbi beszélgetések"
+  },
+  "Conversations": {
+    "de": "Gespräche",
+    "fr": "Conversations",
+    "es": "Conversaciones",
+    "uk": "Розмови",
+    "hu": "Beszélgetések"
+  },
+  "Continue a conversation": {
+    "de": "Gespräch fortsetzen",
+    "fr": "Reprendre une conversation",
+    "es": "Continuar una conversación",
+    "uk": "Продовжити розмову",
+    "hu": "Beszélgetés folytatása"
+  },
+  "Rename conversation": {
+    "de": "Gespräch umbenennen",
+    "fr": "Renommer la conversation",
+    "es": "Renombrar conversación",
+    "uk": "Перейменувати розмову",
+    "hu": "Beszélgetés átnevezése"
+  },
+  "Search conversations…": {
+    "de": "Gespräche suchen…",
+    "fr": "Rechercher des conversations…",
+    "es": "Buscar conversaciones…",
+    "uk": "Пошук розмов…",
+    "hu": "Beszélgetések keresése…"
+  },
+  "No conversations found.": {
+    "de": "Keine Gespräche gefunden.",
+    "fr": "Aucune conversation trouvée.",
+    "es": "No se encontraron conversaciones.",
+    "uk": "Розмов не знайдено.",
+    "hu": "Nincs találat a beszélgetések között."
+  },
+  "Your conversations will appear here.": {
+    "de": "Deine Gespräche erscheinen hier.",
+    "fr": "Vos conversations apparaîtront ici.",
+    "es": "Tus conversaciones aparecerán aquí.",
+    "uk": "Ваші розмови з’являться тут.",
+    "hu": "Itt jelennek meg a beszélgetéseid."
+  },
+  "Close chat": {
+    "de": "Chat schließen",
+    "fr": "Fermer la discussion",
+    "es": "Cerrar chat",
+    "uk": "Закрити чат",
+    "hu": "Csevegés bezárása"
+  },
+  "Toggle chat and focus input": {
+    "de": "Chat ein-/ausblenden und Eingabe fokussieren",
+    "fr": "Afficher ou masquer la discussion et activer la saisie",
+    "es": "Abrir o cerrar el chat y enfocar la entrada",
+    "uk": "Відкрити або закрити чат і перейти до введення",
+    "hu": "Csevegés megnyitása vagy bezárása, beviteli mező fókuszálása"
+  },
+  "Stop the current response before starting a new conversation.": {
+    "de": "Stoppe die aktuelle Antwort, bevor du ein neues Gespräch beginnst.",
+    "fr": "Arrêtez la réponse en cours avant de commencer une nouvelle conversation.",
+    "es": "Detén la respuesta actual antes de iniciar una conversación nueva.",
+    "uk": "Зупиніть поточну відповідь, перш ніж почати нову розмову.",
+    "hu": "Új beszélgetés előtt állítsd le a folyamatban lévő választ."
+  },
+  "Stop the current response before switching conversations.": {
+    "de": "Stoppe die aktuelle Antwort, bevor du das Gespräch wechselst.",
+    "fr": "Arrêtez la réponse en cours avant de changer de conversation.",
+    "es": "Detén la respuesta actual antes de cambiar de conversación.",
+    "uk": "Зупиніть поточну відповідь, перш ніж змінити розмову.",
+    "hu": "Másik beszélgetésre váltás előtt állítsd le a folyamatban lévő választ."
+  },
+  "You": {
+    "de": "Du",
+    "fr": "Vous",
+    "es": "Tú",
+    "uk": "Ви",
+    "hu": "Te"
+  },
+  "Agent": {
+    "de": "Agent",
+    "fr": "Agent",
+    "es": "Agente",
+    "uk": "Агент",
+    "hu": "Ügynök"
+  },
+  "Notice": {
+    "de": "Hinweis",
+    "fr": "Information",
+    "es": "Aviso",
+    "uk": "Повідомлення",
+    "hu": "Értesítés"
+  },
+  "Terminal": {
+    "de": "Terminal",
+    "fr": "Terminal",
+    "es": "Terminal",
+    "uk": "Термінал",
+    "hu": "Terminál"
+  },
+  "terminal": {
+    "de": "Terminal",
+    "fr": "terminal",
+    "es": "terminal",
+    "uk": "термінал",
+    "hu": "terminál"
+  },
+  "terminal tabs": {
+    "de": "Terminal-Tabs",
+    "fr": "onglets du terminal",
+    "es": "pestañas del terminal",
+    "uk": "вкладки термінала",
+    "hu": "terminállapok"
+  },
+  "Browser": {
+    "de": "Browser",
+    "fr": "Navigateur",
+    "es": "Navegador",
+    "uk": "Браузер",
+    "hu": "Böngésző"
+  },
+  "Browser — Example workspace": {
+    "de": "Browser — Beispiel-Arbeitsfläche",
+    "fr": "Navigateur — Espace de travail d’exemple",
+    "es": "Navegador — Espacio de trabajo de ejemplo",
+    "uk": "Браузер — Приклад робочого простору",
+    "hu": "Böngésző — Példa munkaterület"
+  },
+  "Current window": {
+    "de": "Aktuelles Fenster",
+    "fr": "Fenêtre actuelle",
+    "es": "Ventana actual",
+    "uk": "Поточне вікно",
+    "hu": "Aktuális ablak"
+  },
+  "Move to workspace 2": {
+    "de": "Auf Arbeitsfläche 2 verschieben",
+    "fr": "Déplacer vers l’espace de travail 2",
+    "es": "Mover al espacio de trabajo 2",
+    "uk": "Перемістити до робочого простору 2",
+    "hu": "Áthelyezés a 2. munkaterületre"
+  },
+  "Open Terminal": {
+    "de": "Terminal öffnen",
+    "fr": "Ouvrir le terminal",
+    "es": "Abrir terminal",
+    "uk": "Відкрити термінал",
+    "hu": "Terminál megnyitása"
+  },
+  "Open Browser": {
+    "de": "Browser öffnen",
+    "fr": "Ouvrir le navigateur",
+    "es": "Abrir navegador",
+    "uk": "Відкрити браузер",
+    "hu": "Böngésző megnyitása"
+  },
+  "Help me find a shortcut": {
+    "de": "Hilf mir, ein Tastenkürzel zu finden",
+    "fr": "Aidez-moi à trouver un raccourci",
+    "es": "Ayúdame a encontrar un atajo",
+    "uk": "Допоможи знайти сполучення",
+    "hu": "Segíts gyorsbillentyűt keresni"
+  },
+  "Ask about shortcuts…": {
+    "de": "Nach Tastenkürzeln fragen…",
+    "fr": "Poser une question sur les raccourcis…",
+    "es": "Pregunta sobre atajos…",
+    "uk": "Запитайте про сполучення…",
+    "hu": "Kérdezz a gyorsbillentyűkről…"
+  },
+  "Choose a key": {
+    "de": "Taste wählen",
+    "fr": "Choisir une touche",
+    "es": "Elegir una tecla",
+    "uk": "Виберіть клавішу",
+    "hu": "Válassz billentyűt"
+  },
+  "Click, then press a shortcut. Escape cancels capture.": {
+    "de": "Klicken, dann ein Tastenkürzel drücken. Escape bricht die Aufnahme ab.",
+    "fr": "Cliquez, puis appuyez sur un raccourci. Échap annule la capture.",
+    "es": "Haz clic y pulsa un atajo. Escape cancela la captura.",
+    "uk": "Натисніть, а потім введіть сполучення. Escape скасовує запис.",
+    "hu": "Kattints, majd nyomj meg egy billentyűkombinációt. Escape: rögzítés megszakítása."
+  },
+  "Bookmark sources in the source menu to cycle them with Alt+S.": {
+    "de": "Markiere Quellen im Quellenmenü, um mit Alt+S zwischen ihnen zu wechseln.",
+    "fr": "Ajoutez des sources aux favoris dans leur menu pour les parcourir avec Alt+S.",
+    "es": "Marca fuentes como favoritas en su menú para recorrerlas con Alt+S.",
+    "uk": "Позначте джерела в їхньому меню, щоб перемикатися між ними за допомогою Alt+S.",
+    "hu": "Jelöld kedvencnek a forrásokat a menüben, hogy Alt+S-sel válthass közöttük."
+  },
+  "Bookmark this source for Alt+S": {
+    "de": "Diese Quelle für Alt+S merken",
+    "fr": "Ajouter cette source aux favoris pour Alt+S",
+    "es": "Marcar esta fuente como favorita para Alt+S",
+    "uk": "Позначити це джерело для Alt+S",
+    "hu": "Forrás kedvencnek jelölése az Alt+S váltáshoz"
+  },
+  "About Bindlume": {
+    "de": "Über Bindlume",
+    "fr": "À propos d’Bindlume",
+    "es": "Acerca de Bindlume",
+    "uk": "Про Bindlume",
+    "hu": "Az Bindlume névjegye"
+  },
+  "Inside Bindlume": {
+    "de": "Überblick über Bindlume",
+    "fr": "Découvrir Bindlume",
+    "es": "Dentro de Bindlume",
+    "uk": "Огляд Bindlume",
+    "hu": "Az Bindlume bemutatása"
+  },
+  "How it works, where things live, and the resources behind it. Click any link to preview it.": {
+    "de": "Funktionsweise, Speicherorte und verwendete Ressourcen. Klicke auf einen Link für eine Vorschau.",
+    "fr": "Fonctionnement, emplacements et ressources. Cliquez sur un lien pour l’afficher.",
+    "es": "Funcionamiento, ubicaciones y recursos. Haz clic en un enlace para ver una vista previa.",
+    "uk": "Як усе працює, де зберігається та які ресурси використовує. Натисніть посилання для перегляду.",
+    "hu": "Működés, fájlok helye és felhasznált források. Kattints egy hivatkozásra az előnézethez."
+  },
+  "Created": {
+    "de": "Erstellt",
+    "fr": "Création",
+    "es": "Creado",
+    "uk": "Створено",
+    "hu": "Létrehozva"
+  },
+  "Updated": {
+    "de": "Aktualisiert",
+    "fr": "Mise à jour",
+    "es": "Actualizado",
+    "uk": "Оновлено",
+    "hu": "Frissítve"
+  },
+  "Messages": {
+    "de": "Nachrichten",
+    "fr": "Messages",
+    "es": "Mensajes",
+    "uk": "Повідомлення",
+    "hu": "Üzenetek"
+  },
+  "Status": {
+    "de": "Status",
+    "fr": "État",
+    "es": "Estado",
+    "uk": "Стан",
+    "hu": "Állapot"
+  },
+  "Model": {
+    "de": "Modell",
+    "fr": "Modèle",
+    "es": "Modelo",
+    "uk": "Модель",
+    "hu": "Modell",
+    "ko": "모델",
+    "ja": "モデル",
+    "zh_CN": "模型"
+  },
+  "Ready": {
+    "de": "Bereit",
+    "fr": "Prêt",
+    "es": "Listo",
+    "uk": "Готово",
+    "hu": "Kész"
+  },
+  "Running": {
+    "de": "Läuft",
+    "fr": "En cours",
+    "es": "En curso",
+    "uk": "Виконується",
+    "hu": "Folyamatban"
+  },
+  "Interrupted": {
+    "de": "Unterbrochen",
+    "fr": "Interrompu",
+    "es": "Interrumpido",
+    "uk": "Перервано",
+    "hu": "Megszakítva"
+  },
+  "Error": {
+    "de": "Fehler",
+    "fr": "Erreur",
+    "es": "Error",
+    "uk": "Помилка",
+    "hu": "Hiba"
+  },
+  "Style": {
+    "de": "Stil",
+    "fr": "Style",
+    "es": "Estilo",
+    "uk": "Стиль",
+    "hu": "Stílus"
+  },
+  "System": {
+    "de": "System",
+    "fr": "Système",
+    "es": "Sistema",
+    "uk": "Система",
+    "hu": "Rendszer"
+  },
+  "System ({value})": {
+    "de": "System ({value})",
+    "fr": "Système ({value})",
+    "es": "Sistema ({value})",
+    "uk": "Система ({value})",
+    "hu": "Rendszer ({value})"
+  },
+  "Neo-brutalism": {
+    "de": "Neo-Brutalismus",
+    "fr": "Néo-brutalisme",
+    "es": "Neobrutalismo",
+    "uk": "Необруталізм",
+    "hu": "Neobrutalizmus"
+  },
+  "Working…": {
+    "de": "Wird bearbeitet…",
+    "fr": "Traitement en cours…",
+    "es": "Procesando…",
+    "uk": "Опрацювання…",
+    "hu": "Feldolgozás…"
+  },
+  "Queue message": {
+    "de": "Nachricht einreihen",
+    "fr": "Mettre en attente",
+    "es": "Poner en cola",
+    "uk": "Додати до черги",
+    "hu": "Üzenet sorba állítása"
+  },
+  "Remove queued message": {
+    "de": "Eingereihte Nachricht entfernen",
+    "fr": "Retirer le message en attente",
+    "es": "Quitar mensaje de la cola",
+    "uk": "Вилучити повідомлення з черги",
+    "hu": "Várakozó üzenet eltávolítása"
+  },
+  "Send queued messages": {
+    "de": "Eingereihte Nachrichten senden",
+    "fr": "Envoyer les messages en attente",
+    "es": "Enviar mensajes en cola",
+    "uk": "Надіслати повідомлення з черги",
+    "hu": "Várakozó üzenetek küldése"
+  },
+  "Stop response": {
+    "de": "Antwort stoppen",
+    "fr": "Arrêter la réponse",
+    "es": "Detener respuesta",
+    "uk": "Зупинити відповідь",
+    "hu": "Válasz leállítása"
+  },
+  "Started": {
+    "de": "Gestartet",
+    "fr": "Début",
+    "es": "Iniciado",
+    "uk": "Розпочато",
+    "hu": "Elindítva"
+  },
+  "Updating app…": {
+    "de": "App wird aktualisiert…",
+    "fr": "Mise à jour de l’application…",
+    "es": "Actualizando la aplicación…",
+    "uk": "Оновлення застосунку…",
+    "hu": "Alkalmazás frissítése…"
+  },
+  "App updated": {
+    "de": "App aktualisiert",
+    "fr": "Application mise à jour",
+    "es": "Aplicación actualizada",
+    "uk": "Застосунок оновлено",
+    "hu": "Alkalmazás frissítve"
+  },
+  "Reset guide settings": {
+    "de": "Guide-Einstellungen zurücksetzen",
+    "fr": "Réinitialiser les réglages du guide",
+    "es": "Restablecer ajustes de la guía",
+    "uk": "Скинути налаштування довідника",
+    "hu": "Segéd beállításainak visszaállítása"
+  },
+  "Show the shortcut guide while Super is held.": {
+    "de": "Tastenkürzel-Hilfe bei gedrückter Super-Taste anzeigen.",
+    "fr": "Afficher le guide tant que Super est maintenue.",
+    "es": "Mostrar la guía al mantener pulsada Super.",
+    "uk": "Показувати довідник, поки утримується Super.",
+    "hu": "Gyorsbillentyű-segéd megjelenítése a Super nyomva tartásakor."
+  },
+  "Scale (%)": {
+    "de": "Skalierung (%)",
+    "fr": "Échelle (%)",
+    "es": "Escala (%)",
+    "uk": "Масштаб (%)",
+    "hu": "Méretezés (%)"
+  },
+  "Opacity (%)": {
+    "de": "Deckkraft (%)",
+    "fr": "Opacité (%)",
+    "es": "Opacidad (%)",
+    "uk": "Непрозорість (%)",
+    "hu": "Átlátszatlanság (%)"
+  },
+  "Modifier groups": {
+    "de": "Modifikatorgruppen",
+    "fr": "Groupes de modificateurs",
+    "es": "Grupos de modificadores",
+    "uk": "Групи модифікаторів",
+    "hu": "Módosítóbillentyű-csoportok"
+  },
+  "Shortcut visibility in the guide": {
+    "de": "Sichtbarkeit von Tastenkürzeln im Guide",
+    "fr": "Visibilité des raccourcis dans le guide",
+    "es": "Visibilidad de atajos en la guía",
+    "uk": "Видимість сполучень у довіднику",
+    "hu": "Gyorsbillentyűk láthatósága a segédben"
+  },
+  "No matching shortcuts.": {
+    "de": "Keine passenden Tastenkürzel.",
+    "fr": "Aucun raccourci correspondant.",
+    "es": "No hay atajos coincidentes.",
+    "uk": "Немає відповідних сполучень.",
+    "hu": "Nincs megfelelő gyorsbillentyű."
+  },
+  "Agent usage cache": {
+    "de": "Agenten-Nutzungscache",
+    "fr": "Cache d’utilisation des agents",
+    "es": "Caché de uso de agentes",
+    "uk": "Кеш використання агентів",
+    "hu": "Ügynökhasználati gyorsítótár"
+  },
+  "{count} shortcuts": {
+    "de": "{count} Tastenkürzel",
+    "fr": "{count} raccourcis",
+    "es": "{count} atajos",
+    "uk": "{count} сполучень",
+    "hu": "{count} gyorsbillentyű"
+  },
+  "Super shortcuts": {
+    "de": "Super-Tastenkürzel",
+    "fr": "Raccourcis Super",
+    "es": "Atajos de Super",
+    "uk": "Сполучення Super",
+    "hu": "Super gyorsbillentyűk"
+  },
+  "Ask an installed agent about shortcuts and settings. Keep conversations here and return to them later.": {
+    "de": "Frage einen installierten Agenten nach Tastenkürzeln und Einstellungen. Speichere Gespräche hier und setze sie später fort.",
+    "fr": "Interrogez un agent installé sur les raccourcis et les réglages. Conservez les conversations ici pour les reprendre plus tard.",
+    "es": "Pregunta a un agente instalado sobre atajos y ajustes. Guarda aquí las conversaciones para retomarlas más tarde.",
+    "uk": "Запитайте встановленого агента про сполучення й налаштування. Зберігайте розмови тут і повертайтеся до них пізніше.",
+    "hu": "Kérdezz egy telepített ügynököt a gyorsbillentyűkről és beállításokról. A beszélgetéseket itt tárolhatod, és később folytathatod."
+  },
+  "Browse, find and remember shortcuts for your desktop and installed apps.": {
+    "de": "Durchsuche und merke dir Tastenkürzel für deinen Desktop und installierte Apps.",
+    "fr": "Parcourez, trouvez et retenez les raccourcis de votre bureau et des applications installées.",
+    "es": "Explora, encuentra y recuerda atajos del escritorio y las aplicaciones instaladas.",
+    "uk": "Переглядайте, знаходьте та запам’ятовуйте сполучення для робочого столу й установлених застосунків.",
+    "hu": "Böngészd, keresd és jegyezd meg az asztal és a telepített alkalmazások gyorsbillentyűit."
+  },
+  "Search by name, or type @ctrl+w to find a key combination. Bookmark useful shortcuts and hide the ones you do not need.": {
+    "de": "Suche nach Namen oder gib @ctrl+w für eine Tastenkombination ein. Merke nützliche Tastenkürzel und blende nicht benötigte aus.",
+    "fr": "Recherchez par nom ou saisissez @ctrl+w pour une combinaison. Ajoutez les raccourcis utiles aux favoris et masquez les autres.",
+    "es": "Busca por nombre o escribe @ctrl+w para una combinación. Guarda los atajos útiles en favoritos y oculta los que no necesites.",
+    "uk": "Шукайте за назвою або введіть @ctrl+w для комбінації клавіш. Додавайте корисні сполучення до закладок і приховуйте непотрібні.",
+    "hu": "Keress név alapján, vagy írj be például @ctrl+w kifejezést. Jelöld kedvencnek a hasznos gyorsbillentyűket, és rejtsd el a feleslegeseket."
+  },
+  "Current is the default target. Choose another window from View options to send actions there.": {
+    "de": "Aktuell ist das Standardziel. Wähle in den Ansichtsoptionen ein anderes Fenster, um Aktionen dorthin zu senden.",
+    "fr": "La cible par défaut est la fenêtre actuelle. Choisissez une autre fenêtre dans les options d’affichage pour y envoyer les actions.",
+    "es": "El destino predeterminado es la ventana actual. Elige otra ventana en las opciones de vista para enviarle las acciones.",
+    "uk": "Типова ціль — поточне вікно. Виберіть інше вікно в параметрах перегляду, щоб спрямувати дії до нього.",
+    "hu": "Az alapértelmezett cél az aktuális ablak. A nézetbeállításokban másik ablakot is választhatsz a műveletekhez."
+  },
+  "Hold Super to see the guide. Its settings control spacing, icons, position and which shortcuts appear. Open guide settings with Ctrl+Shift+,.": {
+    "de": "Halte Super, um den Guide anzuzeigen. Seine Einstellungen steuern Abstände, Symbole, Position und sichtbare Tastenkürzel. Öffne sie mit Ctrl+Shift+,.",
+    "fr": "Maintenez Super pour afficher le guide. Ses réglages contrôlent l’espacement, les icônes, la position et les raccourcis visibles. Ouvrez-les avec Ctrl+Maj+,.",
+    "es": "Mantén Super para ver la guía. Sus ajustes controlan espaciado, iconos, posición y atajos visibles. Ábrelos con Ctrl+Mayús+,.",
+    "uk": "Утримуйте Super, щоб побачити довідник. Налаштування визначають відступи, піктограми, позицію та видимі сполучення. Відкрийте їх через Ctrl+Shift+,.",
+    "hu": "Tartsd lenyomva a Super billentyűt a segédhez. Beállíthatod a térközöket, ikonokat, pozíciót és a látható gyorsbillentyűket. Beállításai: Ctrl+Shift+,."
+  },
+  "Ask an installed agent to find shortcuts or change app settings. Conversations are saved locally; messages are sent to the agent you choose.": {
+    "de": "Bitte einen installierten Agenten, Tastenkürzel zu finden oder App-Einstellungen zu ändern. Gespräche werden lokal gespeichert; Nachrichten gehen an den gewählten Agenten.",
+    "fr": "Demandez à un agent installé de trouver des raccourcis ou de modifier les réglages. Les conversations sont enregistrées localement ; les messages sont envoyés à l’agent choisi.",
+    "es": "Pide a un agente instalado que encuentre atajos o cambie ajustes. Las conversaciones se guardan localmente; los mensajes se envían al agente elegido.",
+    "uk": "Попросіть установленого агента знайти сполучення або змінити налаштування. Розмови зберігаються локально; повідомлення надсилаються вибраному агенту.",
+    "hu": "Kérj meg egy telepített ügynököt gyorsbillentyűk keresésére vagy a beállítások módosítására. A beszélgetések helyben tárolódnak; az üzeneteket a választott ügynök kapja meg."
+  },
+  "Documentation": {
+    "de": "Dokumentation",
+    "fr": "Documentation",
+    "es": "Documentación",
+    "uk": "Документація",
+    "hu": "Dokumentáció"
+  },
+  "Project files": {
+    "de": "Projektdateien",
+    "fr": "Fichiers du projet",
+    "es": "Archivos del proyecto",
+    "uk": "Файли проєкту",
+    "hu": "Projektfájlok"
+  },
+  "Switch List / Keyboard": {
+    "de": "Liste / Tastatur wechseln",
+    "fr": "Basculer liste / clavier",
+    "es": "Cambiar lista / teclado",
+    "uk": "Перемкнути список / клавіатуру",
+    "hu": "Lista / billentyűzet váltása"
+  },
+  "Cycle bookmarked sources": {
+    "de": "Zwischen gemerkten Quellen wechseln",
+    "fr": "Parcourir les sources favorites",
+    "es": "Recorrer fuentes favoritas",
+    "uk": "Перемикати джерела із закладок",
+    "hu": "Kedvenc források váltása"
+  },
+  "Back from shortcut management": {
+    "de": "Tastenkürzelverwaltung verlassen",
+    "fr": "Quitter la gestion des raccourcis",
+    "es": "Volver desde la gestión de atajos",
+    "uk": "Вийти з керування сполученнями",
+    "hu": "Vissza a gyorsbillentyűk kezeléséből"
+  },
+  "Toggle bookmarks filter": {
+    "de": "Lesezeichenfilter umschalten",
+    "fr": "Activer ou désactiver le filtre des favoris",
+    "es": "Alternar filtro de favoritos",
+    "uk": "Перемкнути фільтр закладок",
+    "hu": "Kedvencek szűrőjének váltása"
+  },
+  "Choose shortcut type": {
+    "de": "Tastenkürzeltyp wählen",
+    "fr": "Choisir le type de raccourci",
+    "es": "Elegir tipo de atajo",
+    "uk": "Вибрати тип сполучення",
+    "hu": "Gyorsbillentyűtípus kiválasztása"
+  },
+  "Choose visibility": {
+    "de": "Sichtbarkeit wählen",
+    "fr": "Choisir la visibilité",
+    "es": "Elegir visibilidad",
+    "uk": "Вибрати видимість",
+    "hu": "Láthatóság kiválasztása"
+  },
+  "Choose window for shortcut actions": {
+    "de": "Zielfenster für Aktionen wählen",
+    "fr": "Choisir la fenêtre cible des actions",
+    "es": "Elegir ventana para acciones",
+    "uk": "Вибрати вікно для дій",
+    "hu": "Műveletek célablakának kiválasztása"
+  },
+  "Toggle numpad (Keyboard)": {
+    "de": "Ziffernblock umschalten (Tastatur)",
+    "fr": "Afficher ou masquer le pavé numérique (clavier)",
+    "es": "Alternar teclado numérico (teclado)",
+    "uk": "Перемкнути цифровий блок (клавіатура)",
+    "hu": "Numerikus billentyűzet váltása"
+  },
+  "Toggle fit width (Keyboard)": {
+    "de": "Breitenanpassung umschalten (Tastatur)",
+    "fr": "Adapter à la largeur (clavier)",
+    "es": "Ajustar al ancho (teclado)",
+    "uk": "Перемкнути підгонку ширини (клавіатура)",
+    "hu": "Billentyűzet szélességhez igazítása"
+  },
+  "Toggle all modifier layers (Keyboard)": {
+    "de": "Alle Modifikatorebenen umschalten (Tastatur)",
+    "fr": "Afficher tous les niveaux de modificateurs (clavier)",
+    "es": "Alternar todas las capas de modificadores (teclado)",
+    "uk": "Перемкнути всі шари модифікаторів (клавіатура)",
+    "hu": "Összes módosítóréteg váltása"
+  },
+  "Toggle key overlay (Keyboard)": {
+    "de": "Tastenüberlagerung umschalten (Tastatur)",
+    "fr": "Afficher ou masquer les indications des touches (clavier)",
+    "es": "Alternar indicaciones de teclas (teclado)",
+    "uk": "Перемкнути підказки клавіш (клавіатура)",
+    "hu": "Billentyűjelölések váltása"
+  },
+  "Choose a conversation": {
+    "de": "Gespräch wählen",
+    "fr": "Choisir une conversation",
+    "es": "Elegir conversación",
+    "uk": "Вибрати розмову",
+    "hu": "Beszélgetés kiválasztása"
+  },
+  "Apply shortcut (Editor)": {
+    "de": "Tastenkürzel anwenden (Editor)",
+    "fr": "Appliquer le raccourci (éditeur)",
+    "es": "Aplicar atajo (editor)",
+    "uk": "Застосувати сполучення (редактор)",
+    "hu": "Gyorsbillentyű alkalmazása (szerkesztő)"
+  },
+  "Quit app and background process": {
+    "de": "App und Hintergrundprozess beenden",
+    "fr": "Quitter l’application et son processus en arrière-plan",
+    "es": "Salir de la aplicación y del proceso en segundo plano",
+    "uk": "Закрити застосунок і фоновий процес",
+    "hu": "Alkalmazás és háttérfolyamat leállítása"
+  },
+  "Toggle filters (List)": {
+    "de": "Filter umschalten (Liste)",
+    "fr": "Afficher ou masquer les filtres (liste)",
+    "es": "Alternar filtros (lista)",
+    "uk": "Перемкнути фільтри (список)",
+    "hu": "Szűrők váltása (lista)"
+  },
+  "Toggle flat list (List)": {
+    "de": "Flache Liste umschalten",
+    "fr": "Activer ou désactiver la liste simple",
+    "es": "Alternar lista plana",
+    "uk": "Перемкнути плаский список",
+    "hu": "Egyszerű lista váltása"
+  },
+  "Toggle columns (List)": {
+    "de": "Spalten umschalten (Liste)",
+    "fr": "Afficher ou masquer les colonnes (liste)",
+    "es": "Alternar columnas (lista)",
+    "uk": "Перемкнути стовпці (список)",
+    "hu": "Oszlopok váltása (lista)"
+  },
+  "Enable live filter (List; Escape exits)": {
+    "de": "Live-Filter aktivieren (Liste; Escape beendet)",
+    "fr": "Activer le filtre en direct (liste ; Échap quitte)",
+    "es": "Activar filtro en vivo (lista; Escape sale)",
+    "uk": "Увімкнути живий фільтр (список; Escape — вихід)",
+    "hu": "Élő szűrő bekapcsolása (lista; Escape: kilépés)"
+  },
+  "Bookmark selected shortcut (List)": {
+    "de": "Ausgewähltes Tastenkürzel merken (Liste)",
+    "fr": "Ajouter le raccourci sélectionné aux favoris (liste)",
+    "es": "Marcar el atajo seleccionado como favorito (lista)",
+    "uk": "Додати вибране сполучення до закладок (список)",
+    "hu": "Kijelölt gyorsbillentyű kedvencnek jelölése (lista)"
+  },
+  "Hide/show selected shortcut (List)": {
+    "de": "Ausgewähltes Tastenkürzel ein-/ausblenden (Liste)",
+    "fr": "Masquer ou afficher le raccourci sélectionné (liste)",
+    "es": "Ocultar o mostrar el atajo seleccionado (lista)",
+    "uk": "Приховати або показати вибране сполучення (список)",
+    "hu": "Kijelölt gyorsbillentyű elrejtése/megjelenítése (lista)"
+  },
+  "Expand all groups (List)": {
+    "de": "Alle Gruppen ausklappen (Liste)",
+    "fr": "Développer tous les groupes (liste)",
+    "es": "Expandir todos los grupos (lista)",
+    "uk": "Розгорнути всі групи (список)",
+    "hu": "Összes csoport kibontása (lista)"
+  },
+  "Collapse all groups (List)": {
+    "de": "Alle Gruppen einklappen (Liste)",
+    "fr": "Réduire tous les groupes (liste)",
+    "es": "Contraer todos los grupos (lista)",
+    "uk": "Згорнути всі групи (список)",
+    "hu": "Összes csoport összecsukása (lista)"
+  },
+  "Open Keyboard Guide settings": {
+    "de": "Einstellungen der Tastaturhilfe öffnen",
+    "fr": "Ouvrir les réglages du guide clavier",
+    "es": "Abrir ajustes de la guía de teclado",
+    "uk": "Відкрити налаштування довідника клавіатури",
+    "hu": "Billentyűzetsegéd beállításainak megnyitása"
+  },
+  "Open Info": {
+    "de": "Informationen öffnen",
+    "fr": "Ouvrir les informations",
+    "es": "Abrir información",
+    "uk": "Відкрити інформацію",
+    "hu": "Információk megnyitása"
+  },
+  "Search": {
+    "de": "Suche",
+    "fr": "Recherche",
+    "es": "Búsqueda",
+    "uk": "Пошук",
+    "hu": "Keresés"
+  },
+  "Search font name": {
+    "de": "Schriftname suchen",
+    "fr": "Rechercher une police",
+    "es": "Buscar nombre de fuente",
+    "uk": "Пошук шрифту",
+    "hu": "Betűtípus keresése"
+  },
+  "Select": {
+    "de": "Auswählen",
+    "fr": "Sélectionner",
+    "es": "Seleccionar",
+    "uk": "Вибрати",
+    "hu": "Kiválasztás"
+  },
+  "Command": {
+    "de": "Befehl",
+    "fr": "Commande",
+    "es": "Comando",
+    "uk": "Команда",
+    "hu": "Parancs"
+  },
+  "Desktop App": {
+    "de": "Desktop-App",
+    "fr": "Application de bureau",
+    "es": "Aplicación de escritorio",
+    "uk": "Настільний застосунок",
+    "hu": "Asztali alkalmazás"
+  },
+  "Web App": {
+    "de": "Web-App",
+    "fr": "Application web",
+    "es": "Aplicación web",
+    "uk": "Вебзастосунок",
+    "hu": "Webalkalmazás"
+  },
+  "System UI": {
+    "de": "Systemoberfläche",
+    "fr": "Interface système",
+    "es": "Interfaz del sistema",
+    "uk": "Інтерфейс системи",
+    "hu": "Rendszerfelület"
+  },
+  "AI companion settings": {
+    "de": "KI-Assistent-Einstellungen",
+    "fr": "Paramètres de l’assistant IA",
+    "es": "Ajustes del asistente de IA",
+    "uk": "Налаштування ШІ-помічника",
+    "hu": "AI-társ beállításai"
+  },
+  "Preview on the right": {
+    "de": "Vorschau rechts",
+    "fr": "Aperçu à droite",
+    "es": "Vista previa a la derecha",
+    "uk": "Попередній перегляд праворуч",
+    "hu": "Előnézet a jobb oldalon"
+  },
+  "Auto-save": {
+    "de": "Automatisch speichern",
+    "fr": "Enregistrement automatique",
+    "es": "Guardado automático",
+    "uk": "Автозбереження",
+    "hu": "Automatikus mentés"
+  },
+  "Saved": {
+    "de": "Gespeichert",
+    "fr": "Enregistré",
+    "es": "Guardado",
+    "uk": "Збережено",
+    "hu": "Mentve"
+  },
+  "Chat presentation": {
+    "de": "Chat-Darstellung",
+    "fr": "Affichage du chat",
+    "es": "Presentación del chat",
+    "uk": "Вигляд чату",
+    "hu": "Csevegés megjelenése"
+  },
+  "Keyboard snippets": {
+    "de": "Tastaturausschnitte",
+    "fr": "Illustrations du clavier",
+    "es": "Fragmentos de teclado",
+    "uk": "Фрагменти клавіатури",
+    "hu": "Billentyűzetrészletek"
+  },
+  "Allow illustrated keyboard shortcuts in replies.": {
+    "de": "Illustrierte Tastenkürzel in Antworten erlauben.",
+    "fr": "Autoriser les illustrations de raccourcis dans les réponses.",
+    "es": "Permitir ilustraciones de atajos en las respuestas.",
+    "uk": "Дозволити ілюстрації сполучень клавіш у відповідях.",
+    "hu": "Billentyűkombinációk szemléltetése a válaszokban."
+  },
+  "Fade keyboard snippet edges": {
+    "de": "Tastaturränder ausblenden",
+    "fr": "Estomper les bords du clavier",
+    "es": "Difuminar bordes del teclado",
+    "uk": "Розмивати краї клавіатури",
+    "hu": "Billentyűzetrészlet széleinek elhalványítása"
+  },
+  "Use a soft vignette around generated keyboards.": {
+    "de": "Weiche Vignette um generierte Tastaturen verwenden.",
+    "fr": "Utiliser une vignette douce autour des claviers générés.",
+    "es": "Usar una viñeta suave alrededor de los teclados generados.",
+    "uk": "Застосовувати м’яку віньєтку навколо згенерованих клавіатур.",
+    "hu": "Lágy vignetta a megjelenített billentyűzetek körül."
+  },
+  "Show session token usage": {
+    "de": "Tokenverbrauch der Sitzung anzeigen",
+    "fr": "Afficher les jetons de la session",
+    "es": "Mostrar tokens de la sesión",
+    "uk": "Показувати токени сеансу",
+    "hu": "Munkamenet tokenhasználatának megjelenítése"
+  },
+  "Show reported input and output tokens. Providers may not report usage.": {
+    "de": "Gemeldete Eingabe- und Ausgabetokens anzeigen. Manche Anbieter melden keinen Verbrauch.",
+    "fr": "Afficher les jetons d’entrée et de sortie déclarés. Certains fournisseurs ne les indiquent pas.",
+    "es": "Mostrar tokens de entrada y salida reportados. Algunos proveedores no informan del uso.",
+    "uk": "Показувати повідомлені вхідні й вихідні токени. Постачальники можуть не надавати даних.",
+    "hu": "Jelentett bemeneti és kimeneti tokenek. Egyes szolgáltatók nem jelentenek használatot."
+  },
+  "Personalization": {
+    "de": "Personalisierung",
+    "fr": "Personnalisation",
+    "es": "Personalización",
+    "uk": "Персоналізація",
+    "hu": "Személyre szabás"
+  },
+  "Remember my preferences": {
+    "de": "Meine Einstellungen merken",
+    "fr": "Mémoriser mes préférences",
+    "es": "Recordar mis preferencias",
+    "uk": "Запам’ятовувати мої вподобання",
+    "hu": "Beállításaim megjegyzése"
+  },
+  "Only save facts and preferences you explicitly ask the agent to remember.": {
+    "de": "Nur Fakten und Vorlieben speichern, die du ausdrücklich zum Merken vorgibst.",
+    "fr": "Enregistrer uniquement les faits et préférences que vous demandez explicitement de retenir.",
+    "es": "Guardar solo datos y preferencias que pidas recordar explícitamente.",
+    "uk": "Зберігати лише факти й уподобання, які ви явно просите запам’ятати.",
+    "hu": "Csak a kifejezetten megjegyzésre kért tények és preferenciák mentése."
+  },
+  "Save memory": {
+    "de": "Erinnerungen speichern",
+    "fr": "Enregistrer la mémoire",
+    "es": "Guardar memoria",
+    "uk": "Зберегти пам’ять",
+    "hu": "Emlékek mentése"
+  },
+  "Use custom instructions": {
+    "de": "Eigene Anweisungen verwenden",
+    "fr": "Utiliser des instructions personnalisées",
+    "es": "Usar instrucciones personalizadas",
+    "uk": "Використовувати власні інструкції",
+    "hu": "Egyéni utasítások használata"
+  },
+  "Applied to subsequent messages in every companion conversation.": {
+    "de": "Gilt für folgende Nachrichten in allen Assistentengesprächen.",
+    "fr": "Appliquées aux prochains messages de toutes les conversations.",
+    "es": "Se aplican a los próximos mensajes de todas las conversaciones.",
+    "uk": "Застосовуються до наступних повідомлень у всіх розмовах.",
+    "hu": "Minden beszélgetés következő üzeneteire érvényes."
+  },
+  "Session tokens: {count}": {
+    "de": "Sitzungstokens: {count}",
+    "fr": "Jetons de la session : {count}",
+    "es": "Tokens de sesión: {count}",
+    "uk": "Токени сеансу: {count}",
+    "hu": "Munkamenet tokenjei: {count}"
+  },
+  "Token usage unavailable": {
+    "de": "Tokenverbrauch nicht verfügbar",
+    "fr": "Utilisation des jetons indisponible",
+    "es": "Uso de tokens no disponible",
+    "uk": "Дані про токени недоступні",
+    "hu": "Tokenhasználat nem érhető el"
+  },
+  "Agent default": {
+    "de": "Agent-Standard",
+    "fr": "Valeur par défaut de l’agent",
+    "es": "Predeterminado del agente",
+    "uk": "Типова модель агента",
+    "hu": "Ügynök alapértelmezése"
+  },
+  "Not installed": {
+    "de": "Nicht installiert",
+    "fr": "Non installé",
+    "es": "No instalado",
+    "uk": "Не встановлено",
+    "hu": "Nincs telepítve"
+  },
+  "Copy code": {
+    "de": "Code kopieren",
+    "fr": "Copier le code",
+    "es": "Copiar código",
+    "uk": "Копіювати код",
+    "hu": "Kód másolása"
+  },
+  "Inside the app": {
+    "de": "Im Inneren der App",
+    "fr": "Dans les coulisses",
+    "es": "Dentro de la aplicación",
+    "uk": "Усередині застосунку",
+    "hu": "Az alkalmazás belülről"
+  },
+  "Version": {
+    "de": "Version",
+    "fr": "Version",
+    "es": "Versión",
+    "uk": "Версія",
+    "hu": "Verzió",
+    "ko": "버전",
+    "ja": "バージョン",
+    "zh_CN": "版本"
+  },
+  "Build": {
+    "de": "Build",
+    "fr": "Compilation",
+    "es": "Compilación",
+    "uk": "Збірка",
+    "hu": "Build"
+  },
+  "Built": {
+    "de": "Erstellt",
+    "fr": "Compilé le",
+    "es": "Compilado",
+    "uk": "Зібрано",
+    "hu": "Összeállítva"
+  },
+  "Runtime": {
+    "de": "Laufzeit",
+    "fr": "Environnement",
+    "es": "Entorno",
+    "uk": "Середовище",
+    "hu": "Futtatókörnyezet"
+  },
+  "Project homepage": {
+    "de": "Projekt-Website",
+    "fr": "Site du projet",
+    "es": "Sitio del proyecto",
+    "uk": "Сайт проєкту",
+    "hu": "Projekt honlapja"
+  },
+  "Omarchy homepage": {
+    "de": "Omarchy-Website",
+    "fr": "Site d’Omarchy",
+    "es": "Sitio de Omarchy",
+    "uk": "Сайт Omarchy",
+    "hu": "Omarchy honlapja"
+  },
+  "Model: {model}": {
+    "de": "Modell: {model}",
+    "fr": "Modèle : {model}",
+    "es": "Modelo: {model}",
+    "uk": "Модель: {model}",
+    "hu": "Modell: {model}"
+  },
+  "Configured model: {model}": {
+    "de": "Konfiguriertes Modell: {model}",
+    "fr": "Modèle configuré : {model}",
+    "es": "Modelo configurado: {model}",
+    "uk": "Налаштована модель: {model}",
+    "hu": "Beállított modell: {model}"
+  },
+  "Development": {
+    "de": "Entwicklung",
+    "fr": "Développement",
+    "es": "Desarrollo",
+    "uk": "Розробка",
+    "hu": "Fejlesztés",
+    "ko": "개발",
+    "ja": "開発",
+    "zh_CN": "开发"
+  },
+  "Working tree": {
+    "de": "Arbeitsstand",
+    "fr": "Copie de travail",
+    "es": "Copia de trabajo",
+    "uk": "Робоча копія",
+    "hu": "Munkapéldány"
+  },
+  "User memory": {
+    "de": "Benutzergedächtnis",
+    "fr": "Mémoire utilisateur",
+    "es": "Memoria del usuario",
+    "uk": "Пам’ять користувача",
+    "hu": "Felhasználói emlékek"
+  },
+  "In-app animations": {
+    "de": "Animationen in der App",
+    "fr": "Animations dans l’application",
+    "es": "Animaciones de la aplicación",
+    "uk": "Анімації в застосунку",
+    "hu": "Alkalmazáson belüli animációk",
+    "ko": "앱 내부 애니메이션",
+    "ja": "アプリ内アニメーション",
+    "zh_CN": "应用内动画"
+  },
+  "Use system typography": {
+    "de": "Systemschrift verwenden",
+    "fr": "Utiliser la typographie du système",
+    "es": "Usar la tipografía del sistema",
+    "uk": "Використовувати системні шрифти",
+    "hu": "Rendszer betűbeállításainak használata",
+    "ko": "시스템 글꼴 사용",
+    "ja": "システムのフォント設定を使用",
+    "zh_CN": "使用系统字体设置"
+  },
+  "No matches for “{query}”": {
+    "de": "Keine Treffer für „{query}“",
+    "fr": "Aucun résultat pour « {query} »",
+    "es": "No hay resultados para «{query}»",
+    "uk": "Немає збігів для «{query}»",
+    "hu": "Nincs találat erre: „{query}”",
+    "ko": "“{query}”에 대한 결과 없음",
+    "ja": "「{query}」に一致する項目はありません",
+    "zh_CN": "没有与“{query}”匹配的结果"
+  },
+  "Remember last search": {
+    "de": "Letzte Suche merken",
+    "fr": "Mémoriser la dernière recherche",
+    "es": "Recordar la última búsqueda",
+    "uk": "Запам’ятовувати останній пошук",
+    "hu": "Legutóbbi keresés megjegyzése",
+    "ko": "마지막 검색 기억",
+    "ja": "前回の検索を記憶",
+    "zh_CN": "记住上次搜索"
+  },
+  "Tooltips": {
+    "de": "Kurzinfos",
+    "fr": "Infobulles",
+    "es": "Información emergente",
+    "uk": "Спливні підказки",
+    "hu": "Buboréksúgók",
+    "ko": "도구 설명",
+    "ja": "ツールチップ",
+    "zh_CN": "工具提示"
+  },
+  "Show shortcut details on hover": {
+    "de": "Tastenkürzeldetails beim Darüberfahren anzeigen",
+    "fr": "Afficher les détails des raccourcis au survol",
+    "es": "Mostrar detalles del atajo al pasar el cursor",
+    "uk": "Показувати подробиці скорочень при наведенні",
+    "hu": "Gyorsbillentyűk részletei az egérmutató alatt",
+    "ko": "마우스를 올리면 단축키 세부 정보 표시",
+    "ja": "マウスを合わせたときにショートカットの詳細を表示",
+    "zh_CN": "悬停时显示快捷键详情"
+  },
+  "Shortcut tooltip delay (milliseconds)": {
+    "de": "Verzögerung der Kurzinfo (Millisekunden)",
+    "fr": "Délai des infobulles de raccourci (millisecondes)",
+    "es": "Retardo de la información del atajo (milisegundos)",
+    "uk": "Затримка підказки скорочення (мілісекунди)",
+    "hu": "Gyorsbillentyű-súgó késleltetése (ezredmásodperc)",
+    "ko": "단축키 도구 설명 지연 (밀리초)",
+    "ja": "ショートカットのツールチップの遅延（ミリ秒）",
+    "zh_CN": "快捷键提示延迟（毫秒）"
+  },
+  "Mouse gestures & controllers": {
+    "hu": "Egérgesztusok és vezérlők"
+  },
+  "Explore connected input devices and assign gestures or controller buttons to Bindlume actions.": {
+    "hu": "Fedezd fel a csatlakoztatott beviteli eszközöket, és rendelj gesztusokat vagy vezérlőgombokat a Bindlume műveleteihez."
+  },
+  "Connected devices": {
+    "hu": "Csatlakoztatott eszközök"
+  },
+  "No action": {
+    "hu": "Nincs művelet"
+  },
+  "Toggle chat": {
+    "hu": "Csevegés megnyitása/bezárása"
+  },
+  "Clear search": {
+    "hu": "Keresés törlése",
+    "de": "Suche löschen",
+    "fr": "Effacer la recherche",
+    "es": "Borrar búsqueda",
+    "uk": "Очистити пошук",
+    "ko": "검색 지우기",
+    "ja": "検索をクリア",
+    "zh_CN": "清除搜索"
+  },
+  "Mouse": {
+    "hu": "Egér"
+  },
+  "Controller": {
+    "hu": "Vezérlő"
+  },
+  "Mouse gestures": {
+    "hu": "Egérgesztusok"
+  },
+  "No controller selected": {
+    "hu": "Nincs kiválasztott vezérlő"
+  },
+  "Refresh devices": {
+    "hu": "Eszközök frissítése"
+  },
+  "No input devices detected.": {
+    "hu": "Nem található beviteli eszköz."
+  },
+  "Hold the right mouse button and drag inside Bindlume. Assign actions below.": {
+    "hu": "Tartsd lenyomva a jobb egérgombot, és húzd az egeret a Bindlume ablakában. Alább rendelhetsz hozzá műveleteket."
+  },
+  "Drag left": {
+    "hu": "Húzás balra"
+  },
+  "Drag right": {
+    "hu": "Húzás jobbra"
+  },
+  "Drag up": {
+    "hu": "Húzás felfelé"
+  },
+  "Drag down": {
+    "hu": "Húzás lefelé"
+  },
+  "Try a right-button gesture here": {
+    "hu": "Próbálj ki itt egy gesztust a jobb egérgombbal"
+  },
+  "Move farther to recognize a gesture": {
+    "hu": "Mozgasd távolabb a gesztus felismeréséhez"
+  },
+  "Device": {
+    "hu": "Eszköz"
+  },
+  "Enable controller actions": {
+    "hu": "Vezérlőműveletek engedélyezése"
+  },
+  "Only while the Bindlume main window has focus. No desktop-wide remapping.": {
+    "hu": "Csak akkor, ha a Bindlume főablaka van fókuszban. Nem módosítja az asztal egészének gombkiosztását."
+  },
+  "Button {number}": {
+    "hu": "{number}. gomb"
+  },
+  "Button {number}: {value}": {
+    "hu": "{number}. gomb: {value}"
+  },
+  "Axis {number}: {value}": {
+    "hu": "{number}. tengely: {value}"
+  },
+  "Test controller input": {
+    "hu": "Vezérlő bemenetének tesztelése"
+  },
+  "Input is read only while this test is enabled and focused.": {
+    "hu": "A bemenet olvasása csak bekapcsolt és fókuszban lévő teszt közben történik."
+  },
+  "Azeron keyboard and mouse modes use their existing key mappings. Controller button numbers depend on the device; test before assigning.": {
+    "hu": "Az Azeron billentyűzet- és egérmódja a meglévő kiosztást használja. A vezérlő gombszámai eszközfüggők; hozzárendelés előtt teszteld őket."
+  },
+  "Controller unavailable. Reconnect it or check device access.": {
+    "hu": "A vezérlő nem érhető el. Csatlakoztasd újra, vagy ellenőrizd a hozzáférést."
+  },
+  "Model not reported": {
+    "hu": "A modell nincs megadva"
+  },
+  "Account limits": {
+    "hu": "Fiókkorlátok"
+  },
+  "{percent}% used": {
+    "hu": "{percent}% felhasználva"
+  },
+  "Resets {time}": {
+    "hu": "Visszaállítás: {time}"
+  },
+  "Bindlume tokens by day": {
+    "hu": "Bindlume-tokenek naponta"
+  },
+  "Bindlume tokens by model": {
+    "hu": "Bindlume-tokenek modellenként"
+  },
+  "No reported Bindlume usage yet.": {
+    "hu": "Még nincs jelentett Bindlume-használat."
+  },
+  "Older tokens without a date: {count}": {
+    "hu": "Korábbi, dátum nélküli tokenek: {count}"
+  },
+  "Saved Bindlume conversations only. Input includes cached tokens; cached tokens are not counted twice.": {
+    "hu": "Csak a mentett Bindlume-beszélgetések. A bemenet a gyorsítótárazott tokeneket is tartalmazza, de csak egyszer számítjuk őket."
+  },
+  "Enable token usage in AI companion settings to show Bindlume charts.": {
+    "hu": "A Bindlume-diagramok megjelenítéséhez engedélyezd a tokenhasználatot az AI-társ beállításaiban."
+  },
+  "Mon": {
+    "hu": "H"
+  },
+  "Tue": {
+    "hu": "K"
+  },
+  "Wed": {
+    "hu": "Sze"
+  },
+  "Thu": {
+    "hu": "Cs"
+  },
+  "Fri": {
+    "hu": "P"
+  },
+  "Sat": {
+    "hu": "Szo"
+  },
+  "Sun": {
+    "hu": "V"
+  },
+  "Mouse · Controller · Azeron": {
+    "hu": "Egér · Vezérlő · Azeron"
+  },
+  "Browsers": {
+    "de": "Browser",
+    "fr": "Navigateurs",
+    "es": "Navegadores",
+    "uk": "Браузери",
+    "hu": "Böngészők",
+    "ko": "브라우저",
+    "ja": "ブラウザー",
+    "zh_CN": "浏览器"
+  },
+  "Desktop": {
+    "de": "Desktop",
+    "fr": "Bureau",
+    "es": "Escritorio",
+    "uk": "Стільниця",
+    "hu": "Asztal",
+    "ko": "데스크톱",
+    "ja": "デスクトップ",
+    "zh_CN": "桌面"
+  },
+  "Terminals": {
+    "de": "Terminals",
+    "fr": "Terminaux",
+    "es": "Terminales",
+    "uk": "Термінали",
+    "hu": "Terminálok",
+    "ko": "터미널",
+    "ja": "ターミナル",
+    "zh_CN": "终端"
+  },
+  "Personal": {
+    "de": "Persönlich",
+    "fr": "Personnel",
+    "es": "Personal",
+    "uk": "Особисті",
+    "hu": "Személyes",
+    "ko": "개인",
+    "ja": "個人",
+    "zh_CN": "个人"
+  },
+  "{count} shortcut": {
+    "de": "{count} Tastenkombination",
+    "fr": "{count} raccourci",
+    "es": "{count} atajo",
+    "uk": "{count} сполучення",
+    "hu": "{count} gyorsbillentyű",
+    "ko": "단축키 {count}개",
+    "ja": "ショートカット {count}件",
+    "zh_CN": "{count} 个快捷键"
+  },
+  "Added {name}": {
+    "de": "{name} hinzugefügt",
+    "fr": "{name} ajouté",
+    "es": "Se añadió {name}",
+    "uk": "Додано {name}",
+    "hu": "Hozzáadva: {name}",
+    "ko": "{name} 추가됨",
+    "ja": "{name} を追加しました",
+    "zh_CN": "已添加 {name}"
+  },
+  "Created {path}. Edit the JSON file, then press Refresh.": {
+    "de": "{path} erstellt. Bearbeiten Sie die JSON-Datei und klicken Sie auf Aktualisieren.",
+    "fr": "{path} créé. Modifiez le fichier JSON, puis cliquez sur Actualiser.",
+    "es": "Se creó {path}. Edita el archivo JSON y pulsa Actualizar.",
+    "uk": "Створено {path}. Відредагуйте файл JSON і натисніть Оновити.",
+    "hu": "Létrehozva: {path}. Szerkessze a JSON-fájlt, majd nyomja meg a Frissítés gombot.",
+    "ko": "{path} 생성됨. JSON 파일을 편집한 후 새로고침을 누르세요.",
+    "ja": "{path} を作成しました。JSON ファイルを編集してから更新してください。",
+    "zh_CN": "已创建 {path}。编辑 JSON 文件，然后点击刷新。"
+  },
+  "Ask about shortcuts or change the app…": {
+    "de": "Nach Tastenkürzeln fragen oder die App anpassen…",
+    "fr": "Demandez un raccourci ou modifiez l’application…",
+    "es": "Pregunta por atajos o modifica la aplicación…",
+    "uk": "Запитайте про скорочення або змініть застосунок…",
+    "hu": "Kérdezzen a gyorsbillentyűkről vagy módosítsa az alkalmazást…",
+    "ko": "단축키를 질문하거나 앱을 변경하세요…",
+    "ja": "ショートカットを質問、またはアプリを変更…",
+    "zh_CN": "询问快捷键或更改应用…"
+  },
+  "App tool failed": {
+    "de": "App-Werkzeug fehlgeschlagen",
+    "fr": "Échec de l’outil de l’application",
+    "es": "Falló la herramienta de la aplicación",
+    "uk": "Помилка інструмента застосунку",
+    "hu": "Az alkalmazáseszköz hibát jelzett",
+    "ko": "앱 도구 실패",
+    "ja": "アプリツールが失敗しました",
+    "zh_CN": "应用工具失败"
+  },
+  "App tool finished": {
+    "de": "App-Werkzeug abgeschlossen",
+    "fr": "Outil de l’application terminé",
+    "es": "Herramienta de la aplicación finalizada",
+    "uk": "Інструмент застосунку завершив роботу",
+    "hu": "Az alkalmazáseszköz befejezte a műveletet",
+    "ko": "앱 도구 완료",
+    "ja": "アプリツールが完了しました",
+    "zh_CN": "应用工具已完成"
+  },
+  "Using app tool…": {
+    "de": "App-Werkzeug wird verwendet…",
+    "fr": "Utilisation de l’outil de l’application…",
+    "es": "Usando la herramienta de la aplicación…",
+    "uk": "Використання інструмента застосунку…",
+    "hu": "Alkalmazáseszköz használata…",
+    "ko": "앱 도구 사용 중…",
+    "ja": "アプリツールを使用中…",
+    "zh_CN": "正在使用应用工具…"
+  },
+  "Saved shortcuts · refreshing…": {
+    "de": "Gespeicherte Tastenkürzel · Aktualisierung…",
+    "fr": "Raccourcis enregistrés · actualisation…",
+    "es": "Atajos guardados · actualizando…",
+    "uk": "Збережені скорочення · оновлення…",
+    "hu": "Mentett gyorsbillentyűk · frissítés…",
+    "ko": "저장된 단축키 · 새로 고침 중…",
+    "ja": "保存済みショートカット · 更新中…",
+    "zh_CN": "已保存的快捷键 · 正在刷新…"
+  },
+  "Saved shortcuts · refresh unavailable": {
+    "de": "Gespeicherte Tastenkürzel · Aktualisierung nicht verfügbar",
+    "fr": "Raccourcis enregistrés · actualisation indisponible",
+    "es": "Atajos guardados · actualización no disponible",
+    "uk": "Збережені скорочення · оновлення недоступне",
+    "hu": "Mentett gyorsbillentyűk · a frissítés nem érhető el",
+    "ko": "저장된 단축키 · 새로 고침 불가",
+    "ja": "保存済みショートカット · 更新できません",
+    "zh_CN": "已保存的快捷键 · 无法刷新"
+  },
+  "Configured in AI companion settings": {
+    "de": "In den KI-Assistent-Einstellungen konfiguriert",
+    "fr": "Configuré dans les paramètres de l’assistant IA",
+    "es": "Configurado en los ajustes del asistente IA",
+    "uk": "Налаштовано в параметрах ШІ-помічника",
+    "hu": "Az MI-segéd beállításaiban megadva",
+    "ko": "AI 도우미 설정에서 구성됨",
+    "ja": "AIアシスタント設定で構成",
+    "zh_CN": "在 AI 助手设置中配置"
+  },
+  "Direct model connections": {
+    "de": "Direkte Modellverbindungen",
+    "fr": "Connexions directes aux modèles",
+    "es": "Conexiones directas a modelos",
+    "uk": "Прямі підключення до моделей",
+    "hu": "Közvetlen modellkapcsolatok",
+    "ko": "모델 직접 연결",
+    "ja": "モデルへの直接接続",
+    "zh_CN": "直接模型连接"
+  },
+  "Use a tool-capable model. API keys stay in environment variables. Start a new chat after changing connections.": {
+    "de": "Verwenden Sie ein Modell mit Werkzeugunterstützung. API-Schlüssel bleiben in Umgebungsvariablen. Starten Sie nach Verbindungsänderungen einen neuen Chat.",
+    "fr": "Utilisez un modèle prenant en charge les outils. Les clés API restent dans les variables d’environnement. Après modification, démarrez une nouvelle conversation.",
+    "es": "Usa un modelo compatible con herramientas. Las claves API permanecen en variables de entorno. Inicia un chat nuevo después de cambiar conexiones.",
+    "uk": "Використовуйте модель із підтримкою інструментів. Ключі API зберігаються у змінних середовища. Після зміни підключень почніть новий чат.",
+    "hu": "Használjon eszközöket támogató modellt. Az API-kulcsok környezeti változókban maradnak. A kapcsolatok módosítása után indítson új beszélgetést.",
+    "ko": "도구를 지원하는 모델을 사용하세요. API 키는 환경 변수에 유지됩니다. 연결을 변경한 후 새 대화를 시작하세요.",
+    "ja": "ツール対応モデルを使用してください。APIキーは環境変数に保存します。接続変更後は新しいチャットを開始してください。",
+    "zh_CN": "请使用支持工具的模型。API 密钥保留在环境变量中。更改连接后请开始新对话。"
+  },
+  "Base URL": {
+    "de": "Basis-URL",
+    "fr": "URL de base",
+    "es": "URL base",
+    "uk": "Базова URL-адреса",
+    "hu": "Alap URL",
+    "ko": "기본 URL",
+    "ja": "ベースURL",
+    "zh_CN": "基础 URL"
+  },
+  "API key environment variable": {
+    "de": "Umgebungsvariable für API-Schlüssel",
+    "fr": "Variable d’environnement de la clé API",
+    "es": "Variable de entorno de la clave API",
+    "uk": "Змінна середовища для ключа API",
+    "hu": "Az API-kulcs környezeti változója",
+    "ko": "API 키 환경 변수",
+    "ja": "APIキーの環境変数",
+    "zh_CN": "API 密钥环境变量"
+  },
+  "Optional": {
+    "de": "Optional",
+    "fr": "Facultatif",
+    "es": "Opcional",
+    "uk": "Необов’язково",
+    "hu": "Nem kötelező",
+    "ko": "선택 사항",
+    "ja": "任意",
+    "zh_CN": "可选"
+  },
+  "Invalid model connection.": {
+    "de": "Ungültige Modellverbindung.",
+    "fr": "Connexion au modèle invalide.",
+    "es": "Conexión al modelo no válida.",
+    "uk": "Неправильне підключення до моделі.",
+    "hu": "Érvénytelen modellkapcsolat.",
+    "ko": "잘못된 모델 연결입니다.",
+    "ja": "モデル接続が無効です。",
+    "zh_CN": "模型连接无效。"
+  },
+  "Configure an API key before connecting.": {
+    "de": "Vor dem Verbinden einen API-Schlüssel konfigurieren.",
+    "fr": "Configurez une clé API avant la connexion.",
+    "es": "Configura una clave API antes de conectar.",
+    "uk": "Налаштуйте ключ API перед підключенням.",
+    "hu": "Csatlakozás előtt állítson be API-kulcsot.",
+    "ko": "연결 전에 API 키를 설정하세요.",
+    "ja": "接続前にAPIキーを設定してください。",
+    "zh_CN": "连接前请配置 API 密钥。"
+  },
+  "Model request timed out.": {
+    "de": "Modellanfrage abgelaufen.",
+    "fr": "La requête au modèle a expiré.",
+    "es": "La solicitud al modelo agotó el tiempo.",
+    "uk": "Час запиту до моделі вичерпано.",
+    "hu": "A modellkérés időtúllépés miatt megszakadt.",
+    "ko": "모델 요청 시간이 초과되었습니다.",
+    "ja": "モデルリクエストがタイムアウトしました。",
+    "zh_CN": "模型请求超时。"
+  },
+  "Model request failed. Check the model and its tool support.": {
+    "de": "Modellanfrage fehlgeschlagen. Modell und Werkzeugunterstützung prüfen.",
+    "fr": "Échec de la requête. Vérifiez le modèle et sa prise en charge des outils.",
+    "es": "La solicitud falló. Comprueba el modelo y su soporte de herramientas.",
+    "uk": "Помилка запиту. Перевірте модель і підтримку інструментів.",
+    "hu": "A modellkérés sikertelen. Ellenőrizze a modellt és az eszköztámogatást.",
+    "ko": "모델 요청 실패. 모델과 도구 지원을 확인하세요.",
+    "ja": "モデルリクエストに失敗しました。モデルとツール対応を確認してください。",
+    "zh_CN": "模型请求失败。请检查模型及其工具支持。"
+  },
+  "Model response exceeded limits.": {
+    "de": "Modellantwort überschreitet das Limit.",
+    "fr": "La réponse du modèle dépasse les limites.",
+    "es": "La respuesta del modelo superó los límites.",
+    "uk": "Відповідь моделі перевищила обмеження.",
+    "hu": "A modell válasza túllépte a korlátokat.",
+    "ko": "모델 응답이 제한을 초과했습니다.",
+    "ja": "モデル応答が制限を超えました。",
+    "zh_CN": "模型响应超出限制。"
+  },
+  "Choose a model in AI companion settings.": {
+    "de": "Modell in den KI-Assistent-Einstellungen wählen.",
+    "fr": "Choisissez un modèle dans les paramètres de l’assistant IA.",
+    "es": "Elige un modelo en los ajustes del asistente IA.",
+    "uk": "Виберіть модель у налаштуваннях ШІ-помічника.",
+    "hu": "Válasszon modellt az MI-segéd beállításaiban.",
+    "ko": "AI 도우미 설정에서 모델을 선택하세요.",
+    "ja": "AIアシスタント設定でモデルを選択してください。",
+    "zh_CN": "请在 AI 助手设置中选择模型。"
+  },
+  "Unsupported tool.": {
+    "de": "Nicht unterstütztes Werkzeug.",
+    "fr": "Outil non pris en charge.",
+    "es": "Herramienta no compatible.",
+    "uk": "Інструмент не підтримується.",
+    "hu": "Nem támogatott eszköz.",
+    "ko": "지원되지 않는 도구입니다.",
+    "ja": "未対応のツールです。",
+    "zh_CN": "不支持的工具。"
+  },
+  "Invalid tool arguments.": {
+    "de": "Ungültige Werkzeugargumente.",
+    "fr": "Arguments d’outil invalides.",
+    "es": "Argumentos de herramienta no válidos.",
+    "uk": "Неправильні аргументи інструмента.",
+    "hu": "Érvénytelen eszközparaméterek.",
+    "ko": "잘못된 도구 인수입니다.",
+    "ja": "ツールの引数が無効です。",
+    "zh_CN": "工具参数无效。"
+  },
+  "Result too large. Narrow your search.": {
+    "de": "Ergebnis zu groß. Suche eingrenzen.",
+    "fr": "Résultat trop volumineux. Affinez la recherche.",
+    "es": "Resultado demasiado grande. Acota la búsqueda.",
+    "uk": "Результат завеликий. Звузьте пошук.",
+    "hu": "Az eredmény túl nagy. Szűkítse a keresést.",
+    "ko": "결과가 너무 큽니다. 검색 범위를 좁히세요.",
+    "ja": "結果が大きすぎます。検索を絞ってください。",
+    "zh_CN": "结果过大。请缩小搜索范围。"
+  },
+  "The assistant reached its tool limit.": {
+    "de": "Der Assistent hat sein Werkzeuglimit erreicht.",
+    "fr": "L’assistant a atteint sa limite d’outils.",
+    "es": "El asistente alcanzó su límite de herramientas.",
+    "uk": "Помічник досяг ліміту інструментів.",
+    "hu": "A segéd elérte az eszközhasználati korlátot.",
+    "ko": "도우미가 도구 사용 제한에 도달했습니다.",
+    "ja": "アシスタントがツール上限に達しました。",
+    "zh_CN": "助手已达到工具使用上限。"
+  },
+  "Uses the configured model connection.": {
+    "de": "Verwendet die konfigurierte Modellverbindung.",
+    "fr": "Utilise la connexion au modèle configurée.",
+    "es": "Usa la conexión al modelo configurada.",
+    "uk": "Використовує налаштоване підключення до моделі.",
+    "hu": "A beállított modellkapcsolatot használja.",
+    "ko": "설정된 모델 연결을 사용합니다.",
+    "ja": "設定済みのモデル接続を使用します。",
+    "zh_CN": "使用配置的模型连接。"
+  },
+  "Choose an installed agent or configure a connection in AI companion settings.": {
+    "de": "Installierten Agenten wählen oder eine Verbindung in den KI-Assistent-Einstellungen konfigurieren.",
+    "fr": "Choisissez un agent installé ou configurez une connexion dans les paramètres de l’assistant IA.",
+    "es": "Elige un agente instalado o configura una conexión en los ajustes del asistente IA.",
+    "uk": "Виберіть встановленого агента або налаштуйте підключення в параметрах ШІ-помічника.",
+    "hu": "Válasszon telepített ügynököt, vagy állítson be kapcsolatot az MI-segéd beállításaiban.",
+    "ko": "설치된 에이전트를 선택하거나 AI 도우미 설정에서 연결을 구성하세요.",
+    "ja": "インストール済みエージェントを選ぶか、AIアシスタント設定で接続を構成してください。",
+    "zh_CN": "选择已安装的智能体，或在 AI 助手设置中配置连接。"
+  },
+  "Raised keys": {
+    "de": "Erhöhte Tasten",
+    "fr": "Touches en relief",
+    "es": "Teclas en relieve",
+    "uk": "Об’ємні клавіші",
+    "hu": "Térhatású billentyűk",
+    "ko": "입체 키",
+    "ja": "立体キー",
+    "zh_CN": "立体按键"
+  },
+  "Raised keycaps with illuminated bindings": {
+    "de": "Erhöhte Tastenkappen mit beleuchteten Tastenkombinationen",
+    "fr": "Touches en relief avec raccourcis illuminés",
+    "es": "Teclas en relieve con atajos iluminados",
+    "uk": "Об’ємні клавіші з підсвіченими комбінаціями",
+    "hu": "Térhatású billentyűk megvilágított kombinációkkal",
+    "ko": "단축키가 빛나는 입체 키캡",
+    "ja": "ショートカットが光る立体キーキャップ",
+    "zh_CN": "带快捷键背光的立体键帽"
+  },
+  "Choose a harness to inspect usage": {
+    "de": "Agent für die Nutzungsanzeige auswählen",
+    "fr": "Choisir un agent pour consulter son utilisation",
+    "es": "Elige un agente para ver el uso",
+    "uk": "Виберіть агента для перегляду використання",
+    "hu": "Válasszon ügynököt a használat megtekintéséhez",
+    "ko": "사용량을 확인할 에이전트 선택",
+    "ja": "使用状況を確認するエージェントを選択",
+    "zh_CN": "选择代理以查看用量"
+  },
+  "{name}: {percent}% left": {
+    "de": "{name}: {percent}% übrig",
+    "fr": "{name} : {percent}% restants",
+    "es": "{name}: {percent}% restante",
+    "uk": "{name}: залишилось {percent}%",
+    "hu": "{name}: {percent}% maradt",
+    "ko": "{name}: {percent}% 남음",
+    "ja": "{name}: 残り {percent}%",
+    "zh_CN": "{name}：剩余 {percent}%"
+  },
+  "Just now": {
+    "de": "Gerade eben",
+    "fr": "À l’instant",
+    "es": "Ahora mismo",
+    "uk": "Щойно",
+    "hu": "Most",
+    "ko": "방금",
+    "ja": "たった今",
+    "zh_CN": "刚刚"
+  },
+  "{count} min ago": {
+    "de": "vor {count} Min.",
+    "fr": "il y a {count} min",
+    "es": "hace {count} min",
+    "uk": "{count} хв тому",
+    "hu": "{count} perce",
+    "ko": "{count}분 전",
+    "ja": "{count}分前",
+    "zh_CN": "{count} 分钟前"
+  },
+  "{count} h ago": {
+    "de": "vor {count} Std.",
+    "fr": "il y a {count} h",
+    "es": "hace {count} h",
+    "uk": "{count} год тому",
+    "hu": "{count} órája",
+    "ko": "{count}시간 전",
+    "ja": "{count}時間前",
+    "zh_CN": "{count} 小时前"
+  },
+  "{count} d ago": {
+    "de": "vor {count} Tagen",
+    "fr": "il y a {count} j",
+    "es": "hace {count} d",
+    "uk": "{count} дн тому",
+    "hu": "{count} napja",
+    "ko": "{count}일 전",
+    "ja": "{count}日前",
+    "zh_CN": "{count} 天前"
+  },
+  "Input tokens": {
+    "de": "Eingabetokens",
+    "fr": "Jetons d’entrée",
+    "es": "Tokens de entrada",
+    "uk": "Вхідні токени",
+    "hu": "Bemeneti tokenek",
+    "ko": "입력 토큰",
+    "ja": "入力トークン",
+    "zh_CN": "输入令牌"
+  },
+  "Cached input tokens": {
+    "de": "Gecachte Eingabetokens",
+    "fr": "Jetons d’entrée en cache",
+    "es": "Tokens de entrada en caché",
+    "uk": "Кешовані вхідні токени",
+    "hu": "Gyorsítótárazott bemeneti tokenek",
+    "ko": "캐시된 입력 토큰",
+    "ja": "キャッシュ済み入力トークン",
+    "zh_CN": "缓存输入令牌"
+  },
+  "Cache write tokens": {
+    "de": "Cache-Schreibtokens",
+    "fr": "Jetons écrits en cache",
+    "es": "Tokens escritos en caché",
+    "uk": "Токени запису кешу",
+    "hu": "Gyorsítótárba írt tokenek",
+    "ko": "캐시 쓰기 토큰",
+    "ja": "キャッシュ書き込みトークン",
+    "zh_CN": "缓存写入令牌"
+  },
+  "Output tokens": {
+    "de": "Ausgabetokens",
+    "fr": "Jetons de sortie",
+    "es": "Tokens de salida",
+    "uk": "Вихідні токени",
+    "hu": "Kimeneti tokenek",
+    "ko": "출력 토큰",
+    "ja": "出力トークン",
+    "zh_CN": "输出令牌"
+  },
+  "Reasoning tokens": {
+    "de": "Denktokens",
+    "fr": "Jetons de raisonnement",
+    "es": "Tokens de razonamiento",
+    "uk": "Токени міркування",
+    "hu": "Gondolkodási tokenek",
+    "ko": "추론 토큰",
+    "ja": "推論トークン",
+    "zh_CN": "推理令牌"
+  },
+  "Executable": {
+    "de": "Programmdatei",
+    "fr": "Exécutable",
+    "es": "Ejecutable",
+    "uk": "Виконуваний файл",
+    "hu": "Futtatható fájl",
+    "ko": "실행 파일",
+    "ja": "実行ファイル",
+    "zh_CN": "可执行文件"
+  },
+  "Version unavailable": {
+    "de": "Version nicht verfügbar",
+    "fr": "Version indisponible",
+    "es": "Versión no disponible",
+    "uk": "Версія недоступна",
+    "hu": "A verzió nem érhető el",
+    "ko": "버전을 확인할 수 없음",
+    "ja": "バージョンを取得できません",
+    "zh_CN": "版本不可用"
+  },
+  "Remove shortcut set": {
+    "de": "Tastenkürzel-Sammlung entfernen",
+    "fr": "Supprimer le jeu de raccourcis",
+    "es": "Eliminar conjunto de atajos",
+    "uk": "Видалити набір скорочень",
+    "hu": "Billentyűparancs-készlet eltávolítása",
+    "ko": "단축키 세트 삭제",
+    "ja": "ショートカットセットを削除",
+    "zh_CN": "移除快捷键集"
+  },
+  "Move to Trash": {
+    "de": "In den Papierkorb",
+    "fr": "Mettre à la corbeille",
+    "es": "Mover a la papelera",
+    "uk": "Перемістити в кошик",
+    "hu": "Áthelyezés a kukába",
+    "ko": "휴지통으로 이동",
+    "ja": "ゴミ箱に移動",
+    "zh_CN": "移到回收站"
+  },
+  "Move this custom set to Trash? Saved marks are kept.": {
+    "de": "Diese eigene Sammlung in den Papierkorb verschieben? Gespeicherte Markierungen bleiben erhalten.",
+    "fr": "Mettre ce jeu personnalisé à la corbeille ? Les favoris sont conservés.",
+    "es": "¿Mover este conjunto personalizado a la papelera? Se conservan las marcas guardadas.",
+    "uk": "Перемістити цей власний набір у кошик? Збережені позначки залишаться.",
+    "hu": "Áthelyezi ezt az egyéni készletet a kukába? A mentett jelölések megmaradnak.",
+    "ko": "이 사용자 지정 세트를 휴지통으로 이동할까요? 저장된 표시는 유지됩니다.",
+    "ja": "このカスタムセットをゴミ箱に移動しますか？保存したマークは保持されます。",
+    "zh_CN": "将此自定义快捷键集移到回收站？已保存的标记将保留。"
+  },
+  "Custom shortcut set is no longer available.": {
+    "de": "Die eigene Sammlung ist nicht mehr verfügbar.",
+    "fr": "Ce jeu personnalisé n’est plus disponible.",
+    "es": "Este conjunto personalizado ya no está disponible.",
+    "uk": "Власний набір більше недоступний.",
+    "hu": "Az egyéni készlet már nem érhető el.",
+    "ko": "사용자 지정 세트를 더 이상 사용할 수 없습니다.",
+    "ja": "カスタムセットは利用できなくなりました。",
+    "zh_CN": "自定义快捷键集已不可用。"
+  },
+  "This set changed. Reopen the removal preview.": {
+    "de": "Die Sammlung wurde geändert. Öffnen Sie die Vorschau erneut.",
+    "fr": "Ce jeu a changé. Rouvrez l’aperçu de suppression.",
+    "es": "El conjunto cambió. Vuelve a abrir la vista previa.",
+    "uk": "Набір змінився. Відкрийте перегляд видалення знову.",
+    "hu": "A készlet megváltozott. Nyissa meg újra az eltávolítási előnézetet.",
+    "ko": "세트가 변경되었습니다. 삭제 미리보기를 다시 여세요.",
+    "ja": "セットが変更されました。削除プレビューを開き直してください。",
+    "zh_CN": "快捷键集已更改。请重新打开移除预览。"
+  },
+  "Restart": {
+    "de": "Neu starten",
+    "fr": "Redémarrer",
+    "es": "Reiniciar",
+    "uk": "Перезапустити",
+    "hu": "Újraindítás",
+    "ko": "다시 시작",
+    "ja": "再起動",
+    "zh_CN": "重启"
+  },
+  "Stop the response before restarting.": {
+    "de": "Antwort vor dem Neustart stoppen.",
+    "fr": "Arrêtez la réponse avant de redémarrer.",
+    "es": "Detén la respuesta antes de reiniciar.",
+    "uk": "Зупиніть відповідь перед перезапуском.",
+    "hu": "Újraindítás előtt állítsa le a választ.",
+    "ko": "다시 시작하기 전에 응답을 중지하세요.",
+    "ja": "再起動する前に応答を停止してください。",
+    "zh_CN": "请先停止回复再重启。"
+  },
+  "Restart Bindlume and restore the chat draft.": {
+    "de": "Bindlume neu starten und Chatentwurf wiederherstellen.",
+    "fr": "Redémarrer Bindlume et restaurer le brouillon.",
+    "es": "Reiniciar Bindlume y restaurar el borrador.",
+    "uk": "Перезапустити Bindlume і відновити чернетку.",
+    "hu": "A Bindlume újraindítása és a piszkozat visszaállítása.",
+    "ko": "Bindlume을 다시 시작하고 초안을 복원합니다.",
+    "ja": "Bindlumeを再起動して下書きを復元します。",
+    "zh_CN": "重启 Bindlume 并恢复聊天草稿。"
+  },
+  "Quit Bindlume. Hold Shift to restart.": {
+    "de": "Bindlume beenden. Zum Neustarten Umschalt halten.",
+    "fr": "Quitter Bindlume. Maintenez Maj pour redémarrer.",
+    "es": "Salir de Bindlume. Mantén Mayús para reiniciar.",
+    "uk": "Закрити Bindlume. Утримуйте Shift для перезапуску.",
+    "hu": "Kilépés a Bindlume-ból. Újraindításhoz tartsa lenyomva a Shiftet.",
+    "ko": "Bindlume을 종료합니다. Shift를 누르면 다시 시작합니다.",
+    "ja": "Bindlumeを終了。Shiftを押すと再起動します。",
+    "zh_CN": "退出 Bindlume。按住 Shift 可重启。"
+  }
+}

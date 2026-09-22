@@ -1,0 +1,20 @@
+name: Tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  gtk-and-qml:
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    container: archlinux:latest
+    timeout-minutes: 15
+    steps:
+      - name: Install supported-platform test dependencies
+        run: pacman -Syu --noconfirm --needed git make python python-gobject python-cairo gtk4 libxkbcommon base-devel qt6-declarative
+      - uses: actions/checkout@v4
+      - name: Compile Python sources
+        run: python -m compileall -q .
+      - name: Test in isolated displays
+        run: |
+          export XDG_RUNTIME_DIR="$(mktemp -d)"
+          chmod 700 "$XDG_RUNTIME_DIR"
+          make test

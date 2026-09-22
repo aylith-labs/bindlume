@@ -127,7 +127,7 @@ def detected_look():
     return 'square' if Path('/usr/share/omarchy').is_dir() or (Path.home()/'.local/share/omarchy').is_dir() else 'rounded'
 
 def resolve_look(name):
-    if name == 'square': name = 'square'
+    if name == 'omarchy': name = 'square'
     return detected_look() if name == 'system' else name if name in LOOKS else detected_look()
 
 class SystemTheme:

@@ -11,8 +11,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Install supported-platform test dependencies
-        run: pacman -Syu --noconfirm --needed git make python python-gobject python-cairo gtk4 libxkbcommon base-devel qt6-declarative
+        run: pacman -Syu --noconfirm --needed git make python python-gobject python-cairo gtk4 libxkbcommon base-devel qt6-declarative lua ttf-dejavu
       - uses: actions/checkout@v4
+      - name: Trust the checked-out workspace
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Compile Python sources
         run: python -m compileall -q .
       - name: Test in isolated displays

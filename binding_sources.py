@@ -114,14 +114,20 @@ def load(source):
         try:
             prefix = run(['tmux', 'show-options', '-gv', 'prefix']).strip()
             return tmux_records(run(['tmux', 'list-keys']), prefix), 'Live tmux server · current socket'
-        except subprocess.CalledProcessError:
-            return printed(source, run(['omarchy', 'menu', 'tmux-keybindings', '--print'])), 'Tmux configuration · no live server'
+        except (OSError, subprocess.SubprocessError):
+            try:
+                return printed(source, run(['omarchy', 'menu', 'tmux-keybindings', '--print'])), 'Tmux configuration · no live server'
+            except (OSError, subprocess.SubprocessError):
+                return [], f'{source} is not installed or not on PATH'
     executable = os.environ.get(source.upper()+'_BIN') or shutil.which(source.lower())
     if not executable:
         return [], f'{source} is not installed or not on PATH'
     try:
         return resolved(source, json.loads(run([executable, 'keys', 'list', '--json']))), f'{source} live resolved keymap'
-    except (subprocess.SubprocessError, ValueError):
+    except (OSError, subprocess.SubprocessError, ValueError):
         if source == 'Herdr':
-            return printed(source, run(['omarchy', 'menu', 'herdr-keybindings', '--print'])), 'Herdr defaults + current config · live keymap unavailable in this version'
+            try:
+                return printed(source, run(['omarchy', 'menu', 'herdr-keybindings', '--print'])), 'Herdr defaults + current config · live keymap unavailable in this version'
+            except (OSError, subprocess.SubprocessError):
+                return [], f'{source} is not installed or not on PATH'
         return [], 'Shefrd live keymap unavailable · start its server, then Refresh'

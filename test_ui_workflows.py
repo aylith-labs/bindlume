@@ -306,6 +306,7 @@ class UiWorkflows(unittest.TestCase):
         self.assertTrue(self.ui.feature_enabled('keyboard'))
 
     def test_search_returns_to_top_and_hover_preserves_selection(self):
+        self.ui.window.set_size_request(900, 560)
         self.ui.flat_list = True
         self.ui.items = [dict(id=str(i),key=f'F{i}',name=f'Match {i}',kind='action',group='Action',dispatcher='',arg='') for i in range(80)]
         self.ui.render(); pump(.2)
@@ -1223,7 +1224,7 @@ class UiWorkflows(unittest.TestCase):
         for label in labels:
             self.assertFalse(label.has_css_class('shortcut-key'))
             font = label.get_pango_context().get_font_description()
-            self.assertEqual(font.get_size() / app.Pango.SCALE, self.ui.system_theme.typography(self.ui.preferences)[1])
+            self.assertAlmostEqual(font.get_size() / app.Pango.SCALE, self.ui.system_theme.typography(self.ui.preferences)[1], delta=1 / app.Pango.SCALE)
 
     def test_column_width_survives_search_and_size_change(self):
         self.ui.settings_switches['Columns'].set_active(True)

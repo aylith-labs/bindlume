@@ -2,6 +2,15 @@ import unittest
 from binding_sources import chord, printed, tmux_records, resolved
 
 class SourceTests(unittest.TestCase):
+    def test_missing_optional_executables_do_not_crash_discovery(self):
+        from unittest.mock import patch
+        from binding_sources import load
+        with patch('binding_sources.shortcut_sets.installed', return_value=True), patch('binding_sources.run', side_effect=FileNotFoundError), patch('binding_sources.shutil.which', return_value='/missing/harness'):
+            for source in ('Tmux', 'Herdr'):
+                rows, status = load(source)
+                self.assertEqual(rows, [])
+                self.assertIn('not installed', status)
+
     def test_tmux_modifiers_and_prefix(self):
         rows = tmux_records('bind-key -T prefix C-M-x split-window -h\nbind-key -T root S-Left resize-pane -L', 'C-Space')
         self.assertEqual(rows[0]['key'], 'CTRL ALT + X')

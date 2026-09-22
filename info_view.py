@@ -221,7 +221,7 @@ def available_area(owner):
         left, top, right, bottom = current.get('reserved', [0, 0, 0, 0])
         width -= left + right
         height -= top + bottom
-    except (subprocess.SubprocessError, ValueError, StopIteration, KeyError):
+    except (OSError, subprocess.SubprocessError, ValueError, StopIteration, KeyError):
         pass
     return width, height
 

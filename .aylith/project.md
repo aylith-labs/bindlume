@@ -3,7 +3,7 @@ name: Bindlume
 tagline: Illuminate the shortcuts you need, when you need them
 description: Find desktop and app shortcuts, see their keys on a keyboard, and use an optional agent companion to search and configure the app. Public alpha testing starts with Omarchy on Linux.
 category: productivity
-status: building
+status: beta
 features:
   - Live Omarchy shortcuts alongside app and custom shortcut sets
   - Search by action or key, keyboard illumination, bookmarks and hidden items

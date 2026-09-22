@@ -40,4 +40,3 @@ class GuideController:
 
     def open_settings(self):
         self.ipc('shell', 'summon', 'mrai.keyguide')
-

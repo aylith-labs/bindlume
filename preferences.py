@@ -5,7 +5,7 @@ import localization
 import settings_ui
 from shortcut_data import make_switch_row, action_tooltip
 
-DEFAULTS = dict(chat_connections={}, remember_search=False, shortcut_tooltips=False, tooltip_delay=700, language='system', theme='system', app_icons=False, action_icons=False,
+DEFAULTS = dict(model_insights_enabled=False, activity_limit=1000, activity_days=0, decision_ranker="", decision_router="", decision_connections={}, chat_connections={}, remember_search=False, shortcut_tooltips=False, tooltip_delay=700, language='system', theme='system', app_icons=False, action_icons=False,
                 system_typography=True, font_family='sans-serif', font_size=14, compact=False,
                 global_hotkey='SUPER + SHIFT + K', window_animations='off', app_animations='system', agent_provider='auto',
                 guide_preview_side=False, guide_autosave=False, chat_snippets=False, chat_vignette=True,
@@ -78,6 +78,10 @@ def show(app):
     apply_hotkey.connect('clicked', apply_binding)
     section('Search')
     switch('Remember last search', 'remember_search')
+    section('Activity log')
+    activity_button = Gtk.Button(label=localization.text('Activity log'))
+    activity_button.connect('clicked',lambda *_: __import__('activity_log').show(app))
+    content.append(activity_button)
     section('Tooltips')
     switch('Show shortcut details on hover', 'shortcut_tooltips')
     delay = Gtk.SpinButton.new_with_range(0, 5000, 100)

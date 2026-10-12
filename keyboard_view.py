@@ -14,6 +14,20 @@ from gi.repository import Gtk, Gdk, GLib, GdkPixbuf
 from localization import text as tr
 from shortcut_data import action_tooltip, split_shortcut, canonical, details, tooltip_widget, reveal_indicators_on_hover, make_switch_row
 
+class WrappingToolbar(Gtk.FlowBox):
+    def __init__(self, **kwargs):
+        super().__init__(selection_mode=Gtk.SelectionMode.NONE,
+                         min_children_per_line=1, max_children_per_line=8,
+                         column_spacing=10, row_spacing=8, **kwargs)
+    def append(self, child): self.insert(child, -1)
+    def prepend(self, child): self.insert(child, 0)
+    def remove(self, child):
+        wrapper = child.get_parent()
+        if isinstance(wrapper, Gtk.FlowBoxChild):
+            wrapper.set_child(None)
+            super().remove(wrapper)
+        else: super().remove(child)
+
 # Standard XKB physical key names, positioned in quarter-key units.
 ROWS = [
  [('ESC',1),('gap',1)]+[(f'FK{i:02}',1) for i in range(1,13)],
@@ -128,7 +142,7 @@ class KeyboardView(Gtk.Box):
         self.manual = set(preferences.get('manual', [])) & {'SUPER', 'CTRL', 'SHIFT', 'ALT'}
         # The scrolled viewport clips outlines outside its allocation.
         # Reserve space around controls for GTK's outward focus ring.
-        toolbar=Gtk.Box(spacing=10, margin_top=6, margin_bottom=6,
+        toolbar=WrappingToolbar(margin_top=6, margin_bottom=6,
                         margin_start=6, margin_end=6)
         all_control = Gtk.Box(spacing=8, margin_end=10)
         all_control.append(Gtk.Label(label='All layers'))
@@ -319,8 +333,8 @@ class KeyboardView(Gtk.Box):
 
     def resize_keyboard(self, *_):
         columns = 23.2 if self.show_numpad else 18.7
-        self.area.set_content_width(0 if self.fit_width else round(columns * 41))
-        self.scroll.set_policy(Gtk.PolicyType.NEVER if self.fit_width else Gtk.PolicyType.AUTOMATIC,
+        self.area.set_content_width(0)
+        self.scroll.set_policy(Gtk.PolicyType.NEVER,
                                Gtk.PolicyType.NEVER)
         width = self.area.get_width()
         unit = width / columns if width else 41

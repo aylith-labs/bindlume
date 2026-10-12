@@ -24,6 +24,7 @@ gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gio, GLib, Gdk, Pango, GObject, GdkPixbuf
 from shortcut_data import action_tooltip, matches_query, details, split_shortcut, attach_tooltip, reveal_indicators_on_hover, make_switch_row, canonical, hotkey_caps
 from theme import SystemTheme, LOOKS
+import activity_log
 from keyboard_view import KeyboardView
 from binding_sources import SOURCES, load as load_source, refresh_registry
 import shortcut_sets
@@ -395,7 +396,9 @@ class Shortcuts(Gtk.Application):
         self.main_pane.add_css_class("chat-splitter")
         self.main_pane.set_start_child(root)
         self.main_pane.set_resize_start_child(True)
-        self.main_pane.set_shrink_start_child(True)
+        self.main_pane.set_shrink_start_child(False)
+        root.set_size_request(620, -1)
+        GLib.timeout_add(100, self.resize_shortcut_columns)
         self.main_pane.set_shrink_end_child(False)
         self.main_pane.connect('notify::position', self.chat_split_changed)
         self.window.set_child(self.main_pane)
@@ -448,6 +451,14 @@ class Shortcuts(Gtk.Application):
         toolbar.append(self.chat_button)
         toolbar.append(self.app_menu_button)
         root.append(toolbar)
+        indicators = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
+        self.workflow_indicators = [Gtk.Label(xalign=0, wrap=True, visible=False) for _ in range(2)]
+        from companion import RANKING_HELP, ROUTING_HELP
+        for label, explanation in zip(self.workflow_indicators, (RANKING_HELP, ROUTING_HELP)):
+            label.add_css_class('dim-label')
+            label.set_tooltip_text(localization.text(explanation))
+            indicators.append(label)
+        root.append(indicators)
         popover = Gtk.Popover()
         popover.set_halign(Gtk.Align.END)
         menu.set_popover(popover)
@@ -1180,11 +1191,13 @@ class Shortcuts(Gtk.Application):
         # Share the actual controls, keeping their state and behavior identical.
         for control in (self.keyboard.modifier_group, self.keyboard.layer_control):
             parent = control.get_parent()
+            if isinstance(parent, Gtk.FlowBoxChild): parent = parent.get_parent()
             if parent != destination:
                 if parent: parent.remove(control)
                 destination.prepend(control)
 
         parent = self.type_filter.get_parent()
+        if isinstance(parent, Gtk.FlowBoxChild): parent = parent.get_parent()
         if parent != destination:
             if parent: parent.remove(self.type_filter)
             destination.append(self.type_filter)
@@ -1223,6 +1236,7 @@ class Shortcuts(Gtk.Application):
         self.features_window.connect('close-request', lambda *_: setattr(self, 'features_window', None) or False)
         self.features_window.present()
 
+    @activity_log.ui_operation('features', lambda key,enabled: {'name':key,'enabled':enabled})
     def set_feature(self, key, enabled):
         self.features[key] = enabled
         if key == 'guide': self.sync_guide_feature(enabled)
@@ -1242,6 +1256,7 @@ class Shortcuts(Gtk.Application):
                 GLib.idle_add(self.status.set_text, 'Keyboard guide: ' + str(error))
         self._guide_executor.submit(update)
 
+    @activity_log.ui_operation('settings', lambda key,value: {'key':key,'value':value})
     def set_preference(self, key, value):
         self.preferences[key] = value
         self.system_theme.set_preferences(self.preferences)
@@ -1265,7 +1280,7 @@ class Shortcuts(Gtk.Application):
         self.save_ui_state()
 
     def chat_split_changed(self, pane, *_):
-        if getattr(self, '_restoring_chat_split', False) or pane.get_end_child() is None:return
+        if getattr(self, '_restoring_chat_split', False) or pane.get_end_child() is None or pane.get_orientation() != Gtk.Orientation.HORIZONTAL:return
         width=pane.get_width()
         if width <= 0:return
         self.chat_split_ratio=max(.2,min(.8,pane.get_position()/width))
@@ -1277,6 +1292,7 @@ class Shortcuts(Gtk.Application):
             if getattr(self, 'chat_panel', None) and self.chat_panel.history_window:
                 self.chat_panel.history_window.close()
             self.main_pane.set_end_child(None)
+            self.main_pane.set_orientation(Gtk.Orientation.HORIZONTAL)
             if hasattr(self, '_before_chat_size'):
                 self.window.set_default_size(*self._before_chat_size)
                 del self._before_chat_size
@@ -1308,7 +1324,9 @@ class Shortcuts(Gtk.Application):
                 available_height = min(available_height, bounds[1] - 40)
             self.window.set_default_size(max(1, available), max(1, available_height))
             self._restoring_chat_split = True
-            self.main_pane.set_position(round(available * self.chat_split_ratio))
+            narrow = available < 1050
+            self.main_pane.set_orientation(Gtk.Orientation.VERTICAL if narrow else Gtk.Orientation.HORIZONTAL)
+            self.main_pane.set_position(round(available_height * .45 if narrow else available * self.chat_split_ratio))
             def restored():
                 self._restoring_chat_split = False
                 return False
@@ -2053,6 +2071,7 @@ class Shortcuts(Gtk.Application):
         return (source not in self.disabled_sources and shortcut_sets.installed(source)
                 and (self.source_counts.get(source) or 0) > 0)
 
+    @activity_log.ui_operation('sources', lambda source,enabled: {'name':source,'enabled':enabled})
     def set_source_enabled(self, source, enabled):
         if enabled: self.disabled_sources.discard(source)
         else: self.disabled_sources.add(source)
@@ -2183,6 +2202,7 @@ class Shortcuts(Gtk.Application):
         self.render()
         startup_mark("shortcuts-rendered")
 
+    @activity_log.ui_operation('bookmark', lambda item: {'id':item['id']})
     def favorite(self, item):
         if not self.feature_enabled('bookmarks'): return
         if item['id'] in self.favorites:
@@ -2192,6 +2212,7 @@ class Shortcuts(Gtk.Application):
         save_json(STATE, sorted(self.favorites))
         self.refresh_marks(item)
 
+    @activity_log.ui_operation('hide', lambda item: {'id':item['id']})
     def toggle_learned(self, item):
         if not self.feature_enabled('hidden'): return
         if item['id'] in self.learned:
@@ -2264,7 +2285,9 @@ class Shortcuts(Gtk.Application):
                 matches = [r for r in matches if
                            (selected <= split_shortcut(r['key'])[0] if keyboard.all_layers
                             else selected == split_shortcut(r['key'])[0])]
-        return matches
+        from decision_workflows import SearchRanking
+        if not hasattr(self, '_decision_ranking'): self._decision_ranking = SearchRanking()
+        return self._decision_ranking.apply(self, query, matches)
 
     def set_all_expanded(self, expanded):
         if self.flat_list: return
@@ -2551,13 +2574,23 @@ class Shortcuts(Gtk.Application):
             self._native_size = desired
             self.window.set_default_size(*desired)
 
+    def resize_shortcut_columns(self):
+        if self.main_root.get_root() is None: return False
+        if not hasattr(self, 'list_box'): return True
+        width = self.main_root.get_width()
+        if width > 0 and width != getattr(self, '_column_allocation', 0):
+            self._column_allocation = width
+            self.render()
+        return True
+
     def update_column_width(self):
         # Measure the complete source, never the filtered or visible subset.
         keys = tuple(item.get('display_key', item['key']) for item in self.items)
         prefs = getattr(self, 'preferences', preferences.DEFAULTS)
         family, size = self.system_theme.typography(prefs) if hasattr(self, 'system_theme') else (prefs['font_family'], prefs['font_size'])
         chat_open = bool(getattr(self, "main_pane", None) and self.main_pane.get_end_child())
-        signature = (keys, family, size, chat_open)
+        available = self.main_root.get_width() if hasattr(self, 'main_root') else 0
+        signature = (keys, family, size, available)
         if signature == self.column_signature: return
         self.column_signature = signature
         layout = self.list_box.create_pango_layout('')
@@ -2574,9 +2607,14 @@ class Shortcuts(Gtk.Application):
         typical = statistics.median(widths) if widths else 0
         outlier_limit = typical + max(80, typical * .6)
         regular = [width for width in widths if width <= outlier_limit]
-        self.shortcut_column_width = max(140, min(200 if chat_open else 320, max(regular, default=140) + 8))
+        minimum = max(140, min(320, max(regular, default=140) + 8))
+        self.shortcut_column_width = max(minimum, round(max(0, available - 100) * .4))
 
     def render(self):
+        if hasattr(self, 'workflow_indicators'):
+            from companion import workflow_indicators
+            for label, text in zip(self.workflow_indicators, workflow_indicators(self.preferences)):
+                label.set_text(text);label.set_visible(bool(text))
         if getattr(self, '_normalizing_marks', False): return
         if hasattr(self, 'visibility_label') and self.items:
             self._normalizing_marks = True
@@ -2606,7 +2644,7 @@ class Shortcuts(Gtk.Application):
         entries = []
         if not matches:
             entries.append(ShortcutEntry({'loading': True}) if self.refresh_busy and not self.items else ShortcutEntry({'empty_query': self.search.get_text()}))
-        elif self.flat_list:
+        elif self.flat_list or getattr(getattr(self, '_decision_ranking', None), 'active', False):
             entries = [ShortcutEntry({'item': item}) for item in matches]
         else:
             for category in sorted({r['group'] for r in matches}):

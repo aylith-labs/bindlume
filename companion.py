@@ -24,8 +24,13 @@ def write_memory(root, entries):
     temporary=path.with_suffix('.tmp');temporary.write_text(''.join('- '+value+'\n' for value in entries));temporary.chmod(0o600);temporary.replace(path)
     return entries
 
-def runtime(provider, session=None):
+def runtime(provider, session=None, prefs=None):
     model=(session or {}).get('model')
+    if provider.startswith('decision_'):
+        from system_one import DEFAULTS
+        key=provider.removeprefix('decision_')
+        connection=(prefs or {}).get('decision_connections',{}).get(key,{})
+        return dict(harness=connection.get('url',DEFAULTS[key][0]), model=model or connection.get('model',DEFAULTS[key][2]), reported=bool(model))
     if provider.startswith('api_'):
         from chat_api import DEFAULTS
         return dict(harness=DEFAULTS.get(provider, ('',))[0], model=model or tr('Configured in AI companion settings'), reported=bool(model))
@@ -45,6 +50,23 @@ def tokens(session):
     usage=session.get('usage_total',session.get('usage',{}))
     return sum(int(usage.get(k,0) or 0) for k in ('input_tokens','output_tokens'))
 
+RANKING_HELP = 'Reorders up to 24 matching shortcuts after you pause typing. Filters still apply. Enable the selected System One connection first; if it fails, the original order is kept.'
+ROUTING_HELP = 'In Automatic mode, enabled local System One models handle requests first and pass unsupported requests to another assistant. This optional router chooses a decision model when no local model is enabled. It does not affect a manually selected agent.'
+
+
+def workflow_indicators(prefs):
+    from system_one import PROVIDERS
+    from decision_workflows import available
+    enabled = set(available(prefs))
+    result = []
+    for key, template, disabled in [('decision_ranker', 'Ranking: {model}', 'Ranking: connection disabled'),
+                                     ('decision_router', 'Routing: {model}', 'Routing: connection disabled')]:
+        provider = prefs.get(key)
+        result.append((tr(template).format(model=tr(PROVIDERS.get(provider, provider)))
+                       if 'decision_'+str(provider) in enabled else tr(disabled)) if provider else '')
+    return result
+
+
 def show(app,panel=None):
     if getattr(app,'companion_window',None):app.companion_window.present();return
     from app import UI_STATE
@@ -53,8 +75,17 @@ def show(app,panel=None):
     window.connect('close-request',lambda *_:setattr(app,'companion_window',None) or False)
     body=Gtk.Box(orientation=Gtk.Orientation.VERTICAL,spacing=14,margin_top=20,margin_bottom=20,margin_start=20,margin_end=20)
     settings_ui.header(body,window,'AI companion settings')
-    content=Gtk.Box(orientation=Gtk.Orientation.VERTICAL,spacing=14)
-    scroll=Gtk.ScrolledWindow(vexpand=True,hscrollbar_policy=Gtk.PolicyType.NEVER);scroll.set_child(content);body.append(scroll)
+    stack=Gtk.Stack(vexpand=True, hhomogeneous=False, vhomogeneous=False)
+    tabs=Gtk.StackSwitcher(stack=stack, halign=Gtk.Align.CENTER)
+    body.append(tabs);body.append(stack)
+    window.tabs=stack
+    def page(name,title):
+        content=Gtk.Box(orientation=Gtk.Orientation.VERTICAL,spacing=14,margin_top=12,margin_end=8)
+        scroll=Gtk.ScrolledWindow(vexpand=True,hscrollbar_policy=Gtk.PolicyType.NEVER)
+        scroll.set_child(content);stack.add_titled(scroll,name,tr(title))
+        return content
+    general=page('general','General')
+    content=general
     def switch(title,key,description=None):
         control=Gtk.Switch(active=app.preferences[key]);settings_ui.row(content,title,control,description)
         def changed(widget,*_):
@@ -71,7 +102,7 @@ def show(app,panel=None):
     settings_ui.row(content,'Default agent',picker)
     window.harness_details = {}
     for agent in available_agents(app.preferences):
-        if agent.startswith('api_'):continue
+        if agent.startswith(('api_', 'decision_')):continue
         data=runtime(agent,panel.session if panel and panel.session and panel.session['provider']==agent else None)
         group=Gtk.Expander(label=f"{PROVIDERS[agent]} · {data['model']}")
         group._translation_skip=True
@@ -94,6 +125,7 @@ def show(app,panel=None):
                 GLib.idle_add(apply)
             threading.Thread(target=worker,daemon=True).start()
         group.connect('notify::expanded',expanded)
+    content=page('models','Models')
     settings_ui.section(content,'Direct model connections')
     guidance = Gtk.Label(label=tr('Use a tool-capable model. API keys stay in environment variables. Start a new chat after changing connections.'), xalign=0, wrap=True)
     content.append(guidance)
@@ -120,10 +152,52 @@ def show(app,panel=None):
         enabled.connect('notify::active',save_connection)
         for control in fields.values():control.connect('changed',save_connection)
         window.connection_controls[provider] = dict(fields,enabled=enabled)
+    content=page('system-one','System One')
+    settings_ui.section(content,'System One connections')
+    content.append(Gtk.Label(label=tr('Typed decisions for agents: choices, scores, and probabilities.'), xalign=0, wrap=True))
+    from system_one import DEFAULTS as DECISION_DEFAULTS, PROVIDERS as DECISION_PROVIDERS, validate_connections
+    window.decision_controls = {}
+    for provider, (base, key_env, model) in DECISION_DEFAULTS.items():
+        group = Gtk.Expander(label=tr(DECISION_PROVIDERS[provider]))
+        form = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8, margin_top=8, margin_bottom=8)
+        group.set_child(form);content.append(group)
+        current = app.preferences.get('decision_connections', {}).get(provider, {})
+        enabled = Gtk.Switch(active=bool(current.get('enabled')))
+        settings_ui.row(form, 'Enabled', enabled)
+        fields = {}
+        for field, title, default in [('url', 'Base URL', base), ('model', 'Model', model), ('key_env', 'API key environment variable', key_env)]:
+            control = Gtk.Entry(text=current.get(field, default), hexpand=True)
+            settings_ui.row(form, title, control);fields[field] = control
+        status = Gtk.Label(xalign=0, wrap=True);form.append(status)
+        apply_button = Gtk.Button(label=tr('Apply'));form.append(apply_button)
+        def save_decision(*_, provider=provider, fields=fields, enabled=enabled, status=status):
+            values = {key: control.get_text().strip() for key, control in fields.items()}
+            values['enabled'] = enabled.get_active()
+            connections = dict(app.preferences.get('decision_connections', {}));connections[provider] = values
+            try:
+                validate_connections(connections)
+                app.set_preference('decision_connections', connections)
+                status.set_text(tr('Decision connection saved.'))
+                if panel and not panel.session and not panel.run: panel.new()
+            except ValueError as error:
+                status.set_text(str(error))
+        apply_button.connect('clicked', save_decision)
+        window.decision_controls[provider] = dict(fields, enabled=enabled, apply=apply_button, status=status, group=group)
+    window.decision_workflow_controls = {}
+    for key, title in [('decision_ranker', 'Shortcut ranking'), ('decision_router', 'Companion routing')]:
+        choices = [''] + list(DECISION_DEFAULTS)
+        picker = Gtk.DropDown.new_from_strings([tr('Disabled')] + [tr(DECISION_PROVIDERS[p]) for p in choices[1:]])
+        current = app.preferences.get(key, '')
+        picker.set_selected(choices.index(current) if current in choices else 0)
+        picker.connect('notify::selected', lambda w, *_, key=key, choices=choices: app.set_preference(key, choices[w.get_selected()]))
+        settings_ui.row(content, title, picker, tr(RANKING_HELP if key=='decision_ranker' else ROUTING_HELP))
+        window.decision_workflow_controls[key] = picker
+    content=general
     settings_ui.section(content,'Chat presentation')
     switch('Keyboard snippets','chat_snippets','Allow illustrated keyboard shortcuts in replies.')
     switch('Fade keyboard snippet edges','chat_vignette','Use a soft vignette around generated keyboards.')
     switch('Show session token usage','chat_token_usage','Show reported input and output tokens. Providers may not report usage.')
+    content=page('personalization','Personalization')
     settings_ui.section(content,'Personalization')
     memory=switch('Remember my preferences','chat_memory_enabled','Only save facts and preferences you explicitly ask the agent to remember.')
     memory_box=Gtk.TextView(wrap_mode=Gtk.WrapMode.WORD_CHAR,height_request=100)
@@ -145,4 +219,7 @@ def show(app,panel=None):
     instructions.connect('notify::active',lambda w,*_:editor.set_sensitive(w.get_active()))
     def store(buffer):app.preferences['chat_instructions']=buffer.get_text(buffer.get_start_iter(),buffer.get_end_iter(),False)[:16000];app.save_ui_state()
     editor.get_buffer().connect('changed',store);content.append(editor)
+    content=page('insights','Insights')
+    __import__('model_insights').populate(app,content)
+    window.insights=content
     window.set_child(body);window.present()

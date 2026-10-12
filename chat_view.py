@@ -177,16 +177,16 @@ class ChatPanel(Gtk.Box):
     def clear(self, box):
         while child := box.get_first_child(): box.remove(child)
 
-    def bubble(self, role, text):
+    def bubble(self, role, text, provider=None, preview=False):
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
         box.add_css_class('chat-message')
         box.add_css_class('chat-'+role)
         if role == 'user': box.set_margin_start(24)
-        title = Gtk.Label(label={'user':'You','assistant':PROVIDERS.get(self.session['provider'],'Agent') if self.session else 'Agent','notice':'Notice'}[role], xalign=0)
+        title = Gtk.Label(label={'user':'You','assistant':PROVIDERS.get(provider or (self.session['provider'] if self.session else ''),'Agent'),'notice':'Notice'}[role], xalign=0)
         title.add_css_class('heading')
         box.append(title)
         from rich_content import MarkdownView
-        label = MarkdownView(text, snippets=self.app.preferences.get('chat_snippets',False), vignette=self.app.preferences.get('chat_vignette',True)) if role == 'assistant' else Gtk.Label(label=text, xalign=0, selectable=True, wrap=True, wrap_mode=Pango.WrapMode.WORD_CHAR, max_width_chars=45)
+        label = MarkdownView(text, snippets=preview or self.app.preferences.get('chat_snippets',False), vignette=self.app.preferences.get('chat_vignette',True)) if role == 'assistant' else Gtk.Label(label=text, xalign=0, selectable=True, wrap=True, wrap_mode=Pango.WrapMode.WORD_CHAR, max_width_chars=45)
         label._translation_skip = True
         label.set_hexpand(True)
         box.append(label)
@@ -197,7 +197,7 @@ class ChatPanel(Gtk.Box):
         self.clear(self.messages)
         from companion import runtime
         provider = self.session['provider'] if self.session else self.agent_choices[self.agent.get_selected()]
-        data = runtime(provider, self.session)
+        data = runtime(provider, self.session, self.app.preferences)
         self.model_label.set_text(tr('Model: {model}' if data['reported'] else 'Configured model: {model}').format(model=data['model']))
         self.model_label.set_visible(provider != 'auto')
         self.title._translation_skip = self.session is not None
@@ -209,7 +209,11 @@ class ChatPanel(Gtk.Box):
             for label, key in [('Conversation content','transcript'),('Session ID','id'),('Session file path','path'),
                                ('Agent session ID','agent-id'),('Continue in a terminal','resume')]:
                 if key in self.store.copy_values(self.session): self.copy_menu.append(tr(label), 'chat-copy.'+key)
-            for message in self.session['messages']: self.bubble(message['role'], message['content'])
+            from decision_commands import keyboard_requested
+            preview=False
+            for message in self.session['messages']:
+                if message['role']=='user':preview=keyboard_requested(message['content'])
+                self.bubble(message['role'], message['content'], message.get('provider'), preview=preview)
             if self.app.preferences.get('chat_token_usage'):
                 from companion import tokens
                 usage = self.session.get('usage_total', self.session.get('usage',{}))
@@ -236,7 +240,7 @@ class ChatPanel(Gtk.Box):
         if not self.agents:
             self.status.set_text(tr('Choose an installed agent or configure a connection in AI companion settings.'))
         elif not self.run:
-            self.status.set_text(tr('Uses the configured model connection.' if provider.startswith('api_') else 'Uses your installed agent and its signed-in account.') if not self.session else '')
+            self.status.set_text(tr('Uses the configured model connection.' if provider.startswith(('api_', 'decision_')) else 'Uses your installed agent and its signed-in account.') if not self.session else '')
         available = bool(self.agents) and (not self.session or self.session['provider'] in self.agents)
         if not available and self.session:
             self.status.set_text(PROVIDERS[self.session['provider']]+' is unavailable. Install it to continue, or copy this conversation to another agent.')
@@ -560,7 +564,14 @@ class ChatPanel(Gtk.Box):
                 if not quotas:
                     from agent_quota import cached_quotas
                     quotas = cached_quotas(self.store.root.parent)
-                provider, reason = choose_agent(self.agents,quotas)
+                general = [p for p in self.agents if not p.startswith('decision_')]
+                from decision_workflows import local_agents
+                local = [p for p in local_agents(self.app.preferences) if p in self.agents]
+                provider, reason = (local[0], 'local') if local else choose_agent(general or self.agents,quotas)
+                if not local and self.app.preferences.get('decision_router'):
+                    from decision_workflows import route
+                    try: provider = route(self.app.preferences, prompt, self.agents, provider)
+                    except Exception: pass  # Preserve the existing assistant when routing is unavailable.
                 GLib.idle_add(selected,provider,quotas,'')
             except Exception as error: GLib.idle_add(selected,None,{},str(error))
         def selected(provider,quotas,error):
@@ -591,7 +602,7 @@ class ChatPanel(Gtk.Box):
         self.save_queue()
         self.render()
         self.bubble('user',prompt)
-        self.reply = self.bubble('assistant','')
+        self.reply = self.bubble('assistant','', preview=__import__('decision_commands').keyboard_requested(prompt))
         self.agent.set_sensitive(False)
         self.status.set_text('')
         self.activity_label.set_text(tr('Working…'))
@@ -606,6 +617,10 @@ class ChatPanel(Gtk.Box):
             self._pending_reply = value
             if not getattr(self, '_reply_timer', None):
                 self._reply_timer = GLib.timeout_add(50, self.flush_reply)
+        elif kind == 'provider':
+            if getattr(self, 'reply', None):
+                self.reply.get_parent().get_first_child().set_text(tr(PROVIDERS[value]))
+            self.model_label.set_text(tr('Configured model: {model}').format(model=__import__('companion').runtime(value, prefs=self.app.preferences)['model']))
         elif kind == 'activity': self.activity_label.set_text(tr(value))
         elif kind == 'done':
             if getattr(self, '_reply_timer', None):

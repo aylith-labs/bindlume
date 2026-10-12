@@ -29,3 +29,27 @@ NATIVE_PHOTOS=/tmp/bindlume-native /usr/bin/python tests/run.py test_native_styl
 The tests use private Broadway/offscreen displays and temporary user settings. Inspect generated screenshots; capture success alone is not visual approval. Test installation with `install.py install --home <temporary-directory> --no-reload`, then test update and uninstall against that same directory.
 
 Please file reproducible bugs at https://github.com/aylith-labs/bindlume/issues/new/choose.
+
+## Version policy from 0.2.0
+
+Use plain `0.x.y` versions during active development. Alpha and beta suffixes are
+optional, not mandatory steps before 1.0. The zero major version communicates that
+interfaces may still change. A beta milestone, if used later, should mean the
+planned feature set is settled and work is focused on compatibility, testing and
+bug fixes. Before calling the app stable, exercise installation/upgrades and data
+preservation, real Wayland focus/input, mixed-DPI and keyboard layouts, supported
+live model/harness integrations, and recovery from unavailable providers. Resolve
+known critical bugs and document remaining limitations.
+
+Release notes live in `changelog.json`, with text translated in `translations.json`.
+Add new entries first; retain prior build timestamps. The About changelog uses the
+installed build timestamp for the current version, opens that entry by default,
+and keeps historical entries collapsed. These dates describe the recorded local
+builds, not an assertion that a GitHub release was published.
+
+Companion Insights records only when enabled. It retains at most 50 local request
+records, each capped at 512 KiB; truncated records are marked. System One and direct
+chat API bodies are captured before dispatch, without authentication headers.
+Reported input-token counts are kept separately from the four-characters-per-token
+estimate. Laya supplies actual input usage after inference. Installed-agent records
+contain only the input handed to the harness; its internal context is not exposed.

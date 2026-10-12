@@ -13,9 +13,12 @@ import time
 BUS = 'com.aylith.Bindlume'
 OBJECT = '/com/aylith/Bindlume/Control'
 INTERFACE = BUS + '.Control'
-OPERATIONS = ['schema', 'quota', 'state', 'search', 'bookmark', 'hide', 'features', 'settings',
+OPERATIONS = ['schema', 'activity', 'quota', 'decision', 'decision_apply', 'state', 'search', 'bookmark', 'hide', 'features', 'settings',
               'sources', 'view', 'guide', 'reset', 'sessions', 'companion', 'inputs', 'open']
 HELP = {
+    'activity': 'action=list (default), policy, retention, undo, or redo. list accepts limit (1..1000), offset, date (today/yesterday/YYYY-MM-DD). retention accepts max_operations and max_age_days; zero removes that limit. Default: 1000 operations, no age expiry. Undo/redo conflict-checks current state; irreversible operations and expired entries cannot be undone.',
+    "decision_apply": "values: object of supported presentation setting IDs and exact values. Validates the entire batch before applying; returns actual values. No memory, token tracking, bindings, or model connection changes.",
+    'decision': 'provider (jev/laya/von/custom), state (JSON), questions (map of typed choice/score/noul questions). Uses an explicitly enabled decision_connections setting. Returns probabilities; never executes the decision. Choice criteria map stable IDs to descriptions; score criteria is an ordered list. Each question needs type and instructions.',
     'open': 'surface: settings/features/shortcuts/sets/about/details/guide/inputs/chat. Opens the named app surface and enables its required feature.',
     'inputs': 'Read detected input devices and bindings. Optional gestures (up/down/left/right -> action), buttons (0..7 -> action), controller boolean, device (exact returned joystick path). Actions: none/search/chat/clear/shortcuts. Enables input features on mutation. Actions are scoped to Bindlume, not desktop-wide.',
     'companion': 'Read companion preferences and explicitly saved memory. action=remember with text saves an explicitly requested memory bullet when enabled; action=forget with text removes one. action=preferences with vignette boolean changes the persistent keyboard vignette. Memory is opt-in; never save inferred facts.',
@@ -35,12 +38,17 @@ HELP = {
 
 
 def execute(app, request):
+    from activity_log import tracked
+    return tracked(app, request, lambda: _execute(app, request))
+
+
+def _execute(app, request):
     import preferences
     import shortcut_sets
     from features import FEATURES
     from app import STATE, UI_STATE, LEARNED_STATE, SOURCES, load_source, records, save_json
     op = request.get('operation')
-    args = request.get('arguments') or {}
+    args = dict(request.get('arguments') or {}) if isinstance(request.get('arguments') or {}, dict) else request['arguments']
     if op not in OPERATIONS or not isinstance(args, dict): raise ValueError('Use a documented operation and an arguments object.')
     def boolean(value):
         if not isinstance(value, bool): raise ValueError('enabled must be a boolean')
@@ -54,7 +62,24 @@ def execute(app, request):
             item = next((item for item in source_items(source) if item['id'] == identity), None)
             if item: return item
         raise ValueError('Shortcut not found. Search first and use its exact ID.')
+    if op == 'activity':
+        import activity_log
+        action=args.pop('action','list')
+        if action == 'list': return activity_log.query(app,args)
+        if action == 'policy': return activity_log.policy(app)
+        if action == 'retention': return activity_log.change_retention(app,args)
+        if action in ('undo','redo') and not args: return activity_log.restore(app,action)
+        raise ValueError(__import__('localization').text('Invalid activity request.'))
     if op == 'schema': return {'version': 2, 'operations': HELP, 'settings_defaults': preferences.DEFAULTS, 'shortcut_types': dict(__import__('shortcut_types').FILTERS), 'feature_ids': list(FEATURES), 'set_categories': shortcut_sets.CATEGORIES}
+    if op == 'decision_apply':
+        from decision_workflows import validate_settings
+        values = args.get('values')
+        validate_settings(values)
+        for key, value in values.items(): app.set_preference(key, value)
+        return {key: app.preferences[key] for key in values}
+    if op == 'decision':
+        from system_one import decide
+        return decide(args.get('provider'), app.preferences, args.get('state'), args.get('questions'))
     if op == 'quota':
         from agent_quota import read_quotas
         from chat import available_agents
@@ -119,10 +144,16 @@ def execute(app, request):
             choices = {'language': [lang for lang,_ in preferences.LANGUAGES], 'theme':['system','dark','light'],
                        'window_animations':['system','on','off'], 'app_animations':['system','on','off']}
             if key in choices and value not in choices[key]: raise ValueError('Unsupported setting value')
+            if key in ('activity_limit','activity_days') and value < 0: raise ValueError(__import__('localization').text('Invalid activity request.'))
             if key == 'tooltip_delay' and not 0 <= value <= 5000: raise ValueError('Tooltip delay must be between 0 and 5000 milliseconds')
             if key == 'font_size' and not 9 <= value <= 28: raise ValueError('Font size must be between 9 and 28')
             if key == 'chat_instructions' and len(value) > 16000: raise ValueError('Custom instructions must be at most 16000 characters')
-            if isinstance(value, str) and key != 'chat_instructions' and (not value.strip() or len(value) > 200): raise ValueError('Invalid setting text')
+            if key in ('decision_ranker', 'decision_router') and value not in ('', 'jev', 'laya', 'von', 'custom'):
+                raise ValueError(__import__('localization').text('Invalid model connection.'))
+            if isinstance(value, str) and key not in ('chat_instructions', 'decision_ranker', 'decision_router') and (not value.strip() or len(value) > 200): raise ValueError('Invalid setting text')
+            if key == 'decision_connections':
+                from system_one import validate_connections
+                validate_connections(value)
             if key == 'agent_provider':
                 from chat import PROVIDERS
                 if value != 'auto' and value not in PROVIDERS: raise ValueError('Unknown agent')
@@ -138,7 +169,7 @@ def execute(app, request):
         return [dict(name=name, installed=shortcut_sets.installed(name), enabled=name not in app.disabled_sources,
                      count=app.source_counts.get(name), category=shortcut_sets.category(name)) for name in SOURCES]
     if op == 'open':
-        surfaces = {'settings': (None, lambda: preferences.show(app)), 'features':(None, app.show_features),
+        surfaces = {'activity':(None,lambda: __import__('activity_log').show(app)), 'settings': (None, lambda: preferences.show(app)), 'features':(None, app.show_features),
                     'shortcuts':(None, app.show_shortcuts), 'sets':(None, lambda: __import__('source_library').show(app)),
                     'about':(None, lambda: __import__('about').show(app)), 'details':(None, app.show_details),
                     'guide':('guide',app.show_guide), 'inputs':('inputs',app.input_controls.show), 'chat':('agent',app.show_chat)}
@@ -254,7 +285,7 @@ def register(app):
         except (ValueError, TypeError) as error:
             invocation.return_value(GLib.Variant('(s)', (json.dumps({'ok':False, 'error':str(error)}),)))
             return
-        if isinstance(payload, dict) and payload.get('operation') == 'quota':
+        if isinstance(payload, dict) and payload.get('operation') in ('quota', 'decision'):
             import threading
             def fetch():
                 try: result = {'ok':True, 'result':execute(app, payload)}
@@ -275,7 +306,7 @@ def request(payload, start=True):
     bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
     def send():
         value = bus.call_sync(BUS, OBJECT, INTERFACE, 'Request', GLib.Variant('(s)', (json.dumps(payload),)),
-                              GLib.VariantType.new('(s)'), Gio.DBusCallFlags.NONE, 15000, None)
+                              GLib.VariantType.new('(s)'), Gio.DBusCallFlags.NONE, 75000 if payload.get('operation') == 'decision' else 15000, None)
         reply = json.loads(value.unpack()[0])
         if not reply['ok']: raise ValueError(reply['error'])
         return reply['result']

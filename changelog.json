@@ -1,0 +1,27 @@
+[
+  {
+    "version": "0.2.0",
+    "built_at": "2026-09-22T10:08:17+02:00",
+    "changes": [
+      "Tabbed companion settings with workflow explanations and visible ranking and routing indicators.",
+      "Keyboard preview requests show the matching shortcut and its actual keys.",
+      "Insights show recorded request content, estimated tokens and available provider usage.",
+      "About now includes release history with relative build dates."
+    ]
+  },
+  {
+    "version": "0.1.0-alpha.2",
+    "built_at": "2026-09-22T09:58:56+02:00",
+    "changes": [
+      "Local-first automatic routing, direct app commands and an activity log with undo, redo and retention controls.",
+      "Responsive shortcut columns, a protected splitter and a keyboard that fits the available width."
+    ]
+  },
+  {
+    "version": "0.1.0-alpha.1",
+    "built_at": "2026-09-22T09:25:15+02:00",
+    "changes": [
+      "Initial testing preview with shortcut browsing, an agent companion and System One connections."
+    ]
+  }
+]

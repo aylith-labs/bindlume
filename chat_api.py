@@ -60,6 +60,8 @@ def events(provider, prefs, instructions, cancelled):
         if (provider == 'api_gemini' and model == 'gemini-2.5-flash-lite') or (provider == 'api_ollama' and model == 'qwen3:4b'):
             body['reasoning_effort'] = 'none'
         payload = Request(base+'/chat/completions', data=json.dumps(body).encode(),headers=headers)
+        from model_insights import record, usage as record_usage
+        insight=record(prefs,model,'Chat API',payload.data.decode('utf-8'))
         calls, content = {}, ''
         with opener.open(payload,timeout=15) as response:
             for line in response:
@@ -72,6 +74,7 @@ def events(provider, prefs, instructions, cancelled):
                 data=json.loads(raw)
                 if data.get('error'): raise RuntimeError(tr('Model request failed. Check the model and its tool support.'))
                 if data.get('usage'):
+                    record_usage(insight,data['usage'])
                     for k,v in data['usage'].items():
                         if isinstance(v,int): usage[k]=usage.get(k,0)+v
                 for choice in data.get('choices',[]):

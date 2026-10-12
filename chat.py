@@ -13,11 +13,14 @@ CLI_PROVIDERS = {'codex':'Codex', 'claude':'Claude', 'gemini':'Gemini', 'opencod
 
 
 from chat_api import PROVIDERS as API_PROVIDERS
-PROVIDERS = {**CLI_PROVIDERS, **API_PROVIDERS}
+from system_one import PROVIDERS as SYSTEM_ONE_PROVIDERS
+DECISION_PROVIDERS = {'decision_' + k: v + ' · System One' for k, v in SYSTEM_ONE_PROVIDERS.items()}
+PROVIDERS = {**CLI_PROVIDERS, **API_PROVIDERS, **DECISION_PROVIDERS}
 
 def available_agents(preferences=None):
     from chat_api import available
-    return [key for key in CLI_PROVIDERS if shutil.which(key)] + available(preferences or {})
+    from decision_workflows import available as decisions
+    return [key for key in CLI_PROVIDERS if shutil.which(key)] + available(preferences or {}) + decisions(preferences or {})
 
 
 def now(): return datetime.now(timezone.utc).isoformat(timespec='seconds')
@@ -224,6 +227,34 @@ class AgentRun:
 
     def run(self, prompt):
         session = self.session
+        decision_events = None
+        prefs = session.get('companion_preferences', {})
+        if session.get('selection') == 'auto' and session['provider'] in DECISION_PROVIDERS:
+            from decision_workflows import events, local_agents
+            from agent_quota import choose_agent, cached_quotas
+            tried = set()
+            while session['provider'] in DECISION_PROVIDERS and not self.cancelled.is_set():
+                provider = session['provider'];tried.add(provider)
+                try:
+                    decision_events = list(events(provider, dict(prefs, _decision_auto=True), prompt, self.cancelled))
+                except Exception as error:
+                    # App-operation failures may follow a mutation: never replay them.
+                    decision_events = [{'error': str(error)}]
+                if self.cancelled.is_set() or not any(e.get('handoff') for e in decision_events): break
+                candidates = [p for p in local_agents(prefs) if p not in tried]
+                if not candidates:
+                    candidates = [p for p in available_agents(prefs) if p not in DECISION_PROVIDERS]
+                    if candidates:
+                        try: candidates = [choose_agent(candidates, cached_quotas(self.store.root.parent))[0]]
+                        except RuntimeError: candidates = []
+                if not candidates: break
+                session.setdefault('agent_history', []).append(dict(provider=provider, session_id=session.get('provider_session_id')))
+                session['provider'] = candidates[0]
+                session['provider_session_id'] = None
+                session.pop('model', None)
+                self.callback('provider', session['provider'])
+                self.callback('activity', 'Trying the next assistant…')
+                decision_events = None
         session['messages'].append(dict(role='user', content=prompt, created_at=now()))
         session['status'] = 'running'
         session['owner_pid'] = os.getpid()
@@ -248,7 +279,7 @@ class AgentRun:
         else: instructions += 'Persistent memory is disabled. If asked to remember something, explain how to enable it in AI companion settings.\n'
         if prefs.get('chat_instructions_enabled'):
             instructions += 'User custom instructions:\n'+prefs.get('chat_instructions','')+'\n'
-        if prefs.get('chat_snippets'):
+        if prefs.get('chat_snippets') or __import__('decision_commands').keyboard_requested(prompt):
             instructions += ('For shortcut answers, after confirming the binding, include a keyboard illustration using a fenced block '
                              'with language keyboard and JSON {"keys":["SUPER","Y"],"label":"Open YouTube"}. '
                              'Use the actual keys from the confirmed binding. This is a display-only component. '
@@ -259,9 +290,16 @@ class AgentRun:
         parts, delta, failure = [], '', ''
         turn_usage = {}
         try:
-            if session['provider'] in API_PROVIDERS:
-                from chat_api import events
-                for event in events(session['provider'], prefs, instructions, self.cancelled):
+            if session['provider'] in API_PROVIDERS or session['provider'] in DECISION_PROVIDERS:
+                if session['provider'] in DECISION_PROVIDERS:
+                    from decision_workflows import events
+                    model_input = prompt
+                else:
+                    from chat_api import events
+                    model_input = instructions
+                stream = decision_events if decision_events is not None else events(session['provider'], prefs, model_input, self.cancelled)
+                for event in stream:
+                    if 'error' in event: raise RuntimeError(event['error'])
                     if 'delta' in event:
                         delta += event['delta']
                         self.callback('reply', delta)
@@ -269,6 +307,8 @@ class AgentRun:
                     if 'activity' in event: self.callback('activity', event['activity'])
                     if 'usage' in event: turn_usage = event['usage']
             else:
+                from model_insights import record, usage as record_usage
+                insight=record(prefs,session['provider'],'Agent input',instructions)
                 args, env = invocation(session, directory, control)
                 with (directory/'agent-stderr.log').open('w') as errors:
                     (directory/'agent-stderr.log').chmod(0o600)
@@ -280,6 +320,7 @@ class AgentRun:
                     for line in self.process.stdout:
                         try: event = parse_event(session['provider'], json.loads(line))
                         except (ValueError, TypeError): continue
+                        if 'usage' in event: record_usage(insight,normalize_usage(event['usage'],session['provider']))
                         if 'id' in event:
                             session['provider_session_id'] = event['id']
                             self.store.save(session)

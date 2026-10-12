@@ -64,3 +64,7 @@ Removed an unnecessary compositor reload during launch. Window and keyboard-devi
 Keyboard selection no longer changes on pointer-motion events. Scroll scrims suppress GTK’s competing edge effects. Shortcut capture requests temporary OS shortcut inhibition and restores normal handling after completion, Escape, or closing the picker. The original test invoked the handler directly; new coverage exercises the controller and cancellation lifecycle. Broadway tests cannot establish whether a particular compositor grants inhibition.
 
 The Gemini 2.5 Flash-Lite and Ollama Qwen3 4B presets request `reasoning_effort: none` for short app tasks; other models retain their own defaults. Ollama documents this compatibility field and lists Qwen3 4B as supporting tools and thinking. Benchmark tool accuracy as well as latency when disabling reasoning. [Ollama compatibility](https://docs.ollama.com/api/openai-compatibility), [Qwen3 4B](https://ollama.com/library/qwen3:4b).
+
+## System One decisions
+
+For Jev, Laya, Von, shortcut ranking, automatic routing, and the decision-only settings chatbot, see [System One models](SYSTEM_ONE.md). These use a separate typed decision endpoint.

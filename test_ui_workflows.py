@@ -19,6 +19,13 @@ def pump(seconds=.08):
         else: time.sleep(.002)
 
 
+def pump_until(condition, seconds=5):
+    # Fixed sleeps are flaky on a loaded machine; wait for the state itself.
+    deadline = time.monotonic() + seconds
+    while not condition() and time.monotonic() < deadline: pump(.02)
+    return condition()
+
+
 @unittest.skipUnless(os.environ.get('GDK_BACKEND') == 'broadway',
                      'Run mapped UI tests with python tests/run.py (private display)')
 class UiWorkflows(unittest.TestCase):
@@ -487,16 +494,22 @@ class UiWorkflows(unittest.TestCase):
         self.assertEqual(buffer.get_text(buffer.get_start_iter(),buffer.get_end_iter(),True),'first\nhéllolast')
 
     def test_chat_split_is_saved_and_restored(self):
-        with patch('chat_view.available_agents',return_value=['codex']):
-            self.ui.show_chat(True);pump(.3)
-        self.ui.main_pane.set_position(round(self.ui.main_pane.get_width()*.5));pump()
-        saved=self.ui.chat_split_ratio
-        self.assertAlmostEqual(saved,.5,delta=.03)
-        restored=app.Shortcuts()
-        self.assertAlmostEqual(restored.chat_split_ratio,saved,delta=.01)
-        self.ui.show_chat(False);pump()
-        self.ui.show_chat(True);pump(.3)
-        self.assertAlmostEqual(self.ui.chat_split_ratio,saved,delta=.03)
+        # The private display is narrow; exercise a wide-screen horizontal split.
+        self.ui.window.set_size_request(1400, 700)
+        pump_until(lambda:self.ui.window.get_width()>=1400)
+        settled=lambda:not getattr(self.ui,'_restoring_chat_split',False) and self.ui.main_pane.get_width()>0
+        with patch('chat_view.available_agents',return_value=['codex']), patch.object(self.ui.window,'get_surface',return_value=None):
+            self.ui.show_chat(True);self.assertTrue(pump_until(settled))
+            self.assertEqual(self.ui.main_pane.get_orientation(),Gtk.Orientation.HORIZONTAL)
+            self.ui.main_pane.set_position(round(self.ui.main_pane.get_width()*.5))
+            pump_until(lambda:abs(self.ui.chat_split_ratio-.5)<=.03)
+            saved=self.ui.chat_split_ratio
+            self.assertAlmostEqual(saved,.5,delta=.03)
+            restored=app.Shortcuts()
+            self.assertAlmostEqual(restored.chat_split_ratio,saved,delta=.01)
+            self.ui.show_chat(False);pump()
+            self.ui.show_chat(True);self.assertTrue(pump_until(settled))
+            self.assertAlmostEqual(self.ui.chat_split_ratio,saved,delta=.03)
 
     def test_harness_paths_are_collapsed_and_versions_load_on_demand(self):
         import companion

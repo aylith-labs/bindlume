@@ -3775,5 +3775,705 @@
     "ko": "Bindlume을 종료합니다. Shift를 누르면 다시 시작합니다.",
     "ja": "Bindlumeを終了。Shiftを押すと再起動します。",
     "zh_CN": "退出 Bindlume。按住 Shift 可重启。"
+  },
+  "System One connections": {
+    "de": "System-One-Verbindungen",
+    "fr": "Connexions System One",
+    "es": "Conexiones System One",
+    "uk": "Підключення System One",
+    "hu": "System One kapcsolatok",
+    "ko": "System One 연결",
+    "ja": "System One 接続",
+    "zh_CN": "System One 连接"
+  },
+  "Typed decisions for agents: choices, scores, and probabilities.": {
+    "de": "Typisierte Entscheidungen für Agenten: Auswahl, Bewertungen und Wahrscheinlichkeiten.",
+    "fr": "Décisions typées pour les agents : choix, scores et probabilités.",
+    "es": "Decisiones tipadas para agentes: opciones, puntuaciones y probabilidades.",
+    "uk": "Типізовані рішення для агентів: вибір, оцінки та ймовірності.",
+    "hu": "Típusos döntések az ügynököknek: választások, pontszámok és valószínűségek.",
+    "ko": "에이전트를 위한 유형 지정 결정: 선택, 점수 및 확률.",
+    "ja": "エージェント向けの型付き判断：選択、スコア、確率。",
+    "zh_CN": "为智能体提供类型化决策：选择、评分和概率。"
+  },
+  "Decision connection saved.": {
+    "de": "Entscheidungsverbindung gespeichert.",
+    "fr": "Connexion de décision enregistrée.",
+    "es": "Conexión de decisiones guardada.",
+    "uk": "Підключення моделі рішень збережено.",
+    "hu": "Döntési kapcsolat mentve.",
+    "ko": "결정 모델 연결이 저장되었습니다.",
+    "ja": "判断モデルの接続を保存しました。",
+    "zh_CN": "决策模型连接已保存。"
+  },
+  "Invalid decision request.": {
+    "de": "Ungültige Entscheidungsanfrage.",
+    "fr": "Requête de décision non valide.",
+    "es": "Solicitud de decisión no válida.",
+    "uk": "Некоректний запит рішення.",
+    "hu": "Érvénytelen döntési kérés.",
+    "ko": "잘못된 결정 요청입니다.",
+    "ja": "判断リクエストが無効です。",
+    "zh_CN": "决策请求无效。"
+  },
+  "Invalid decision response.": {
+    "de": "Ungültige Entscheidungsantwort.",
+    "fr": "Réponse de décision non valide.",
+    "es": "Respuesta de decisión no válida.",
+    "uk": "Некоректна відповідь моделі рішень.",
+    "hu": "Érvénytelen döntési válasz.",
+    "ko": "잘못된 결정 응답입니다.",
+    "ja": "判断レスポンスが無効です。",
+    "zh_CN": "决策响应无效。"
+  },
+  "Enable this decision connection first.": {
+    "de": "Aktiviere zuerst diese Entscheidungsverbindung.",
+    "fr": "Activez d’abord cette connexion de décision.",
+    "es": "Activa primero esta conexión de decisiones.",
+    "uk": "Спочатку увімкніть це підключення моделі рішень.",
+    "hu": "Előbb engedélyezd ezt a döntési kapcsolatot.",
+    "ko": "먼저 이 결정 모델 연결을 활성화하세요.",
+    "ja": "まずこの判断モデルの接続を有効にしてください。",
+    "zh_CN": "请先启用此决策模型连接。"
+  },
+  "Jev": {
+    "de": "Jev",
+    "fr": "Jev",
+    "es": "Jev",
+    "uk": "Jev",
+    "hu": "Jev",
+    "ko": "Jev",
+    "ja": "Jev",
+    "zh_CN": "Jev"
+  },
+  "Laya": {
+    "de": "Laya",
+    "fr": "Laya",
+    "es": "Laya",
+    "uk": "Laya",
+    "hu": "Laya",
+    "ko": "Laya",
+    "ja": "Laya",
+    "zh_CN": "Laya"
+  },
+  "Von": {
+    "de": "Von",
+    "fr": "Von",
+    "es": "Von",
+    "uk": "Von",
+    "hu": "Von",
+    "ko": "Von",
+    "ja": "Von",
+    "zh_CN": "Von"
+  },
+  "Shortcut ranking": {
+    "de": "Tastenkürzel-Rangfolge",
+    "fr": "Classement des raccourcis",
+    "es": "Clasificación de atajos",
+    "uk": "Ранжування скорочень",
+    "hu": "Billentyűparancsok rangsorolása",
+    "ko": "단축키 순위",
+    "ja": "ショートカットのランキング",
+    "zh_CN": "快捷键排序"
+  },
+  "Companion routing": {
+    "de": "Assistenten-Routing",
+    "fr": "Routage de l’assistant",
+    "es": "Enrutamiento del asistente",
+    "uk": "Маршрутизація помічника",
+    "hu": "Asszisztens útválasztása",
+    "ko": "도우미 라우팅",
+    "ja": "アシスタントのルーティング",
+    "zh_CN": "助手路由"
+  },
+  "No settings changed. The decision was uncertain.": {
+    "de": "Keine Einstellungen geändert. Die Entscheidung war unsicher.",
+    "fr": "Aucun paramètre modifié. La décision était incertaine.",
+    "es": "No se cambió ningún ajuste. La decisión era incierta.",
+    "uk": "Налаштування не змінено. Рішення було невпевненим.",
+    "hu": "Nem módosultak a beállítások. A döntés bizonytalan volt.",
+    "ko": "설정이 변경되지 않았습니다. 결정이 불확실했습니다.",
+    "ja": "設定は変更されませんでした。判断が不確かでした。",
+    "zh_CN": "未更改设置。决策不确定。"
+  },
+  "Applied settings:": {
+    "de": "Angewendete Einstellungen:",
+    "fr": "Paramètres appliqués :",
+    "es": "Ajustes aplicados:",
+    "uk": "Застосовані налаштування:",
+    "hu": "Alkalmazott beállítások:",
+    "ko": "적용된 설정:",
+    "ja": "適用した設定：",
+    "zh_CN": "已应用的设置："
+  },
+  "No supported setting change was selected.": {
+    "de": "Keine unterstützte Einstellungsänderung ausgewählt.",
+    "fr": "Aucune modification de paramètre prise en charge sélectionnée.",
+    "es": "No se seleccionó ningún cambio de ajuste compatible.",
+    "uk": "Не вибрано жодної підтримуваної зміни налаштувань.",
+    "hu": "Nem lett kiválasztva támogatott beállításmódosítás.",
+    "ko": "지원되는 설정 변경이 선택되지 않았습니다.",
+    "ja": "対応する設定変更が選択されませんでした。",
+    "zh_CN": "未选择支持的设置更改。"
+  },
+  "Jev · System One": {
+    "de": "Jev · System One",
+    "fr": "Jev · System One",
+    "es": "Jev · System One",
+    "uk": "Jev · System One",
+    "hu": "Jev · System One",
+    "ko": "Jev · System One",
+    "ja": "Jev · System One",
+    "zh_CN": "Jev · System One"
+  },
+  "Laya · System One": {
+    "de": "Laya · System One",
+    "fr": "Laya · System One",
+    "es": "Laya · System One",
+    "uk": "Laya · System One",
+    "hu": "Laya · System One",
+    "ko": "Laya · System One",
+    "ja": "Laya · System One",
+    "zh_CN": "Laya · System One"
+  },
+  "Von · System One": {
+    "de": "Von · System One",
+    "fr": "Von · System One",
+    "es": "Von · System One",
+    "uk": "Von · System One",
+    "hu": "Von · System One",
+    "ko": "Von · System One",
+    "ja": "Von · System One",
+    "zh_CN": "Von · System One"
+  },
+  "Custom API · System One": {
+    "de": "Custom API · System One",
+    "fr": "Custom API · System One",
+    "es": "Custom API · System One",
+    "uk": "Custom API · System One",
+    "hu": "Custom API · System One",
+    "ko": "Custom API · System One",
+    "ja": "Custom API · System One",
+    "zh_CN": "Custom API · System One"
+  },
+  "I can find shortcuts, bookmark or hide them, toggle features, change settings and filters, select shortcut sets, and open app panels. Try “show themes shortcut” or “enable filters”.": {
+    "de": "Ich kann Tastenkürzel finden, speichern oder ausblenden, Funktionen umschalten, Einstellungen und Filter ändern, Kürzel-Sets auswählen und App-Fenster öffnen. Versuche „show themes shortcut“ oder „enable filters“.",
+    "fr": "Je peux trouver, enregistrer ou masquer des raccourcis, activer des fonctions, modifier les paramètres et les filtres, choisir des ensembles et ouvrir les panneaux. Essayez « show themes shortcut » ou « enable filters ».",
+    "es": "Puedo buscar, guardar u ocultar atajos, activar funciones, cambiar ajustes y filtros, elegir conjuntos y abrir paneles. Prueba «show themes shortcut» o «enable filters».",
+    "uk": "Можу знаходити, зберігати й приховувати скорочення, перемикати функції, змінювати налаштування та фільтри, вибирати набори й відкривати панелі. Спробуйте «show themes shortcut» або «enable filters».",
+    "hu": "Kereshetek, menthetek és elrejthetek billentyűparancsokat, kapcsolhatok funkciókat, módosíthatok beállításokat és szűrőket, választhatok készleteket, és megnyithatok paneleket. Próbáld ezt: „show themes shortcut” vagy „enable filters”.",
+    "ko": "단축키 검색, 저장 및 숨기기, 기능 전환, 설정과 필터 변경, 단축키 세트 선택, 패널 열기를 할 수 있습니다. “show themes shortcut” 또는 “enable filters”를 입력해 보세요.",
+    "ja": "ショートカットの検索・保存・非表示、機能の切り替え、設定やフィルターの変更、セットの選択、パネルの表示ができます。「show themes shortcut」または「enable filters」を試してください。",
+    "zh_CN": "我可以查找、收藏或隐藏快捷键，切换功能，更改设置和筛选条件，选择快捷键集并打开面板。试试“show themes shortcut”或“enable filters”。"
+  },
+  "Several shortcuts match. Use an exact shortcut name.": {
+    "de": "Mehrere Tastenkürzel passen. Verwende einen exakten Namen.",
+    "fr": "Plusieurs raccourcis correspondent. Utilisez un nom exact.",
+    "es": "Coinciden varios atajos. Usa un nombre exacto.",
+    "uk": "Знайдено кілька скорочень. Укажіть точну назву.",
+    "hu": "Több billentyűparancs is megfelel. Add meg a pontos nevet.",
+    "ko": "여러 단축키가 일치합니다. 정확한 이름을 입력하세요.",
+    "ja": "複数のショートカットが一致しました。正確な名前を指定してください。",
+    "zh_CN": "找到多个匹配的快捷键。请使用准确名称。"
+  },
+  "No matching shortcut was found.": {
+    "de": "Kein passendes Tastenkürzel gefunden.",
+    "fr": "Aucun raccourci correspondant trouvé.",
+    "es": "No se encontró ningún atajo coincidente.",
+    "uk": "Відповідне скорочення не знайдено.",
+    "hu": "Nem található megfelelő billentyűparancs.",
+    "ko": "일치하는 단축키를 찾지 못했습니다.",
+    "ja": "一致するショートカットが見つかりませんでした。",
+    "zh_CN": "未找到匹配的快捷键。"
+  },
+  "Trying the next assistant…": {
+    "de": "Nächster Assistent wird versucht…",
+    "fr": "Essai de l’assistant suivant…",
+    "es": "Probando el siguiente asistente…",
+    "uk": "Спроба наступного помічника…",
+    "hu": "A következő asszisztens próbálása…",
+    "ko": "다음 도우미를 시도하는 중…",
+    "ja": "次のアシスタントを試しています…",
+    "zh_CN": "正在尝试下一个助手…"
+  },
+  "Activity log": {
+    "de": "Aktivitätsprotokoll",
+    "fr": "Journal d’activité",
+    "es": "Registro de actividad",
+    "uk": "Журнал дій",
+    "hu": "Tevékenységnapló",
+    "ko": "활동 로그",
+    "ja": "操作履歴",
+    "zh_CN": "活动日志"
+  },
+  "Maximum operations": {
+    "de": "Maximale Vorgänge",
+    "fr": "Nombre maximal d’opérations",
+    "es": "Máximo de operaciones",
+    "uk": "Максимум операцій",
+    "hu": "Műveletek maximális száma",
+    "ko": "최대 작업 수",
+    "ja": "操作の最大件数",
+    "zh_CN": "最大操作数"
+  },
+  "Retention days": {
+    "de": "Aufbewahrungstage",
+    "fr": "Jours de conservation",
+    "es": "Días de retención",
+    "uk": "Дні зберігання",
+    "hu": "Megőrzési napok",
+    "ko": "보관 일수",
+    "ja": "保存日数",
+    "zh_CN": "保留天数"
+  },
+  "Zero means unlimited. Pruned operations cannot be recovered.": {
+    "de": "Null bedeutet unbegrenzt. Entfernte Vorgänge können nicht wiederhergestellt werden.",
+    "fr": "Zéro signifie illimité. Les opérations supprimées ne peuvent pas être récupérées.",
+    "es": "Cero significa ilimitado. Las operaciones eliminadas no se pueden recuperar.",
+    "uk": "Нуль означає без обмежень. Видалені записи відновити неможливо.",
+    "hu": "A nulla korlátlant jelent. A törölt műveletek nem állíthatók vissza.",
+    "ko": "0은 무제한입니다. 삭제된 작업 기록은 복구할 수 없습니다.",
+    "ja": "0は無制限です。削除された操作記録は復元できません。",
+    "zh_CN": "零表示无限制。已清理的操作记录无法恢复。"
+  },
+  "No activity yet.": {
+    "de": "Noch keine Aktivität.",
+    "fr": "Aucune activité pour le moment.",
+    "es": "Aún no hay actividad.",
+    "uk": "Дій ще немає.",
+    "hu": "Még nincs tevékenység.",
+    "ko": "아직 활동이 없습니다.",
+    "ja": "操作履歴はまだありません。",
+    "zh_CN": "暂无活动。"
+  },
+  "Undo": {
+    "de": "Rückgängig",
+    "fr": "Annuler",
+    "es": "Deshacer",
+    "uk": "Скасувати",
+    "hu": "Visszavonás",
+    "ko": "실행 취소",
+    "ja": "元に戻す",
+    "zh_CN": "撤销"
+  },
+  "Redo": {
+    "de": "Wiederholen",
+    "fr": "Rétablir",
+    "es": "Rehacer",
+    "uk": "Повторити",
+    "hu": "Újra",
+    "ko": "다시 실행",
+    "ja": "やり直す",
+    "zh_CN": "重做"
+  },
+  "Previous": {
+    "de": "Zurück",
+    "fr": "Précédent",
+    "es": "Anterior",
+    "uk": "Попередні",
+    "hu": "Előző",
+    "ko": "이전",
+    "ja": "前へ",
+    "zh_CN": "上一页"
+  },
+  "Next": {
+    "de": "Weiter",
+    "fr": "Suivant",
+    "es": "Siguiente",
+    "uk": "Наступні",
+    "hu": "Következő",
+    "ko": "다음",
+    "ja": "次へ",
+    "zh_CN": "下一页"
+  },
+  "All": {
+    "de": "Alle",
+    "fr": "Tout",
+    "es": "Todo",
+    "uk": "Усі",
+    "hu": "Mind",
+    "ko": "전체",
+    "ja": "すべて",
+    "zh_CN": "全部"
+  },
+  "Today": {
+    "de": "Heute",
+    "fr": "Aujourd’hui",
+    "es": "Hoy",
+    "uk": "Сьогодні",
+    "hu": "Ma",
+    "ko": "오늘",
+    "ja": "今日",
+    "zh_CN": "今天"
+  },
+  "Yesterday": {
+    "de": "Gestern",
+    "fr": "Hier",
+    "es": "Ayer",
+    "uk": "Учора",
+    "hu": "Tegnap",
+    "ko": "어제",
+    "ja": "昨日",
+    "zh_CN": "昨天"
+  },
+  "Invalid activity log.": {
+    "de": "Ungültiges Aktivitätsprotokoll.",
+    "fr": "Journal d’activité non valide.",
+    "es": "Registro de actividad no válido.",
+    "uk": "Некоректний журнал дій.",
+    "hu": "Érvénytelen tevékenységnapló.",
+    "ko": "잘못된 활동 로그입니다.",
+    "ja": "操作履歴が無効です。",
+    "zh_CN": "活动日志无效。"
+  },
+  "Invalid activity request.": {
+    "de": "Ungültige Protokollanfrage.",
+    "fr": "Requête d’activité non valide.",
+    "es": "Solicitud de actividad no válida.",
+    "uk": "Некоректний запит до журналу.",
+    "hu": "Érvénytelen naplókérés.",
+    "ko": "잘못된 활동 요청입니다.",
+    "ja": "履歴リクエストが無効です。",
+    "zh_CN": "活动请求无效。"
+  },
+  "Nothing to undo.": {
+    "de": "Nichts rückgängig zu machen.",
+    "fr": "Rien à annuler.",
+    "es": "Nada que deshacer.",
+    "uk": "Немає що скасовувати.",
+    "hu": "Nincs mit visszavonni.",
+    "ko": "실행 취소할 작업이 없습니다.",
+    "ja": "元に戻せる操作はありません。",
+    "zh_CN": "没有可撤销的操作。"
+  },
+  "Nothing to redo.": {
+    "de": "Nichts zu wiederholen.",
+    "fr": "Rien à rétablir.",
+    "es": "Nada que rehacer.",
+    "uk": "Немає що повторювати.",
+    "hu": "Nincs mit újra végrehajtani.",
+    "ko": "다시 실행할 작업이 없습니다.",
+    "ja": "やり直せる操作はありません。",
+    "zh_CN": "没有可重做的操作。"
+  },
+  "The app changed since this operation. Undo or redo was not applied.": {
+    "de": "Die App wurde seit diesem Vorgang geändert. Rückgängig/Wiederholen wurde nicht angewendet.",
+    "fr": "L’application a changé depuis cette opération. Aucune annulation ni répétition appliquée.",
+    "es": "La aplicación cambió desde esa operación. No se aplicó deshacer ni rehacer.",
+    "uk": "Стан застосунку змінився після цієї операції. Скасування чи повторення не виконано.",
+    "hu": "Az alkalmazás állapota megváltozott a művelet óta. A visszavonás vagy újra végrehajtás nem történt meg.",
+    "ko": "이 작업 이후 앱이 변경되었습니다. 실행 취소 또는 다시 실행하지 않았습니다.",
+    "ja": "この操作後にアプリの状態が変わりました。元に戻す操作ややり直しは実行されませんでした。",
+    "zh_CN": "此操作后应用状态已更改。未执行撤销或重做。"
+  },
+  "The operation could not be fully restored.": {
+    "de": "Der Vorgang konnte nicht vollständig wiederhergestellt werden.",
+    "fr": "L’opération n’a pas pu être entièrement restaurée.",
+    "es": "No se pudo restaurar la operación por completo.",
+    "uk": "Не вдалося повністю відновити операцію.",
+    "hu": "A műveletet nem sikerült teljesen visszaállítani.",
+    "ko": "작업을 완전히 복원하지 못했습니다.",
+    "ja": "操作を完全に復元できませんでした。",
+    "zh_CN": "无法完全恢复该操作。"
+  },
+  "Changelog": {
+    "de": "Änderungsprotokoll",
+    "fr": "Historique des modifications",
+    "es": "Registro de cambios",
+    "uk": "Журнал змін",
+    "hu": "Változásnapló",
+    "ko": "변경 기록",
+    "ja": "変更履歴",
+    "zh_CN": "更新日志"
+  },
+  "Models": {
+    "de": "Modelle",
+    "fr": "Modèles",
+    "es": "Modelos",
+    "uk": "Моделі",
+    "hu": "Modellek",
+    "ko": "모델",
+    "ja": "モデル",
+    "zh_CN": "模型"
+  },
+  "System One": {
+    "de": "System One",
+    "fr": "System One",
+    "es": "System One",
+    "uk": "System One",
+    "hu": "System One",
+    "ko": "System One",
+    "ja": "System One",
+    "zh_CN": "System One"
+  },
+  "Insights": {
+    "de": "Einblicke",
+    "fr": "Analyse",
+    "es": "Información",
+    "uk": "Аналітика",
+    "hu": "Betekintés",
+    "ko": "인사이트",
+    "ja": "インサイト",
+    "zh_CN": "洞察"
+  },
+  "Ranking: {model}": {
+    "de": "Sortierung: {model}",
+    "fr": "Classement : {model}",
+    "es": "Clasificación: {model}",
+    "uk": "Ранжування: {model}",
+    "hu": "Rangsorolás: {model}",
+    "ko": "순위 지정: {model}",
+    "ja": "順位付け: {model}",
+    "zh_CN": "排序：{model}"
+  },
+  "Routing: {model}": {
+    "de": "Weiterleitung: {model}",
+    "fr": "Routage : {model}",
+    "es": "Enrutamiento: {model}",
+    "uk": "Маршрутизація: {model}",
+    "hu": "Irányítás: {model}",
+    "ko": "라우팅: {model}",
+    "ja": "ルーティング: {model}",
+    "zh_CN": "路由：{model}"
+  },
+  "Ranking: connection disabled": {
+    "de": "Sortierung: Verbindung deaktiviert",
+    "fr": "Classement : connexion désactivée",
+    "es": "Clasificación: conexión desactivada",
+    "uk": "Ранжування: з’єднання вимкнено",
+    "hu": "Rangsorolás: kapcsolat kikapcsolva",
+    "ko": "순위 지정: 연결 비활성화",
+    "ja": "順位付け: 接続が無効",
+    "zh_CN": "排序：连接已禁用"
+  },
+  "Routing: connection disabled": {
+    "de": "Weiterleitung: Verbindung deaktiviert",
+    "fr": "Routage : connexion désactivée",
+    "es": "Enrutamiento: conexión desactivada",
+    "uk": "Маршрутизація: з’єднання вимкнено",
+    "hu": "Irányítás: kapcsolat kikapcsolva",
+    "ko": "라우팅: 연결 비활성화",
+    "ja": "ルーティング: 接続が無効",
+    "zh_CN": "路由：连接已禁用"
+  },
+  "Record model requests": {
+    "de": "Modellanfragen aufzeichnen",
+    "fr": "Enregistrer les requêtes aux modèles",
+    "es": "Registrar solicitudes a modelos",
+    "uk": "Записувати запити до моделей",
+    "hu": "Modellkérések rögzítése",
+    "ko": "모델 요청 기록",
+    "ja": "モデルへのリクエストを記録",
+    "zh_CN": "记录模型请求"
+  },
+  "Clear history": {
+    "de": "Verlauf löschen",
+    "fr": "Effacer l’historique",
+    "es": "Borrar historial",
+    "uk": "Очистити історію",
+    "hu": "Előzmények törlése",
+    "ko": "기록 지우기",
+    "ja": "履歴を消去",
+    "zh_CN": "清空历史"
+  },
+  "No recorded requests yet.": {
+    "de": "Noch keine aufgezeichneten Anfragen.",
+    "fr": "Aucune requête enregistrée.",
+    "es": "Aún no hay solicitudes registradas.",
+    "uk": "Записаних запитів ще немає.",
+    "hu": "Még nincsenek rögzített kérések.",
+    "ko": "아직 기록된 요청이 없습니다.",
+    "ja": "記録されたリクエストはまだありません。",
+    "zh_CN": "尚无已记录的请求。"
+  },
+  "Not reported": {
+    "de": "Nicht gemeldet",
+    "fr": "Non communiqué",
+    "es": "No informado",
+    "uk": "Не надано",
+    "hu": "Nincs adat",
+    "ko": "보고되지 않음",
+    "ja": "報告なし",
+    "zh_CN": "未报告"
+  },
+  "Chat API": {
+    "de": "Chat-API",
+    "fr": "API de chat",
+    "es": "API de chat",
+    "uk": "API чату",
+    "hu": "Csevegési API",
+    "ko": "채팅 API",
+    "ja": "チャットAPI",
+    "zh_CN": "聊天 API"
+  },
+  "Agent input": {
+    "de": "Agent-Eingabe",
+    "fr": "Entrée de l’agent",
+    "es": "Entrada del agente",
+    "uk": "Вхід агента",
+    "hu": "Ügynök bemenete",
+    "ko": "에이전트 입력",
+    "ja": "エージェントへの入力",
+    "zh_CN": "代理输入"
+  },
+  "Local command": {
+    "de": "Lokaler Befehl",
+    "fr": "Commande locale",
+    "es": "Comando local",
+    "uk": "Локальна команда",
+    "hu": "Helyi parancs",
+    "ko": "로컬 명령",
+    "ja": "ローカルコマンド",
+    "zh_CN": "本地命令"
+  },
+  "Requests: {count} · Estimated input tokens: {tokens}": {
+    "de": "Anfragen: {count} · Geschätzte Eingabetokens: {tokens}",
+    "fr": "Requêtes : {count} · Tokens d’entrée estimés : {tokens}",
+    "es": "Solicitudes: {count} · Tokens de entrada estimados: {tokens}",
+    "uk": "Запити: {count} · Приблизні вхідні токени: {tokens}",
+    "hu": "Kérések: {count} · Becsült bemeneti tokenek: {tokens}",
+    "ko": "요청: {count} · 예상 입력 토큰: {tokens}",
+    "ja": "リクエスト: {count} · 推定入力トークン: {tokens}",
+    "zh_CN": "请求：{count} · 估算输入令牌：{tokens}"
+  },
+  "Input: {bytes} bytes · Estimated tokens: {estimated} · Reported tokens: {reported}": {
+    "de": "Eingabe: {bytes} Bytes · Geschätzte Tokens: {estimated} · Gemeldete Tokens: {reported}",
+    "fr": "Entrée : {bytes} octets · Tokens estimés : {estimated} · Tokens communiqués : {reported}",
+    "es": "Entrada: {bytes} bytes · Tokens estimados: {estimated} · Tokens informados: {reported}",
+    "uk": "Вхід: {bytes} байтів · Приблизні токени: {estimated} · Надані токени: {reported}",
+    "hu": "Bemenet: {bytes} bájt · Becsült tokenek: {estimated} · Jelentett tokenek: {reported}",
+    "ko": "입력: {bytes}바이트 · 예상 토큰: {estimated} · 보고된 토큰: {reported}",
+    "ja": "入力: {bytes}バイト · 推定トークン: {estimated} · 報告トークン: {reported}",
+    "zh_CN": "输入：{bytes} 字节 · 估算令牌：{estimated} · 报告令牌：{reported}"
+  },
+  "Content truncated at 512 KiB; sizes describe the complete request.": {
+    "de": "Inhalt auf 512 KiB gekürzt; Größen beziehen sich auf die vollständige Anfrage.",
+    "fr": "Contenu tronqué à 512 Kio ; les tailles décrivent la requête complète.",
+    "es": "Contenido truncado a 512 KiB; los tamaños corresponden a la solicitud completa.",
+    "uk": "Вміст обрізано до 512 КіБ; розміри стосуються повного запиту.",
+    "hu": "A tartalom 512 KiB-ra csonkolva; a méretek a teljes kérésre vonatkoznak.",
+    "ko": "내용은 512 KiB에서 잘렸습니다. 크기는 전체 요청 기준입니다.",
+    "ja": "内容は512 KiBで切り詰めています。サイズはリクエスト全体の値です。",
+    "zh_CN": "内容已截断至 512 KiB；大小指完整请求。"
+  },
+  "Reorders up to 24 matching shortcuts after you pause typing. Filters still apply. Enable the selected System One connection first; if it fails, the original order is kept.": {
+    "de": "Ordnet bis zu 24 passende Tastenkürzel nach einer Eingabepause neu. Filter bleiben aktiv. Aktivieren Sie zuerst die gewählte System-One-Verbindung; bei Fehlern bleibt die ursprüngliche Reihenfolge erhalten.",
+    "fr": "Réordonne jusqu’à 24 raccourcis correspondants après une pause de saisie. Les filtres restent actifs. Activez d’abord la connexion System One choisie ; en cas d’échec, l’ordre initial est conservé.",
+    "es": "Reordena hasta 24 atajos coincidentes al dejar de escribir. Los filtros siguen activos. Active primero la conexión System One elegida; si falla, se conserva el orden original.",
+    "uk": "Перевпорядковує до 24 відповідних скорочень після паузи введення. Фільтри залишаються чинними. Спершу ввімкніть вибране з’єднання System One; у разі помилки початковий порядок зберігається.",
+    "hu": "A gépelési szünet után legfeljebb 24 találatot rendez újra. A szűrők továbbra is érvényesek. Előbb engedélyezze a kiválasztott System One kapcsolatot; hiba esetén az eredeti sorrend marad.",
+    "ko": "입력을 잠시 멈추면 일치하는 단축키를 최대 24개까지 재정렬합니다. 필터는 유지됩니다. 먼저 선택한 System One 연결을 활성화하세요. 실패하면 원래 순서를 유지합니다.",
+    "ja": "入力を止めると、一致するショートカットを最大24件まで並べ替えます。フィルターは維持されます。先に選択したSystem One接続を有効にしてください。失敗した場合は元の順序を維持します。",
+    "zh_CN": "停止输入后，对最多 24 个匹配的快捷键重新排序。筛选条件仍然适用。请先启用所选的 System One 连接；失败时保留原始顺序。"
+  },
+  "In Automatic mode, enabled local System One models handle requests first and pass unsupported requests to another assistant. This optional router chooses a decision model when no local model is enabled. It does not affect a manually selected agent.": {
+    "de": "Im Automatikmodus bearbeiten aktivierte lokale System-One-Modelle Anfragen zuerst und geben nicht unterstützte Anfragen an einen anderen Assistenten weiter. Dieser optionale Router wählt ein Entscheidungsmodell, wenn kein lokales Modell aktiviert ist. Manuell gewählte Agenten sind nicht betroffen.",
+    "fr": "En mode automatique, les modèles System One locaux activés traitent les requêtes en premier et transmettent celles non prises en charge à un autre assistant. Ce routeur facultatif choisit un modèle de décision si aucun modèle local n’est activé. Il ne modifie pas un agent choisi manuellement.",
+    "es": "En modo automático, los modelos System One locales activos atienden primero las solicitudes y pasan las no compatibles a otro asistente. Este enrutador opcional elige un modelo de decisión cuando no hay ningún modelo local activo. No afecta al agente elegido manualmente.",
+    "uk": "В автоматичному режимі ввімкнені локальні моделі System One першими обробляють запити й передають непідтримувані іншому помічнику. Цей додатковий маршрутизатор вибирає модель рішень, коли локальні моделі вимкнено. Він не впливає на агента, вибраного вручну.",
+    "hu": "Automatikus módban először az engedélyezett helyi System One modellek kezelik a kéréseket, a nem támogatottakat pedig másik asszisztensnek adják át. Ez az opcionális irányító akkor választ döntési modellt, ha nincs engedélyezett helyi modell. A kézzel kiválasztott ügynököt nem érinti.",
+    "ko": "자동 모드에서는 활성화된 로컬 System One 모델이 먼저 요청을 처리하고 지원하지 않는 요청은 다른 도우미에게 전달합니다. 이 선택적 라우터는 로컬 모델이 활성화되지 않았을 때 결정 모델을 선택합니다. 수동으로 선택한 에이전트에는 영향을 주지 않습니다.",
+    "ja": "自動モードでは、有効なローカルSystem Oneモデルが最初に処理し、対応できないリクエストを別のアシスタントに渡します。この任意のルーターは、ローカルモデルが無効な場合に決定モデルを選びます。手動選択したエージェントには影響しません。",
+    "zh_CN": "在自动模式下，已启用的本地 System One 模型优先处理请求，并将不支持的请求转交其他助手。没有启用本地模型时，此可选路由器会选择决策模型。它不影响手动选择的代理。"
+  },
+  "Records the latest 50 requests locally, up to 512 KiB each. Content may include your prompts, instructions and tool results. Headers and API credentials are excluded. Turn recording off or clear the history at any time.": {
+    "de": "Speichert die letzten 50 Anfragen lokal, jeweils bis zu 512 KiB. Inhalte können Prompts, Anweisungen und Werkzeugergebnisse enthalten. Header und API-Zugangsdaten werden ausgeschlossen. Die Aufzeichnung lässt sich jederzeit deaktivieren und der Verlauf löschen.",
+    "fr": "Enregistre localement les 50 dernières requêtes, jusqu’à 512 Kio chacune. Le contenu peut inclure vos messages, instructions et résultats d’outils. Les en-têtes et identifiants API sont exclus. Vous pouvez désactiver l’enregistrement ou effacer l’historique à tout moment.",
+    "es": "Guarda localmente las últimas 50 solicitudes, hasta 512 KiB cada una. Pueden incluir mensajes, instrucciones y resultados de herramientas. No incluye cabeceras ni credenciales API. Puede desactivar el registro o borrar el historial cuando quiera.",
+    "uk": "Локально зберігає останні 50 запитів, до 512 КіБ кожен. Вміст може містити ваші повідомлення, інструкції та результати інструментів. Заголовки й облікові дані API не записуються. Запис можна вимкнути або очистити історію будь-коли.",
+    "hu": "Helyben rögzíti az utolsó 50 kérést, egyenként legfeljebb 512 KiB méretben. A tartalom üzeneteket, utasításokat és eszközeredményeket is tartalmazhat. A fejlécek és API-hitelesítő adatok kimaradnak. A rögzítés bármikor kikapcsolható, az előzmények törölhetők.",
+    "ko": "최근 요청 50개를 각각 최대 512 KiB까지 로컬에 기록합니다. 프롬프트, 지침, 도구 결과가 포함될 수 있습니다. 헤더와 API 인증 정보는 제외됩니다. 언제든 기록을 끄거나 내역을 지울 수 있습니다.",
+    "ja": "最新50件のリクエストを各512 KiBまでローカルに記録します。プロンプト、指示、ツール結果を含む場合があります。ヘッダーとAPI認証情報は記録しません。記録の停止や履歴の消去はいつでもできます。",
+    "zh_CN": "在本地记录最近 50 个请求，每个最多 512 KiB。内容可能包含提示词、指令和工具结果，不包括请求头和 API 凭据。可随时关闭记录或清空历史。"
+  },
+  "Estimates use one token per four characters, not the model tokenizer. Reported input tokens appear when a provider supplies them. For installed agents, only the input handed to the agent is visible; its internal context and extra requests are not captured.": {
+    "de": "Schätzungen verwenden ein Token je vier Zeichen, nicht den Modell-Tokenizer. Gemeldete Eingabetokens erscheinen, wenn der Anbieter sie liefert. Bei installierten Agenten ist nur die übergebene Eingabe sichtbar; interner Kontext und zusätzliche Anfragen werden nicht erfasst.",
+    "fr": "Les estimations comptent un token pour quatre caractères, sans le tokenizer du modèle. Les tokens d’entrée communiqués s’affichent si le fournisseur les indique. Pour les agents installés, seule l’entrée transmise est visible ; le contexte interne et les requêtes supplémentaires ne sont pas capturés.",
+    "es": "Las estimaciones usan un token por cada cuatro caracteres, no el tokenizador del modelo. Los tokens de entrada informados aparecen si el proveedor los facilita. En los agentes instalados solo se ve la entrada entregada; no se captura su contexto interno ni solicitudes adicionales.",
+    "uk": "Оцінка рахує один токен на чотири символи, а не використовує токенізатор моделі. Надані вхідні токени показуються, якщо постачальник їх повідомляє. Для встановлених агентів видно лише переданий вхід; внутрішній контекст і додаткові запити не записуються.",
+    "hu": "A becslés négy karakterenként egy tokent számol, nem a modell tokenizálóját használja. A jelentett bemeneti tokenszám akkor jelenik meg, ha a szolgáltató megadja. Telepített ügynököknél csak az átadott bemenet látható; a belső kontextus és a további kérések nem kerülnek rögzítésre.",
+    "ko": "추정치는 모델 토크나이저가 아닌 문자 4개당 토큰 1개를 기준으로 합니다. 제공자가 입력 토큰 수를 알려주면 표시합니다. 설치된 에이전트는 전달된 입력만 보이며 내부 컨텍스트나 추가 요청은 기록되지 않습니다.",
+    "ja": "推定値はモデルのトークナイザーではなく、4文字で1トークンとして計算します。入力トークン数が提供元から報告された場合は表示します。インストール済みエージェントでは渡した入力のみ確認でき、内部コンテキストや追加リクエストは記録されません。",
+    "zh_CN": "估算按每四个字符一个令牌计算，不使用模型的分词器。提供商报告输入令牌数时会显示该数据。对于已安装的代理，只能查看传入的内容，无法记录其内部上下文和额外请求。"
+  },
+  "Tabbed companion settings with workflow explanations and visible ranking and routing indicators.": {
+    "de": "Companion-Einstellungen mit Tabs, Erklärungen und sichtbaren Anzeigen für Sortierung und Weiterleitung.",
+    "fr": "Réglages du compagnon par onglets, avec explications et indicateurs visibles de classement et de routage.",
+    "es": "Ajustes del asistente en pestañas, con explicaciones e indicadores de clasificación y enrutamiento.",
+    "uk": "Налаштування помічника у вкладках із поясненнями та індикаторами ранжування й маршрутизації.",
+    "hu": "Lapokra bontott asszisztensbeállítások, magyarázatokkal és látható rangsorolási és irányítási jelzőkkel.",
+    "ko": "탭으로 구성된 도우미 설정, 작업 설명 및 순위 지정과 라우팅 표시를 추가했습니다.",
+    "ja": "コンパニオン設定をタブ化し、説明と順位付け・ルーティングの表示を追加しました。",
+    "zh_CN": "助手设置采用标签页，增加工作流程说明及排序和路由状态指示。"
+  },
+  "Keyboard preview requests show the matching shortcut and its actual keys.": {
+    "de": "Tastaturvorschauen zeigen das passende Tastenkürzel und seine tatsächlichen Tasten.",
+    "fr": "Les aperçus clavier montrent le raccourci correspondant et ses touches réelles.",
+    "es": "Las vistas previas del teclado muestran el atajo coincidente y sus teclas reales.",
+    "uk": "Попередній перегляд клавіатури показує відповідне скорочення та його фактичні клавіші.",
+    "hu": "A billentyűzet-előnézet a megfelelő gyorsbillentyűt és annak tényleges billentyűit mutatja.",
+    "ko": "키보드 미리보기 요청 시 일치하는 단축키와 실제 키를 표시합니다.",
+    "ja": "キーボードプレビューで、一致するショートカットと実際のキーを表示します。",
+    "zh_CN": "键盘预览请求会显示匹配的快捷键及其实际按键。"
+  },
+  "Insights show recorded request content, estimated tokens and available provider usage.": {
+    "de": "Einblicke zeigen aufgezeichnete Anfragen, geschätzte Tokens und verfügbare Anbieternutzung.",
+    "fr": "L’analyse affiche les requêtes enregistrées, les tokens estimés et l’utilisation fournie par les prestataires.",
+    "es": "Información muestra las solicitudes registradas, los tokens estimados y el uso disponible del proveedor.",
+    "uk": "Аналітика показує записані запити, приблизні токени та доступні дані використання від постачальника.",
+    "hu": "A Betekintés megmutatja a rögzített kéréseket, a becsült tokenszámot és a szolgáltatói használati adatokat.",
+    "ko": "인사이트에서 기록된 요청 내용, 예상 토큰 및 제공자가 보고한 사용량을 확인할 수 있습니다.",
+    "ja": "インサイトで記録されたリクエスト内容、推定トークン、提供元の使用量を確認できます。",
+    "zh_CN": "洞察显示已记录的请求内容、估算令牌及可用的提供商用量数据。"
+  },
+  "About now includes release history with relative build dates.": {
+    "de": "Über enthält jetzt den Versionsverlauf mit relativen Build-Zeiten.",
+    "fr": "À propos inclut désormais l’historique des versions avec les dates de compilation relatives.",
+    "es": "Acerca de incluye ahora el historial de versiones con fechas relativas de compilación.",
+    "uk": "Вікно «Про програму» тепер містить історію версій із відносним часом збірки.",
+    "hu": "A Névjegy mostantól verzióelőzményeket és relatív buildidőpontokat is tartalmaz.",
+    "ko": "정보 창에 상대 빌드 시간과 함께 버전 기록을 추가했습니다.",
+    "ja": "アプリ情報に、相対的なビルド日時付きのリリース履歴を追加しました。",
+    "zh_CN": "关于窗口新增版本历史，并以相对时间显示构建日期。"
+  },
+  "Local-first automatic routing, direct app commands and an activity log with undo, redo and retention controls.": {
+    "de": "Lokale Modelle zuerst, direkte App-Befehle und ein Aktivitätsprotokoll mit Rückgängig, Wiederholen und Aufbewahrung.",
+    "fr": "Routage local prioritaire, commandes directes et journal d’activité avec annulation, rétablissement et conservation.",
+    "es": "Enrutamiento local prioritario, comandos directos y registro de actividad con deshacer, rehacer y retención.",
+    "uk": "Локальна маршрутизація першою, прямі команди та журнал дій зі скасуванням, повторенням і зберіганням.",
+    "hu": "Helyi modelleket előnyben részesítő irányítás, közvetlen parancsok, valamint visszavonható és megismételhető műveletnapló megőrzési beállításokkal.",
+    "ko": "로컬 우선 자동 라우팅, 직접 앱 명령, 실행 취소·다시 실행 및 보존 설정이 있는 활동 기록을 추가했습니다.",
+    "ja": "ローカル優先の自動ルーティング、アプリへの直接コマンド、取り消し・やり直し・保持設定付きの操作ログを追加しました。",
+    "zh_CN": "新增本地优先自动路由、直接应用命令，以及支持撤销、重做和保留设置的活动日志。"
+  },
+  "Responsive shortcut columns, a protected splitter and a keyboard that fits the available width.": {
+    "de": "Responsive Tastenkürzelspalten, geschützter Teiler und eine an die Breite angepasste Tastatur.",
+    "fr": "Colonnes adaptatives, séparateur protégé et clavier ajusté à la largeur disponible.",
+    "es": "Columnas adaptables, separador protegido y teclado ajustado al ancho disponible.",
+    "uk": "Адаптивні стовпці скорочень, захищений роздільник і клавіатура за доступною шириною.",
+    "hu": "Rugalmas gyorsbillentyű-oszlopok, korlátozott osztó és a rendelkezésre álló szélességhez igazodó billentyűzet.",
+    "ko": "반응형 단축키 열, 최소 너비를 지키는 구분선, 사용 가능한 너비에 맞는 키보드를 제공합니다.",
+    "ja": "ショートカット列を可変幅にし、分割位置を保護して、キーボードを利用可能な幅に収めました。",
+    "zh_CN": "快捷键列自适应布局，限制分隔条最小宽度，键盘自动适应可用宽度。"
+  },
+  "Initial testing preview with shortcut browsing, an agent companion and System One connections.": {
+    "de": "Erste Testversion mit Tastenkürzelsuche, Agent-Begleiter und System-One-Verbindungen.",
+    "fr": "Première version de test avec navigation des raccourcis, assistant et connexions System One.",
+    "es": "Primera versión de prueba con exploración de atajos, asistente y conexiones System One.",
+    "uk": "Перша тестова версія з переглядом скорочень, помічником і з’єднаннями System One.",
+    "hu": "Első tesztverzió gyorsbillentyű-böngészővel, asszisztenssel és System One kapcsolatokkal.",
+    "ko": "단축키 탐색, 에이전트 도우미 및 System One 연결을 포함한 첫 테스트 버전입니다.",
+    "ja": "ショートカット閲覧、エージェント、System One接続を備えた最初のテスト版です。",
+    "zh_CN": "首个测试预览版，包含快捷键浏览、代理助手和 System One 连接。"
+  },
+  "Reported input tokens: {tokens} · Requests without usage: {count}": {
+    "de": "Gemeldete Eingabetokens: {tokens} · Anfragen ohne Nutzungsdaten: {count}",
+    "fr": "Tokens d’entrée communiqués : {tokens} · Requêtes sans données d’utilisation : {count}",
+    "es": "Tokens de entrada informados: {tokens} · Solicitudes sin datos de uso: {count}",
+    "uk": "Надані вхідні токени: {tokens} · Запити без даних використання: {count}",
+    "hu": "Jelentett bemeneti tokenek: {tokens} · Használati adat nélküli kérések: {count}",
+    "ko": "보고된 입력 토큰: {tokens} · 사용량이 없는 요청: {count}",
+    "ja": "報告された入力トークン: {tokens} · 使用量未報告のリクエスト: {count}",
+    "zh_CN": "报告的输入令牌：{tokens} · 无用量数据的请求：{count}"
   }
 }

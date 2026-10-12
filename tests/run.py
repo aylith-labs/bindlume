@@ -23,12 +23,26 @@ with tempfile.TemporaryDirectory(prefix='shortcuts-tests-') as temporary:
     try:
         deadline = time.monotonic() + 5
         while not socket.exists():
-            if server.poll() is not None or time.monotonic() > deadline:
-                raise RuntimeError('Private GTK display failed to start')
+            status = server.poll()
+            timed_out = time.monotonic() > deadline
+            if status is not None or timed_out:
+                if status is None:
+                    server.terminate()
+                try:
+                    _, stderr = server.communicate(timeout=2)
+                except subprocess.TimeoutExpired:
+                    server.kill()
+                    _, stderr = server.communicate()
+                detail = stderr.decode('utf-8', errors='replace').strip()
+                if len(detail) > 2048:
+                    detail = '…' + detail[-2048:]
+                reason = f'exited with status {status}' if status is not None else 'timed out waiting for its private socket'
+                raise RuntimeError(f'Private GTK display failed to start ({reason}): {detail or "no daemon stderr"}')
             time.sleep(.02)
         result = subprocess.run([sys.executable, str(root/'tests/strict_runner.py'), '-v', *sys.argv[1:]],
                                 cwd=root, env=env, timeout=300 if visual else 180)
         sys.exit(result.returncode)
     finally:
-        server.terminate()
+        if server.poll() is None:
+            server.terminate()
         server.wait(timeout=5)

@@ -161,20 +161,25 @@ def action_tooltip(widget, text):
 def reveal_indicators_on_hover(row, indicators):
     """Reserve control space; reveal unset states on pointer or keyboard focus."""
     from gi.repository import Gtk
-    hovered = False
+    # Closures must not capture the controllers or the row: a signal closure that
+    # reaches its own controller is a cycle the garbage collector cannot see through
+    # GObject, and it pins every widget in `indicators` for the life of the process.
+    state = {'hovered': False, 'focused': False}
     focus = Gtk.EventControllerFocus()
     def update():
         for widget, active in indicators:
-            widget.set_opacity(1 if active or hovered or focus.contains_focus() else 0)
+            widget.set_opacity(1 if active or state['hovered'] or state['focused'] else 0)
     def hover(value):
-        nonlocal hovered
-        hovered = value
+        state['hovered'] = value
+        update()
+    def focus_changed(value):
+        state['focused'] = value
         update()
     motion = Gtk.EventControllerMotion()
     motion.connect('enter', lambda *_: hover(True))
     motion.connect('leave', lambda *_: hover(False))
-    focus.connect('enter', lambda *_: update())
-    focus.connect('leave', lambda *_: update())
+    focus.connect('enter', lambda *_: focus_changed(True))
+    focus.connect('leave', lambda *_: focus_changed(False))
     row.add_controller(motion)
     row.add_controller(focus)
     row.refresh_indicators = update

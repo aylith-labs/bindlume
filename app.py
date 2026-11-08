@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import subprocess
 import threading
+import weakref
 import sys
 import shutil
 # Avoid the slow default renderer initialization on this desktop.
@@ -105,7 +106,8 @@ def startup_mark(stage):
     path = Path(os.environ.get('SHORTCUTS_STARTUP_LOG') or Path.home() / '.local/state/bindlume/startup.jsonl')
     try:
         path.parent.mkdir(parents=True, exist_ok=True)
-        if stage == 'imports' and path.exists() and path.stat().st_size > 1024 * 1024:
+        # Rotate by size on every write: the background process lives for days and logs every poll.
+        if path.exists() and path.stat().st_size > 1024 * 1024:
             path.replace(path.with_suffix('.previous.jsonl'))
         with path.open('a') as stream:
             stream.write(json.dumps(dict(pid=os.getpid(), stage=stage, elapsed_ms=elapsed, activation_ms=round((time.perf_counter()-ACTIVATED)*1000, 1))) + '\n')
@@ -200,10 +202,16 @@ class ShortcutSection(Gtk.Box):
         self.append(self.header)
         self.body = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, visible=expanded)
         self.append(self.body)
+        # The handler lives on a child of `self`; capturing `self` strongly closes a
+        # cycle through GObject that the garbage collector cannot break, so every
+        # section ever built (and all its rows) stayed alive. Hold it weakly.
+        section_ref = weakref.ref(self)
         def toggled(*_):
-            self.body.set_visible(self.get_expanded())
-            self.arrow.set_from_icon_name('pan-down-symbolic' if self.get_expanded() else 'pan-end-symbolic')
-            changed(self)
+            section = section_ref()
+            if section is None: return
+            section.body.set_visible(section.get_expanded())
+            section.arrow.set_from_icon_name('pan-down-symbolic' if section.get_expanded() else 'pan-end-symbolic')
+            changed(section)
         self.header.connect('toggled', toggled)
 
     def get_expanded(self):
@@ -2430,7 +2438,10 @@ class Shortcuts(Gtk.Application):
             row.set_can_target(False)
             row.reveal_indicators(True)
         row.shortcut_id = item['id']
+        row_ref = weakref.ref(row)
         def update_marks():
+            row = row_ref()
+            if row is None: return
             row.updating_marks = True
             bookmarked, hidden = item['id'] in self.favorites, item['id'] in self.learned
             star.set_label('★' if bookmarked else '☆')

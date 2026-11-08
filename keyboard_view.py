@@ -8,6 +8,7 @@ import os
 import socket
 import subprocess
 import threading
+import weakref
 import gi
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, Gdk, GLib, GdkPixbuf
@@ -453,7 +454,9 @@ class KeyboardView(Gtk.Box):
                     indicators.append((icon, active))
                 reveal_indicators_on_hover(button, indicators)
                 button.shortcut_id = item['id']
-                def update_marks(card=button, record=item):
+                def update_marks(card_ref=weakref.ref(button), record=item):
+                    card = card_ref()
+                    if card is None: return
                     bookmarked, hidden = self.item_state(record)
                     star, eye = [widget for widget, _ in card.indicators]
                     star.set_from_icon_name('starred-symbolic' if bookmarked else 'non-starred-symbolic')
